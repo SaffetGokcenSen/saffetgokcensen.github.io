@@ -4,6 +4,18 @@
 			<title>{{ page.title }}</title>
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+			<script>
+				MathJax = {
+					tex: {
+						inlineMath: [['$', '$'], ['\\(', '\\)']],
+						processEnvironments: true,
+						tags: 'all',
+						tagSide: 'left'
+					}
+				};
+			</script>
+			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 		</head>
 		<body>
 			<nav>
