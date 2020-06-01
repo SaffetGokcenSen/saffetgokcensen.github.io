@@ -55,7 +55,7 @@ This is a quadratic form. Hence, the decision boundary between the two classes i
 \begin{equation}
 \left [\frac{1}{2}a\_{11}x\_{1}^{2}-b\_{11}x\_{1}+\frac{1}{2}\left ( \boldsymbol{\mu}\_{c\_{1}}^{T} \boldsymbol{\Sigma}\_{c\_{1}}^{-1}\boldsymbol{\mu}\_{c\_{1}}-\boldsymbol{\mu}\_{c\_{2}}^{T} \boldsymbol{\Sigma}\_{c\_{2}}^{-1}\boldsymbol{\mu}\_{c\_{2}}\right )+\frac{1}{2}\log \left (\frac{\left | \boldsymbol{\Sigma}\_{c\_{1}} \right |}{\left | \boldsymbol{\Sigma}\_{c\_{2}} \right |} \right )- \log \left (\frac{\pi\_{c\_{1}}}{\pi\_{c\_{2}}} \right )\right ]
 \end{equation}
-gives element $x\_{2}$ given element $x\_{1}$ of $\textbf{x}$. An example for such a boundary is drawn in a separate Jupyter notebook.
+gives element $x\_{2}$ given element $x\_{1}$ of $\textbf{x}$. An example for such a boundary is drawn in a separate Jupyter notebook on [this link.](https://github.com/SaffetGokcenSen/Gaussian-Models/blob/master/decision_boundaries_for_quadratic_discriminant_analysis.ipynb)
 
 $\textbf{References}$
 
