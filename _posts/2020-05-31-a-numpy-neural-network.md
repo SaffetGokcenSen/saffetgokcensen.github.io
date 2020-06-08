@@ -303,4 +303,4 @@ The gradient results can be summarized as follows:
 \begin{equation}
     \left(\frac{\partial \text{L}}{\partial \textbf{b}\_{1}}\right)\_{\text{k}} = \sum\_{\text{i}=1}^{n}(\textbf{C}\circ\left(\left(\textbf{A}\circ\left(2\left(\textbf{y}\_{\text{pred}}-\textbf{y}\right).\textbf{w}\_{3}^{T}\right)\right).\textbf{w}\_{2}^{T}\right))\_{\text{ik}}
 \end{equation}
-The numerical implementation of the above gradients, the updates of the weight matrices and the bias matrices are carried out in a separate Jupyter notebook.
+The numerical implementation of the above gradients, the updates of the weight matrices and the bias matrices are carried out as a numpy neural network in a separate Jupyter notebook on [this link](https://github.com/SaffetGokcenSen/deep_learning/blob/master/numpy_neural_network.ipynb).
