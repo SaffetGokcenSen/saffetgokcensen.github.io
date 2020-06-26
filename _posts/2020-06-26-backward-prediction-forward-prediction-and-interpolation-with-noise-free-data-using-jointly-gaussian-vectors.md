@@ -274,7 +274,7 @@ For this case, estimating $\mathbf{x}\_{1}$ given $\mathbf{x}\_{2}$ is interpola
 \end{equation}
 
 ## Conclusion
-A numerical implementation is on the link \url{https://github.com/SaffetGokcenSen/Gaussian-Models/blob/master/estimating\_noise\_free\_data\_using\_jointly\_gaussian\_vectors.ipynb}. All of the algorithm and the numerical results depend on the assumption that the posterior is proper although the prior is improper. Another assumption is that the inverses are assumed to exist although they cannot be formally defined. Hence, the numerical results must be examined with these assumptions in mind. In addition, the coefficient $\lambda$ does not have any effect on the results. The interpolation results are more successful than the prediction results.
+A numerical implementation is on  [this link](https://github.com/SaffetGokcenSen/Gaussian-Models/blob/master/estimating_noise_free_data_using_jointly_gaussian_vectors.ipynb). All of the algorithm and the numerical results depend on the assumption that the posterior is proper although the prior is improper. Another assumption is that the inverses are assumed to exist although they cannot be formally defined. Hence, the numerical results must be examined with these assumptions in mind. In addition, the coefficient $\lambda$ does not have any effect on the results. The interpolation results are more successful than the prediction results.
 
 ## References
 Machine Learning A Probabilistic Perspective, Kevin P. Murphy.
