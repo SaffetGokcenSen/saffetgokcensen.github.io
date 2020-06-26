@@ -53,7 +53,7 @@ There is a one dimensional function $f$ defined on an interval $\left[0, T\right
 \end{equation}
 The function is defined at points $s\_{j}$ where
 \begin{equation}
-    s\_{j}=jh \, \left(j=1,2,3, \hdots , D-1, D\right )
+    s\_{j}=jh \, \left(j=1,2,3, \dotso , D-1, D\right )
 \end{equation}
 The function values are denoted by $x\_{j}$:
 \begin{equation}
@@ -71,7 +71,7 @@ The problem is to determine $\mathbf{x}\_{1}$ given $\mathbf{x}\_{2}$ or $\mathb
 ## The Solution
 It is natural to assume that the function is smooth. This prior can be encoded to the solution by
 \begin{equation}
-    x\_{j}=\frac{1}{2}\left(x\_{j-1}+x\_{j+1}\right)+\epsilon\_{j} \, \left(j=2,3,4, \hdots , D-1\right)
+    x\_{j}=\frac{1}{2}\left(x\_{j-1}+x\_{j+1}\right)+\epsilon\_{j} \, \left(j=2,3,4, \dotso , D-1\right)
 \end{equation}
 where $\boldsymbol{\epsilon}$ has a multivariate Gaussian distribution given as follows:
 \begin{equation}
@@ -84,11 +84,11 @@ The smoothness prior yields the following matrix equation:
 where
 \begin{equation}
     \mathbf{L}=\frac{1}{2}\begin{bmatrix}
-        -1 & 2 & -1 & 0 & 0 & \hdots & 0 & 0 & 0 \newline
-        0 & -1 & 2 & -1 & 0 & \hdots & 0 & 0 & 0 \newline
-        0 & 0 & -1 & 2 & -1 & \hdots & 0 & 0 & 0 \newline
-        \vdots & \vdots & \vdots & \vdots & \vdots & \hdots & \vdots & \vdots & \vdots \newline
-        0 & 0 & 0 & 0 & 0 & \hdots & -1 & 2 & -1
+        -1 & 2 & -1 & 0 & 0 & \dotso & 0 & 0 & 0 \newline
+        0 & -1 & 2 & -1 & 0 & \dotso & 0 & 0 & 0 \newline
+        0 & 0 & -1 & 2 & -1 & \dotso & 0 & 0 & 0 \newline
+        \vdots & \vdots & \vdots & \vdots & \vdots & \dotso & \vdots & \vdots & \vdots \newline
+        0 & 0 & 0 & 0 & 0 & \dotso & -1 & 2 & -1
     \end{bmatrix},
 \label{eq:L\_definition}
 \end{equation}
