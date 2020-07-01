@@ -75,7 +75,7 @@ The equation (\ref{constantGrad}) is satisfied if $g$ is chosen to be the identi
 \end{equation}
 
 ## Conclusion
-The activation function and the $w$ coefficient for the constant error carrousel (CEC) which is the basic building block of an LSTM cell has been derived.
+The activation function and the $w$ coefficient for the constant error carrousel (CEC) which is the basic building block of an LSTM cell have been derived.
 
 ## References 
 [1] Sepp Hochreiter and Jurgen Schmidhuber. Long Short-Term Memory. *Neural Computation*, 9(8):1735–1780, November 1997.
