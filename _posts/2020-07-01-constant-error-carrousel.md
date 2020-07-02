@@ -7,11 +7,11 @@ title: Constant Error Carrousel
 In this article, the constant error carrousel is examined. The constant error carrousel is the basic building block of a long short term memory cell discovered by [1].
 
 ## Definition
-The constant error carrousel is a structure to achieve constant error gradient as its name implies. It contains a single unit connected to itself. The unrolled form of the CEC is given in the Figure 1.
+The constant error carrousel is a structure to achieve constant error gradient as its name implies. It contains a single unit connected to itself. The unrolled form of the CEC is given in the Figure 1. $w$ and $g$ are to be found in the following section.
 
 <figure>
    <img src="/assets/CEC.png" style="max-width: 1600px;">
-   <figcaption>Figure 1. The unrolled form of the CEC.</figcaption>
+   <figcaption>Figure 1. The unrolled form of the CEC, $w$ and $g$ are to be found in the next section.</figcaption>
 </figure>
 
 $g$ is the activation function of the CEC. It must be the identity function, $g\left(x\right)=x$, and the coefficient $w$ must be $1$ for keeping the error gradient constant. $\hat{y}\left(t\right)$ is the output at time $t$. $y$ is the target to be reached.
