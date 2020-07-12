@@ -133,6 +133,7 @@ In the above equation, $\left (\boldsymbol{\Sigma}\_{11}-\boldsymbol{\Sigma}\_{1
         \mathbf{I} & -\boldsymbol{\Sigma}\_{12}\boldsymbol{\Sigma}\_{22}^{-1} \newline
         \mathbf{0} & \mathbf{I}
     \end{bmatrix}
+    \label{inverse\_explicit\_1}
 \end{equation}
 This expression for the covariance inverse is to be used in the exponential of the probability density function:
 \begin{equation}
@@ -417,6 +418,7 @@ In the above equation, $\left (\boldsymbol{\Sigma}\_{22}-\boldsymbol{\Sigma}\_{2
         \mathbf{I} & \mathbf{0} \newline
         -\boldsymbol{\Sigma}\_{21}\boldsymbol{\Sigma}\_{11}^{-1} & \mathbf{I}
     \end{bmatrix}
+    \label{inverse\_explicit\_2}
 \end{equation}
 This expression for the covariance inverse is to be used in the exponential of the probability density function:
 \begin{equation}
@@ -586,19 +588,27 @@ The following decomposition has been shown to hold:
     N\left(?|\boldsymbol{\mu}\_{2}+\boldsymbol{\Sigma}\_{21}\boldsymbol{\Sigma}\_{11}^{-1}\left(\mathbf{x}\_{1}-\boldsymbol{\mu}\_{1}\right ), \boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{11} \right)N\left(\mathbf{x}\_{1}|\boldsymbol{\mu}\_{1}, \boldsymbol{\Sigma}\_{11}\right)
 \end{equation}
 What should $?$ stand for? Bayes rule implies that it is for $\mathbf{x}\_{2}|\mathbf{x}\_{1}$.
-## Conclusion
+
+## Different Forms of The Obtained Results
 Given that the probability density function of the distribution of $\mathbf{x}=\left(\mathbf{x}\_{1}, \mathbf{x}\_{2}\right)$ is
 \begin{equation}
     p\left(\left(\mathbf{x}\_{1}, \mathbf{x}\_{2}\right)|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)=\frac{1}{\left(2\pi\right)^{d/2}\left | \boldsymbol{\Sigma}\right |^{1/2}}\exp\left[-\frac{1}{2}\left(\mathbf{x}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\mathbf{x}-\boldsymbol{\mu}\right)\right]
 \end{equation}
-where $\boldsymbol{\mu}$ is the mean vector and 
+where  
+\begin{equation}
+    \boldsymbol{\mu}=\begin{bmatrix}
+        \boldsymbol{\mu}\_{1} \newline
+        \boldsymbol{\mu}\_{2}
+    \end{bmatrix}
+\end{equation}
+is the mean vector and 
 \begin{equation}
     \boldsymbol{\Sigma}=\begin{bmatrix}
         \boldsymbol{\Sigma}\_{11} & \boldsymbol{\Sigma}\_{12} \newline
         \boldsymbol{\Sigma}\_{21} & \boldsymbol{\Sigma}\_{22}
     \end{bmatrix}
 \end{equation}
-is the positive definite and symmetric covariance matrix, the following results hold:
+is the positive definite and symmetric covariance matrix, the following results have been obtained:
 \begin{equation}
     p\left(\mathbf{x}\_{1}|\mathbf{x}\_{2}\right)=N\left(\mathbf{x}\_{1}|\boldsymbol{\mu}\_{1}+\boldsymbol{\Sigma}\_{12}\boldsymbol{\Sigma}\_{22}^{-1}\left(\mathbf{x}\_{2}-\boldsymbol{\mu}\_{2}\right), \boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{22} \right)
 \end{equation}
@@ -607,6 +617,91 @@ is the positive definite and symmetric covariance matrix, the following results 
 \end{equation}
 \begin{equation}
     p\left(\mathbf{x}\_{2}|\mathbf{x}\_{1}\right)=N\left(\mathbf{x}\_{2}|\boldsymbol{\mu}\_{2}+\boldsymbol{\Sigma}\_{21}\boldsymbol{\Sigma}\_{11}^{-1}\left(\mathbf{x}\_{1}-\boldsymbol{\mu}\_{1}\right), \boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{11} \right)
+\end{equation}
+\begin{equation}
+    p\left(\mathbf{x}\_{1}\right)=N\left(\mathbf{x}\_{1}|\boldsymbol{\mu}\_{1}, \boldsymbol{\Sigma}\_{11}\right)
+\end{equation}
+These results are in terms of the entries of the covariance matrix. The other form is in terms of the entries of the precision matrix. For the derivation of this form, the two expressions for the inverse of the covariance matrix are to be used. The inverse of the covariance matrix is the precision matrix denoted by $\boldsymbol{\Lambda}$. From the equation (\ref{inverse\_explicit\_1}), the following form is obtained for $\boldsymbol{\Lambda}$:
+\begin{equation}
+    \boldsymbol{\Lambda}=\boldsymbol{\Sigma}^{-1}=\begin{bmatrix}
+        \left(\boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{22}\right)^{-1} & -\left(\boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{22}\right)^{-1}\boldsymbol{\Sigma}\_{12}\boldsymbol{\Sigma}\_{22}^{-1} \newline_
+        -\boldsymbol{\Sigma}\_{22}^{-1}\boldsymbol{\Sigma}\_{21}\left(\boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{22}\right)^{-1} & \boldsymbol{\Sigma}\_{22}^{-1}+\boldsymbol{\Sigma}\_{22}^{-1}\boldsymbol{\Sigma}\_{21}\left(\boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{22}\right)^{-1}\boldsymbol{\Sigma}\_{12}\boldsymbol{\Sigma}\_{22}^{-1}
+    \end{bmatrix}
+    \label{precision\_matrix\_1}
+\end{equation}
+From the equation (\ref{inverse\_explicit\_2}), the second form for $\boldsymbol{\Sigma}^{-1}$ is calculated as follows:
+\begin{equation}
+    \boldsymbol{\Lambda}=\boldsymbol{\Sigma}^{-1}=\begin{bmatrix}
+        \boldsymbol{\Sigma}\_{11}^{-1}+\boldsymbol{\Sigma}\_{11}^{-1}\boldsymbol{\Sigma}\_{12}\left(\boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{11}\right)^{-1}\boldsymbol{\Sigma}\_{21}\boldsymbol{\Sigma}\_{11}^{-1} & -\boldsymbol{\Sigma}\_{11}^{-1}\boldsymbol{\Sigma}\_{12}\left(\boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{11}\right)^{-1} \newline_
+        -\left(\boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{11}\right)^{-1}\boldsymbol{\Sigma}\_{21}\boldsymbol{\Sigma}\_{11}^{-1} & \left(\boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{11}\right)^{-1}
+    \end{bmatrix}
+    \label{precision\_matrix\_2}
+\end{equation}
+From the equation (\ref{precision\_matrix\_1}), it can be observed that
+\begin{equation}
+    \boldsymbol{\Lambda}\_{11}=\left(\boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{22}\right)^{-1}
+\end{equation}
+\begin{equation}
+    \boldsymbol{\Lambda}\_{12}=-\left(\boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{22}\right)^{-1}\boldsymbol{\Sigma}\_{12}\boldsymbol{\Sigma}\_{22}^{-1}.
+\end{equation}
+Then:
+\begin{equation}
+    \boldsymbol{\Lambda}\_{11}^{-1}\boldsymbol{\Lambda}\_{12}=-\boldsymbol{\Sigma}\_{12}\boldsymbol{\Sigma}\_{22}^{-1}.
+\end{equation}
+Hence, the second form for $p\left(\mathbf{x}\_{1}|\mathbf{x}\_{2}\right)$ can be written as follows:
+\begin{equation}
+    p\left(\mathbf{x}\_{1}|\mathbf{x}\_{2}\right)=N\left(\mathbf{x}\_{1}|\boldsymbol{\mu}\_{1}-\boldsymbol{\Lambda}\_{11}^{-1}\boldsymbol{\Lambda}\_{12}\left(\mathbf{x}\_{2}-\boldsymbol{\mu}\_{2}\right), \boldsymbol{\Lambda}\_{11}^{-1} \right)
+\end{equation}
+From the equation (\ref{precision\_matrix\_2}), it can be observed that
+\begin{equation}
+    \boldsymbol{\Lambda}\_{22}=\left(\boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{11}\right)^{-1}
+\end{equation}
+\begin{equation}
+    \boldsymbol{\Lambda}\_{21}=-\left(\boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{11}\right)^{-1}\boldsymbol{\Sigma}\_{21}\boldsymbol{\Sigma}\_{11}^{-1}.
+\end{equation}
+Then:
+\begin{equation}
+    \boldsymbol{\Lambda}\_{22}^{-1}\boldsymbol{\Lambda}\_{21}=-\boldsymbol{\Sigma}\_{21}\boldsymbol{\Sigma}\_{11}^{-1}.
+\end{equation}
+Hence, the second form for $p\left(\mathbf{x}\_{2}|\mathbf{x}\_{1}\right)$ can be written as follows:
+\begin{equation}
+    p\left(\mathbf{x}\_{2}|\mathbf{x}\_{1}\right)=N\left(\mathbf{x}\_{2}|\boldsymbol{\mu}\_{2}-\boldsymbol{\Lambda}\_{22}^{-1}\boldsymbol{\Lambda}\_{21}\left(\mathbf{x}\_{1}-\boldsymbol{\mu}\_{1}\right), \boldsymbol{\Lambda}\_{22}^{-1} \right)
+\end{equation}
+
+## Conclusion
+Given that the probability density function of the distribution of $\mathbf{x}=\left(\mathbf{x}\_{1}, \mathbf{x}\_{2}\right)$ is
+\begin{equation}
+    p\left(\left(\mathbf{x}\_{1}, \mathbf{x}\_{2}\right)|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)=\frac{1}{\left(2\pi\right)^{d/2}\left | \boldsymbol{\Sigma}\right |^{1/2}}\exp\left[-\frac{1}{2}\left(\mathbf{x}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\mathbf{x}-\boldsymbol{\mu}\right)\right]
+\end{equation}
+where
+\begin{equation}
+    \boldsymbol{\mu}=\begin{bmatrix}
+        \boldsymbol{\mu}\_{1} \newline
+        \boldsymbol{\mu}\_{2}
+    \end{bmatrix}
+\end{equation}
+is the mean vector and 
+\begin{equation}
+    \boldsymbol{\Sigma}=\begin{bmatrix}
+        \boldsymbol{\Sigma}\_{11} & \boldsymbol{\Sigma}\_{12} \newline
+        \boldsymbol{\Sigma}\_{21} & \boldsymbol{\Sigma}\_{22}
+    \end{bmatrix}
+\end{equation}
+is the positive definite and symmetric covariance matrix, the following results hold:
+\begin{equation}
+    p\left(\mathbf{x}\_{1}|\mathbf{x}\_{2}\right)=N\left(\mathbf{x}\_{1}|\boldsymbol{\mu}\_{1}+\boldsymbol{\Sigma}\_{12}\boldsymbol{\Sigma}\_{22}^{-1}\left(\mathbf{x}\_{2}-\boldsymbol{\mu}\_{2}\right), \boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{22} \right) \text{ (covariance entries)}
+\end{equation}
+\begin{equation}
+    p\left(\mathbf{x}\_{1}|\mathbf{x}\_{2}\right)=N\left(\mathbf{x}\_{1}|\boldsymbol{\mu}\_{1}-\boldsymbol{\Lambda}\_{11}^{-1}\boldsymbol{\Lambda}\_{12}\left(\mathbf{x}\_{2}-\boldsymbol{\mu}\_{2}\right), \boldsymbol{\Lambda}\_{11}^{-1} \right) \text{ (precision entries)}
+\end{equation}
+\begin{equation}
+    p\left(\mathbf{x}\_{2}\right)=N\left(\mathbf{x}\_{2}|\boldsymbol{\mu}\_{2}, \boldsymbol{\Sigma}\_{22}\right)
+\end{equation}
+\begin{equation}
+    p\left(\mathbf{x}\_{2}|\mathbf{x}\_{1}\right)=N\left(\mathbf{x}\_{2}|\boldsymbol{\mu}\_{2}+\boldsymbol{\Sigma}\_{21}\boldsymbol{\Sigma}\_{11}^{-1}\left(\mathbf{x}\_{1}-\boldsymbol{\mu}\_{1}\right), \boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{11} \right) \text{ (covariance entries)}
+\end{equation}
+\begin{equation}
+    p\left(\mathbf{x}\_{2}|\mathbf{x}\_{1}\right)=N\left(\mathbf{x}\_{2}|\boldsymbol{\mu}\_{2}-\boldsymbol{\Lambda}\_{22}^{-1}\boldsymbol{\Lambda}\_{21}\left(\mathbf{x}\_{1}-\boldsymbol{\mu}\_{1}\right), \boldsymbol{\Lambda}\_{22}^{-1} \right) \text{ (precision entries)}
 \end{equation}
 \begin{equation}
     p\left(\mathbf{x}\_{1}\right)=N\left(\mathbf{x}\_{1}|\boldsymbol{\mu}\_{1}, \boldsymbol{\Sigma}\_{11}\right)
