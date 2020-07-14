@@ -310,7 +310,7 @@ and the covariance matrix
 \end{equation}
 then:
 \begin{equation}
-    p\left(\mathbf{x}|\mathbf{y}\right)=N\left(\mathbf{x}\_{1}|\boldsymbol{\mu}\_{1}+\boldsymbol{\Sigma}\_{12}\boldsymbol{\Sigma}\_{22}^{-1}\left(\mathbf{x}\_{2}-\boldsymbol{\mu}\_{2}\right), \boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{22}\right)
+    p\left(\mathbf{x}\_{1}|\mathbf{x}\_{2}\right)=N\left(\mathbf{x}\_{1}|\boldsymbol{\mu}\_{1}+\boldsymbol{\Sigma}\_{12}\boldsymbol{\Sigma}\_{22}^{-1}\left(\mathbf{x}\_{2}-\boldsymbol{\mu}\_{2}\right), \boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{22}\right)
 \end{equation}
 $\boldsymbol{\Sigma}/\boldsymbol{\Sigma}\_{22}$ is the Schur complement of $\boldsymbol{\Sigma}$ with respect to $\boldsymbol{\Sigma}\_{22}$ and 
 \begin{equation}
