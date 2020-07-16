@@ -376,10 +376,6 @@ Let this compact expression be used in its place:
     \boldsymbol{\mu}\_{\mathbf{x}|\mathbf{y}}=\boldsymbol{\Sigma}\_{\mathbf{x}|\mathbf{y}}\left[\mathbf{A}^{T}\boldsymbol{\Sigma}\_{y}^{-1}\left(\mathbf{y}-\mathbf{b}\right)+\boldsymbol{\Sigma}\_{x}^{-1}\boldsymbol{\mu}\_{x}\right]
 \end{equation}
 Hence, the second form for $\boldsymbol{\mu}\_{\mathbf{x}|\mathbf{y}}$ has been obtained.
-and covariance
-\begin{equation}
-    \boldsymbol{\Sigma}\_{\mathbf{x}|\mathbf{y}}=\boldsymbol{\Sigma}\_{x}-\boldsymbol{\Sigma}\_{x}\mathbf{A}^{T}\left(\boldsymbol{\Sigma}\_{y}+\mathbf{A}\boldsymbol{\Sigma}\_{x}\mathbf{A}^{T}\right)^{-1}\mathbf{A}\boldsymbol{\Sigma}\_{x}.
-\end{equation}
 As to the forms of the covariance $\boldsymbol{\Sigma}\_{\mathbf{x}|\mathbf{y}}$, the first and second forms for the covariances are respectively as follows:
 \begin{equation}
     \boldsymbol{\Sigma}\_{\mathbf{x}|\mathbf{y}}=\boldsymbol{\Sigma}\_{z}/\boldsymbol{\Sigma}\_{z\_{\_{22}}}=\boldsymbol{\Sigma}\_{x}-\boldsymbol{\Sigma}\_{x}\mathbf{A}^{T}\left(\boldsymbol{\Sigma}\_{y}+\mathbf{A}\boldsymbol{\Sigma}\_{x}\mathbf{A}^{T}\right)^{-1}\mathbf{A}\boldsymbol{\Sigma}\_{x}
@@ -391,7 +387,7 @@ As to the forms of the covariance $\boldsymbol{\Sigma}\_{\mathbf{x}|\mathbf{y}}$
 ## Conclusion
 The mathematical expression for $p\left(\mathbf{x}|\mathbf{y}\right)$ has been found given that $\mathbf{x}$ is multivariate Gaussian and $\mathbf{y}|\mathbf{x}$ is multivariate Gaussian with mean $\mathbf{A}\mathbf{x}+\mathbf{b}$. This mathematical expression has two forms as follows:
 \begin{equation}
-    p\left(\mathbf{x}|\mathbf{y}\right)=N\left(\mathbf{x}|\left[\boldsymbol{\Sigma}\_{x}-\left(\boldsymbol{\Sigma}\_{z}/\boldsymbol{\Sigma}\_{z\_{\_{22}}}\right)\right]\boldsymbol{\Sigma}\_{x}^{-1}\mathbf{A}^{-1}\left(\mathbf{y}-\mathbf{b}\right)+\left(\boldsymbol{\Sigma}\_{z}/\boldsymbol{\Sigma}\_{z\_{\_{22}}}\right)\boldsymbol{\Sigma}\_{x}^{-1}\boldsymbol{\mu}\_{x}, \boldsymbol{\Sigma}\_{z}/\boldsymbol{\Sigma}\_{z\_{\_{22}}}\right)
+    p\left(\mathbf{x}|\mathbf{y}\right)=N\left(\mathbf{x}|\left(\boldsymbol{\Sigma}\_{x}-\boldsymbol{\Sigma}\_{\mathbf{x}|\mathbf{y}}\right)\boldsymbol{\Sigma}\_{x}^{-1}\mathbf{A}^{-1}\left(\mathbf{y}-\mathbf{b}\right)+\boldsymbol{\Sigma}\_{\mathbf{x}|\mathbf{y}}\boldsymbol{\Sigma}\_{x}^{-1}\boldsymbol{\mu}\_{x}, \boldsymbol{\Sigma}\_{\mathbf{x}|\mathbf{y}}\right)
 \end{equation}
 \begin{equation}
     p\left(\mathbf{x}|\mathbf{y}\right)=N\left(\mathbf{x}|\boldsymbol{\Sigma}\_{\mathbf{x}|\mathbf{y}}\left[\mathbf{A}^{T}\boldsymbol{\Sigma}\_{y}^{-1}\left(\mathbf{y}-\mathbf{b}\right)+\boldsymbol{\Sigma}\_{x}^{-1}\boldsymbol{\mu}\_{x}\right], \boldsymbol{\Sigma}\_{\mathbf{x}|\mathbf{y}}\right)
