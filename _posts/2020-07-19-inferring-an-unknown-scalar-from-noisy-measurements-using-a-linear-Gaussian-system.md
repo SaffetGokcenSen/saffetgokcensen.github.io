@@ -5,7 +5,7 @@ title: Inferring An Unknown Scalar From Noisy Measurements Using A Linear Gaussi
 ---
 
 ## Introduction
-In this article, an unknown scalar is estimated from noisy measurements using a linear Gaussian system.
+In this article, an unknown scalar is estimated from noisy measurements using a linear Gaussian system.  A sample implementation is given in a Jupyter notebook on the link given in the conclusion section.
 
 ## The Problem Definition
 There are $N$ noisy measurements. They are denoted by $y\_{i}$. It is assumed that the measurements satisfy the following relation:
@@ -112,7 +112,7 @@ So, the posterior has the following distribution:
 \end{equation}
 
 ## Conclusion
-From the measurements for an unknown scalar, it is estimated using a linear Gaussian system. The estimation for the unknown scalar quantity is expressed as a posterior probability density function.
+From the measurements for an unknown scalar, it is estimated using a linear Gaussian system. The estimation for the unknown scalar quantity is expressed as a posterior probability density function. A sample implementation is given in the Jupyter notebook on [this link](https://github.com/SaffetGokcenSen/Gaussian-Models/blob/master/inferring_an_unknown_scalar_from_noisy_measurements_using_a_linear_Gaussian_system.ipynb).
 
 ## References
 [1] Machine Learning A Probabilistic Perspective, Kevin P. Murphy.
