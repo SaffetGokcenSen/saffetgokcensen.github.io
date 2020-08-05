@@ -6,7 +6,7 @@ title: Inferring An Unknown Vector Using Noisy Measurements From A Single Device
 
 ## Introduction
 
-In this article, a linear Gaussian system is used to infer an unknown vector from noisy measurements obtained by a single measurement source.
+In this article, a linear Gaussian system is used to infer an unknown vector from noisy measurements obtained by a single measurement source. A sample implementation is in a Jupyter notebook on the link given in the conclusion section.
 
 ## Problem Description
 There is an unknown vector $\mathbf{x}$. It has a multivariate Gaussian distribution. This distribution is called the prior and given by
@@ -123,7 +123,7 @@ For the problem to be solved, $\boldsymbol{\mu}\_{x}=\boldsymbol{\mu}\_{0}$, $\b
 \end{equation}
 
 ## Conclusion
-Given the prior for an unknown vector and the likelihood for the noisy measurements of it from a single measurement device, the posterior for the unknown vector has been calculated using a Gaussian linear system. 
+Given the prior for an unknown vector and the likelihood for the noisy measurements of it from a single measurement device, the posterior for the unknown vector has been calculated using a Gaussian linear system. A sample implementation is given in the Jupyter notebook on [this link](https://github.com/SaffetGokcenSen/Gaussian-Models/blob/master/inferring_an_unknown_vector_from_noisy_measurements.ipynb).
 
 ## References
 [1] Machine Learning A Probabilistic Perspective, Kevin P. Murphy.
