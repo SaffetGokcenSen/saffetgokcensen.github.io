@@ -119,7 +119,7 @@ For the problem to be solved, $\boldsymbol{\mu}\_{x}=\boldsymbol{\mu}\_{0}$, $\b
     p\left(\mathbf{x}|\bar{\mathbf{y}}\right)=N\left(\mathbf{x}|\boldsymbol{\Sigma}\_{x|y}\left(\left(\boldsymbol{\Sigma}\_{y}/N\right)^{-1}\bar{\mathbf{y}}+\boldsymbol{\Sigma}\_{x}^{-1}\boldsymbol{\mu}\_{x}\right), \boldsymbol{\Sigma}\_{x|y}\right) \ \text{(second form)}
 \end{equation}
 \begin{equation}
-    \boldsymbol{\Sigma}\_{x|y}=\left(\boldsymbol{\Sigma}\_{x}^{-1}+\left(\boldsymbol{\Sigma}\_{y}\right)^{-1}\right)^{-1} \ \text{(second form)}
+    \boldsymbol{\Sigma}\_{x|y}=\left(\boldsymbol{\Sigma}\_{x}^{-1}+\left(\boldsymbol{\Sigma}\_{y}/N\right)^{-1}\right)^{-1} \ \text{(second form)}
 \end{equation}
 
 ## Conclusion
