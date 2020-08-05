@@ -113,13 +113,13 @@ For the problem to be solved, $\boldsymbol{\mu}\_{x}=\boldsymbol{\mu}\_{0}$, $\b
     p\left(\mathbf{x}|\bar{\mathbf{y}}\right)=N\left(\mathbf{x}|\left(\boldsymbol{\Sigma}\_{x}-\boldsymbol{\Sigma}\_{x|y}\right)\boldsymbol{\Sigma}\_{x}^{-1}\bar{\mathbf{y}}+\boldsymbol{\Sigma}\_{x|y}\boldsymbol{\Sigma}\_{x}^{-1}\boldsymbol{\mu}\_{0}, \boldsymbol{\Sigma}\_{x|y}\right) \ \text{(first form)}
 \end{equation}
 \begin{equation}
-    \boldsymbol{\Sigma}\_{x|y}=\boldsymbol{\Sigma}\_{x}-\boldsymbol{\Sigma}\_{x}\left(\boldsymbol{\Sigma}\_{y}+\boldsymbol{\Sigma}\_{x}\right)^{-1}\boldsymbol{\Sigma}\_{x} \ \text{(first form)}
+    \boldsymbol{\Sigma}\_{x|y}=\boldsymbol{\Sigma}\_{x}-\boldsymbol{\Sigma}\_{x}\left(\boldsymbol{\Sigma}\_{y}/N+\boldsymbol{\Sigma}\_{x}\right)^{-1}\boldsymbol{\Sigma}\_{x} \ \text{(first form)}
 \end{equation}
 \begin{equation}
-    p\left(\mathbf{x}|\bar{\mathbf{y}}\right)=N\left(\mathbf{x}|\boldsymbol{\Sigma}\_{x|y}\left(\boldsymbol{\Sigma}\_{y}^{-1}\bar{\mathbf{y}}+\boldsymbol{\Sigma}\_{x}^{-1}\boldsymbol{\mu}\_{x}\right), \boldsymbol{\Sigma}\_{x|y}\right) \ \text{(second form)}
+    p\left(\mathbf{x}|\bar{\mathbf{y}}\right)=N\left(\mathbf{x}|\boldsymbol{\Sigma}\_{x|y}\left(\left(\boldsymbol{\Sigma}\_{y}/N\right)^{-1}\bar{\mathbf{y}}+\boldsymbol{\Sigma}\_{x}^{-1}\boldsymbol{\mu}\_{x}\right), \boldsymbol{\Sigma}\_{x|y}\right) \ \text{(second form)}
 \end{equation}
 \begin{equation}
-    \boldsymbol{\Sigma}\_{x|y}=\left(\boldsymbol{\Sigma}\_{x}^{-1}+\boldsymbol{\Sigma}\_{y}^{-1}\right)^{-1} \ \text{(second form)}
+    \boldsymbol{\Sigma}\_{x|y}=\left(\boldsymbol{\Sigma}\_{x}^{-1}+\left(\boldsymbol{\Sigma}\_{y}\right)^{-1}\right)^{-1} \ \text{(second form)}
 \end{equation}
 
 ## Conclusion
