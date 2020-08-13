@@ -28,6 +28,10 @@ It can be proven that $\bar{\mathbf{y}}\_{k}$ has the following likelihood:
 \begin{equation}
     p\left(\bar{\mathbf{y}}\_{k}|\mathbf{x}\right)=N\left(\mathbf{x},\frac{1}{N\_{k}}\boldsymbol{\Sigma}\_{y\_{\_{k}}}\right)
 \end{equation}
+where
+\begin{equation}
+    \boldsymbol{\Sigma}_{k}\triangleq \frac{1}{N\_{k}}\boldsymbol{\Sigma}\_{y\_{\_{k}}}
+\end{equation}
 Let the likelihood
 \begin{equation}
     p\left(\left[\bar{\mathbf{y}}\_{1}^{T} \ \bar{\mathbf{y}}\_{2}^{T} \ \bar{\mathbf{y}}\_{3}^{T} \dotso  \ \bar{\mathbf{y}}\_{m}^{T}\right]^{T}\big | \mathbf{x}\right)
@@ -37,22 +41,22 @@ be determined. The measurement sources are independent of each other. Hence:
     p\left(\left[\bar{\mathbf{y}}\_{1}^{T} \ \bar{\mathbf{y}}\_{2}^{T} \ \bar{\mathbf{y}}\_{3}^{T} \dotso  \ \bar{\mathbf{y}}\_{m}^{T}\right]^{T}\big | \mathbf{x}\right)=p\left(\bar{\mathbf{y}}\_{1}| \mathbf{x}\right)p\left(\bar{\mathbf{y}}\_{2}| \mathbf{x}\right)p\left(\bar{\mathbf{y}}\_{3}| \mathbf{x}\right)\dotso p\left(\bar{\mathbf{y}}\_{m}| \mathbf{x}\right)=
 \end{equation}
 \begin{equation}
-    \frac{1}{\left(2\pi\right)^{N\_{1}/2}\left |\boldsymbol{\Sigma}\_{1}/N\_{1} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{1}-\mathbf{x}\right)^{T}\frac{\boldsymbol{\Sigma}\_{1}}{N\_{1}}\left(\bar{\mathbf{y}}\_{1}-\mathbf{x}\right)\right] \times
+    \frac{1}{\left(2\pi\right)^{N\_{1}/2}\left |\boldsymbol{\Sigma}\_{1}/N\_{1} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{1}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{1}\left(\bar{\mathbf{y}}\_{1}-\mathbf{x}\right)\right] \times
 \end{equation}
 \begin{equation}
-    \frac{1}{\left(2\pi\right)^{N\_{2}/2}\left |\boldsymbol{\Sigma}\_{2}/N\_{2} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{2}-\mathbf{x}\right)^{T}\frac{\boldsymbol{\Sigma}\_{2}}{N\_{2}}\left(\bar{\mathbf{y}}\_{2}-\mathbf{x}\right)\right] \times
+    \frac{1}{\left(2\pi\right)^{N\_{2}/2}\left |\boldsymbol{\Sigma}\_{2}/N\_{2} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{2}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{2}\left(\bar{\mathbf{y}}\_{2}-\mathbf{x}\right)\right] \times
 \end{equation}
 \begin{equation}
-    \frac{1}{\left(2\pi\right)^{N\_{3}/2}\left |\boldsymbol{\Sigma}\_{2}/N\_{3} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{3}-\mathbf{x}\right)^{T}\frac{\boldsymbol{\Sigma}\_{3}}{N\_{3}}\left(\bar{\mathbf{y}}\_{3}-\mathbf{x}\right)\right] \times \dotso \times
+    \frac{1}{\left(2\pi\right)^{N\_{3}/2}\left |\boldsymbol{\Sigma}\_{2}/N\_{3} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{3}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{3}\left(\bar{\mathbf{y}}\_{3}-\mathbf{x}\right)\right] \times \dotso \times
 \end{equation}
 \begin{equation}
-    \frac{1}{\left(2\pi\right)^{N\_{m}/2}\left |\boldsymbol{\Sigma}\_{m}/N\_{m} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{m}-\mathbf{x}\right)^{T}\frac{\boldsymbol{\Sigma}\_{m}}{N\_{m}}\left(\bar{\mathbf{y}}\_{m}-\mathbf{x}\right)\right]=
+    \frac{1}{\left(2\pi\right)^{N\_{m}/2}\left |\boldsymbol{\Sigma}\_{m}/N\_{m} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{m}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{m}\left(\bar{\mathbf{y}}\_{m}-\mathbf{x}\right)\right]=
 \end{equation}
 \begin{equation}
     p\left(\left[\bar{\mathbf{y}}\_{1}^{T} \ \bar{\mathbf{y}}\_{2}^{T} \ \bar{\mathbf{y}}\_{3}^{T} \dotso  \ \bar{\mathbf{y}}\_{m}^{T}\right]^{T}\big | \mathbf{x}\right)=
 \end{equation}
 \begin{equation}
-    p\left(\left[\bar{\mathbf{y}}\_{1}^{T} \ \bar{\mathbf{y}}\_{2}^{T} \ \bar{\mathbf{y}}\_{3}^{T} \dotso  \ \bar{\mathbf{y}}\_{m}^{T}\right]^{T}\big | \mathbf{x}\right)=\frac{1}{\prod\_{k=1}^{m}\left(2\pi\right)^{N\_{k}/2}\left |\boldsymbol{\Sigma}\_{k}/N\_{k} \right |^{1/2}}\exp \left[\sum\_{k=1}^{m} -\frac{1}{2}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)^{T}\frac{\boldsymbol{\Sigma}\_{k}}{N\_{k}}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)\right]
+    p\left(\left[\bar{\mathbf{y}}\_{1}^{T} \ \bar{\mathbf{y}}\_{2}^{T} \ \bar{\mathbf{y}}\_{3}^{T} \dotso  \ \bar{\mathbf{y}}\_{m}^{T}\right]^{T}\big | \mathbf{x}\right)=\frac{1}{\prod\_{k=1}^{m}\left(2\pi\right)^{N\_{k}/2}\left |\boldsymbol{\Sigma}\_{k} \right |^{1/2}}\exp \left[\sum\_{k=1}^{m} -\frac{1}{2}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{k}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)\right]
     \label{likelihood}
 \end{equation}
 Then, the exponential in the equation (\ref{likelihood}) can be written as follows:
