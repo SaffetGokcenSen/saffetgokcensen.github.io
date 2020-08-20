@@ -5,7 +5,7 @@ title: Inferring An Unknown Vector Using Noisy Measurements From Multiple Device
 ---
 
 ## Introduction
-In this article, a linear Gaussian system is used to infer an unknown vector from noisy measurements obtained by multiple measurement sources. The information from multiple measuring devices is combined and this is called the sensor fusion.
+In this article, a linear Gaussian system is used to infer an unknown vector from noisy measurements obtained by multiple measurement sources. The information from multiple measuring devices is combined and this is called the sensor fusion. A sample implementation is given in a Jupyter notebook on the link indicated in the conclusion section.
 ## Problem Description
 There is an unknown vector $\mathbf{x}$. It has a multivariate Gaussian distribution. This distribution is called the prior and given by
 \begin{equation}
@@ -30,7 +30,7 @@ It can be proven that $\bar{\mathbf{y}}\_{k}$ has the following likelihood:
 \end{equation}
 where
 \begin{equation}
-    \boldsymbol{\Sigma}_{k}\triangleq \frac{1}{N\_{k}}\boldsymbol{\Sigma}\_{y\_{\_{k}}}
+    \boldsymbol{\Sigma}\_{k}\triangleq \frac{1}{N\_{k}}\boldsymbol{\Sigma}\_{y\_{\_{k}}}
 \end{equation}
 Let the likelihood
 \begin{equation}
@@ -222,6 +222,8 @@ Let the first form of the posterior covariance matrix be calculated for the curr
         \boldsymbol{\Sigma}\_{x}
     \end{bmatrix}
 \end{equation}
+The inversion in the above equation can be numerically an ill-conditioned operation. It can be prone to numerical instabilities. Hence, care should be taken while using this form. The sample Jupyter notebook whose link is given in the conclusion section demonstrates such an ill-conditioned case.
+
 Let the second form for the posterior covariance be calculated:
 \begin{equation}
     \boldsymbol{\Sigma}\_{x|y}=\left(\boldsymbol{\Sigma}\_{x}^{-1}+\mathbf{A}^{T}\boldsymbol{\Sigma}\_{y}^{-1}\mathbf{A}\right)^{-1}=
@@ -255,9 +257,9 @@ Let the second form for the posterior covariance be calculated:
 \begin{equation}
     \boldsymbol{\Sigma}\_{x|y}=\left(\boldsymbol{\Sigma}\_{x}^{-1}+\sum\_{k=1}^{m}\boldsymbol{\Sigma}\_{k}^{-1}\right)^{-1}
 \end{equation}
-Obviously, the second form of the posterior covariance is easier to compute.
+Obviously, the second form of the posterior covariance is easier to compute. It seems to be numerically more stable than the first form.
 ## Conclusion
-There are more than one measurement devices which are independent of each other. Measurements are made for an unknown vector by these devices. The prior for the unknown vector is multivariate Gaussian and it is known. Additionally, likelihoods for the measurement devices are also known and they are all multivariate Gaussian. The prior and likelihoods form a linear Gaussian system. The posterior for the unknown vector has been calculated.
+There are more than one measurement devices which are independent of each other. Measurements are made for an unknown vector by these devices. The prior for the unknown vector is multivariate Gaussian and it is known. Additionally, likelihoods for the measurement devices are also known and they are all multivariate Gaussian. The prior and likelihoods form a linear Gaussian system. The posterior for the unknown vector has been calculated. A sample implementation can be found in the Jupyter notebook given on [this link](https://github.com/SaffetGokcenSen/Gaussian-Models/blob/master/inferring_an_unknown_vector_from_noisy_measurements_sensor_fusion.ipynb).
 ## References
 [1] Machine Learning A Probabilistic Perspective, Kevin P. Murphy.
 
