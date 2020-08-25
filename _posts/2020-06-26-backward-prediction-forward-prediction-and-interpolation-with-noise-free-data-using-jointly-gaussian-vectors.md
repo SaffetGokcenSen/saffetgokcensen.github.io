@@ -66,7 +66,7 @@ Hence, the function values can be considered as a vector $\mathbf{x}$ of $D$ ele
         \mathbf{x}\_{2}
     \end{bmatrix}
 \end{equation}
-The problem is to determine $\mathbf{x}\_{1}$ given $\mathbf{x}\_{2}$ or $\mathbf{x}\_{2}$ given $\mathbf{x}\_{1}$. 
+The problem is to determine $\mathbf{x}\_{1}$ given $\mathbf{x}\_{2}$. 
 
 ## The Solution
 It is natural to assume that the function is smooth. This prior can be encoded to the solution by
