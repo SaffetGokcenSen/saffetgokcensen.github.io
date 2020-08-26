@@ -4,7 +4,7 @@ author: SAFFET GÖKÇEN ŞEN
 title: Backward Prediction Forward Prediction And Interpolation With Noise Free Data Using Jointly Gaussian Vectors
 ---
 ## Introduction
-In this article, it is assumed that there is a one dimensional signal. This signal is noise free. Estimation is applied to the signal using the marginal and conditional probability information from the distribution of two vectors which are jointly Gaussian.
+In this article, it is assumed that there is a one dimensional signal. This signal is noise free. Estimation is applied to the signal using the marginal and conditional probability information from the distribution of two vectors which are jointly Gaussian. At the end of the article, a link is given to a Jupyter notebook. This notebook contains the Python code for an implementation.
 
 ## Marginal and Conditional Distributions of Two Jointly Gaussian Vectors
 The vector $\mathbf{x}$ is composed of or can be separated into two vectors $\mathbf{x}\_{1}$ and $\mathbf{x}\_{2}$:
@@ -274,7 +274,7 @@ For this case, estimating $\mathbf{x}\_{1}$ given $\mathbf{x}\_{2}$ is interpola
 \end{equation}
 
 ## Conclusion
-All of the algorithm and the numerical results depend on the assumption that the posterior is proper although the prior is improper. Another assumption is that the inverses are assumed to exist although they cannot be formally defined. Hence, the numerical results must be examined with these assumptions in mind.
+A numerical implementation is on  [this link](https://github.com/SaffetGokcenSen/Gaussian-Models/blob/master/estimating_noise_free_data_using_jointly_gaussian_vectors.ipynb). All of the algorithm and the numerical results depend on the assumption that the posterior is proper although the prior is improper. Another assumption is that the inverses are assumed to exist although they cannot be formally defined. Hence, the numerical results must be examined with these assumptions in mind. In addition, the coefficient $\lambda$ does not have any effect on the results. The interpolation results are more successful than the prediction results.
 
 ## References
 Machine Learning A Probabilistic Perspective, Kevin P. Murphy.
