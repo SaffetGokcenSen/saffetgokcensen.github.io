@@ -85,7 +85,7 @@ The prior for the mean of the data at hand is chosen as a Gaussian which is give
 \begin{equation}
     p\left(\boldsymbol{\mu}\right)=N\left(\boldsymbol{\mu}| \boldsymbol{\mu}\_{0}, \boldsymbol{\Sigma}\_{0}\right)=\frac{1}{\left(2\pi\right)^{D/2}\left | \boldsymbol{\Sigma}\_{0} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\boldsymbol{\mu}-\boldsymbol{\mu}\_{0}\right)^{T}\boldsymbol{\Sigma}\_{0}^{-1}\left(\boldsymbol{\mu}-\boldsymbol{\mu}\_{0}\right)\right]
 \end{equation}
-The posterior for the mean of the data at hand is the product of the prior and the likelihood:
+The posterior for the mean of the data at hand is proportional to the product of the prior and the likelihood:
 \begin{equation}
     p\left(\boldsymbol{\mu}|\mathbf{X}, \boldsymbol{\Sigma}\right)=\frac{p\left(\boldsymbol{\mu}\right)p\left(\mathbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)}{p\left(\mathbf{X}|\mathbf{\Sigma}\right)} \Rightarrow
 \end{equation}
