@@ -8,7 +8,7 @@ It is assumed that there is a set of vector data. These vectors are assumed to b
 \begin{equation}
     \textbf{x}\_{i} \sim N\left(\boldsymbol{\mu}, \boldsymbol{\Sigma}\right) \ \left(i=1, 2, 3, \dotso , N\right)
 \end{equation}
-It is assumed that $\boldsymbol{\mu}$ is known while $\boldsymbol{\Sigma}$ is unknown. First, the likelihood of the data given the mean and the covariance will be obtained. Then, the prior for the covariance will be set. Lastly, the posterior distribution of $\boldsymbol{\Sigma}$ is to be obtained. 
+It is assumed that $\boldsymbol{\mu}$ is known while $\boldsymbol{\Sigma}$ is unknown. First, the likelihood of the data given the mean and the covariance will be obtained. Then, the prior for the covariance will be set. Lastly, the posterior distribution of $\boldsymbol{\Sigma}$ is to be obtained. The maximum likelihood estimator and the maximum a posteriori estimate for the covariance are compared to each other. They are examined from the perspective of being positive definite.
 ## The Likelihood
 The likelihood is the probability of the occurrence of the data at hand. In the calculation of the likelihood, data samples are supposed to be independent. The likelihood is denoted by $p\left(\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)$ and has the following mathematical expression:
 \begin{equation}
