@@ -81,7 +81,7 @@ The posterior for the covariance, $p \left(\boldsymbol{\Sigma}|\mathbf{X}, \bold
     \label{posterior\_distribution}
 \end{equation}
 So, if the prior is chosen as an inverse Wishart distribution, then the posterior is also an inverse Wishart distribution. Hence, it has been shown that the inverse Wishart distribution is conjugate prior to the likelihood for the covariance of a multivariate normal distribution.
-## Maximum Likelihood Estimate Versus Max\-i\-mum A Pos\-te\-ri\-o\-ri Estimate
+## Maximum Likelihood Estimate Versus Maximum A Posteriori Estimate
 The maximum likelihood estimate (MLE) for the covariance of a multivariate normal distribution is given as follows:
 \begin{equation}
     \boldsymbol{\Sigma}\_{\_{\text{MLE}}}=\frac{1}{N}\sum\_{i=1}^{N}\left(\mathbf{x}\_{i}-\bar{\mathbf{x}}\right)\left(\mathbf{x}\_{i}-\bar{\mathbf{x}}\right)^{T}
@@ -113,7 +113,7 @@ The condition for positive definiteness can be written as in the following form:
 \end{equation}
 If the equality in equation (\ref{positive\_definiteness}) is to hold for any nonzero $\mathbf{p} \in R^{D}$, then $\mathbf{G}^{T}\mathbf{p}$ must never vanish, which means that the columns of $\mathbf{G}^{T}$ must be linearly independent. $\mathbf{G}$ is of dimension $D \times N$. $\mathbf{G}^{T}$ is of dimension $N \times D$. If $N < D$, it is impossible for the columns of $\mathbf{G}^{T}$ to be linearly independent. So, if the number of data samples is less than the number of features, the MLE cannot be positive definite. If $N\geq D$, the columns of the MLE may be linearly independent, but they are not guaranteed to be linearly independent. Hence, if the number of samples is greater than or equal to the number of features, the MLE is not guaranteed to be positive definite.
 
-An alternative to the MLE for the covariance is the maximum a posteriori (MAP) estimate. It is the mode of the posterior distribution for the covariance of the multivariate normal distribution. Provided the prior is an inverse Wishart distribution with scale matrix $\mathbf{S}\_{0}$ and degrees of freedom $\nu\_{0}$, the posterior dis\-tri\-bu\-tion has been de\-ter\-mined to be an inverse Wishart distribution with scale matrix $\mathbf{S}\_{0}+\mathbf{S}\_{\mu}$ and degrees of freedom $\nu\_{0}+N$. The mode of this distribution is
+An alternative to the MLE for the covariance is the maximum a posteriori (MAP) estimate. It is the mode of the posterior distribution for the covariance of the multivariate normal distribution. Provided the prior is an inverse Wishart distribution with scale matrix $\mathbf{S}\_{0}$ and degrees of freedom $\nu\_{0}$, the posterior distribution has been determined to be an inverse Wishart distribution with scale matrix $\mathbf{S}\_{0}+\mathbf{S}\_{\mu}$ and degrees of freedom $\nu\_{0}+N$. The mode of this distribution is
 \begin{equation}
     \frac{\mathbf{S}\_{0}+\mathbf{S}\_{\mu}}{\nu\_{0}+N+D+1},
 \end{equation}
