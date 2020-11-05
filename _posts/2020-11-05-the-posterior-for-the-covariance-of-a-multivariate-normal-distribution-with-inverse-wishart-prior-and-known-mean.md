@@ -143,12 +143,3 @@ A First Course In Bayesian Statistical Methods, Peter D. Hoff.
 Pattern Recognition and Machine Learning, Christopher M. Bishop.
 
 Machine Learning A Probabilistic Perspective, Kevin P. Murphy.
-\end{document}
-## References
-Inverse Wishart Distribution, Wikipedia.
-
-A First Course In Bayesian Statistical Methods, Peter D. Hoff.
-
-Pattern Recognition and Machine Learning, Christopher M. Bishop.
-
-Machine Learning A Probabilistic Perspective, Kevin P. Murphy.
