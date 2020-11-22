@@ -112,6 +112,6 @@ The SVD factorization is not used in its full form. Truncation is often applied 
 ## Conclusion
 The hidden topics in a corpus of documents can be discovered to an extent by using the SVD factorization of the token-document matrix of the corpus. It has been shown why this discovery is possible.
 ## References
-Linear Algebra and Its Aspplications, Gibert Strang.
+Linear Algebra and Its Applications, Gibert Strang.
 
 Natural Language Processing In Action, Hobson Lane, Cole Howard, Hannes Max Hapke.
