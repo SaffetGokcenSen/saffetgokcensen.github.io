@@ -8,13 +8,13 @@ Latent semantic analysis (LSA) is used to extract the topics of the documents in
 ## Term Frequency Inverse Document Frequency (TF-IDF)
 A document is a collection of words which are also called tokens. In order to process this text using a machine learning model, the text must be expressed in terms of numbers. One of the ways of converting text to numbers is term frequency-inverse document frequency (TF-IDF) measure.
 
-Before defining TF-IDF measure, let a few definitions be given. A text made of words or \emph{token}s is called a \emph{document}. The collection of documents is called a \emph{corpus}. The tokens or words in this text form the \emph{vocabulary}.
+Before defining TF-IDF measure, let a few definitions be given. A text made of words or tokens is called a document. The collection of documents is called a corpus. The tokens or words in this text form the vocabulary.
 
-\emph{Term frequency} is a measure of the frequency of a token in a document. It is given by the following expression:
+Term frequency is a measure of the frequency of a token in a document. It is given by the following expression:
 \begin{equation}
     \text{TF}=\log \left(\frac{1+\text{token count}}{\text{document length}}\right)
 \end{equation}
-\emph{Inverse document frequency} is a measure of the importance of a token across the documents in the corpus. It is mathematically given as follows:
+Inverse document frequency is a measure of the importance of a token across the documents in the corpus. It is mathematically given as follows:
 \begin{equation}
     \text{IDF}=\log \left(\frac{\text{count of documents in the corpus}}{1+\text{count of documents containing the token}}\right)
 \end{equation}
@@ -36,7 +36,7 @@ Assume that there is a matrix $A$ of dimension $m \times n$. This matrix can be 
 \end{equation}
 where $U$ is of dimension $m \times m$, $\Sigma$ is of dimension $m \times n$ and $V$ is of dimension $n \times n$. The columns of $U$ are the eigenvectors of $AA^{T}$. The columns of $V$ are the eigenvectors of $A^{T}A$. $\Sigma$ is a matrix whose nonzero entries are on the diagonal and are equal the square roots of the eigenvalues of $AA^{T}$ or $A^{T}A$. They are arranged in a decreasing order.
 
-Let $A$ be the token-document matrix which is the transpose of the TF-IDF matrix explained in the section 2. Then, each column of $A$ is the TF-IDF vector for the corresponding document. Each row is the TF-IDF vector of a token across the documents of the corpus. $m$ is the number of tokens in the vocabulary and $n$ is the number of documents in the corpus.
+Let $A$ be the token-document matrix which is the transpose of the TF-IDF matrix explained in the previous section. Then, each column of $A$ is the TF-IDF vector for the corresponding document. Each row is the TF-IDF vector of a token across the documents of the corpus. $m$ is the number of tokens in the vocabulary and $n$ is the number of documents in the corpus.
 
 Let $A$ be written in terms of its rows:
 \begin{equation}
