@@ -28,9 +28,51 @@ The inverse Wishart distribution is a choice for the prior of the covariance of 
 where the $i^{\text{th}}$ column of $\mathbf{B}^{T}$ is $\mathbf{b}\_{i}$:
 \begin{equation}
     \mathbf{B}^{T}=\begin{bmatrix}
-        \mathbf{b}\_{1} & \mathbf{b}\_{2} & \dotso & \mathbf{b}\_{n}
+        \mathbf{b}\_{1} & \mathbf{b}\_{2} & \dotso & \mathbf{b}\_{N}
     \end{bmatrix}
 \end{equation}
+A quick proof of this relation can be made. From linear algebra, the following equalities for the trace operation are known:
+\begin{equation}
+    \text{Tr}\left(\mathbf{ABC}\right)=\text{Tr}\left(\mathbf{CAB}\right)=\text{Tr}\left(\mathbf{BCA}\right)
+\end{equation}
+Hence:
+\begin{equation}
+    \text{Tr} \left(\mathbf{B}^{T}\mathbf{B}\mathbf{A}\right)=\text{Tr} \left(\mathbf{A}\mathbf{B}^{T}\mathbf{B}\right)=\text{Tr} \left(\mathbf{B}\mathbf{A}\mathbf{B}^{T}\right) \Rightarrow
+\end{equation}
+\begin{equation}
+    \text{Tr} \left(\mathbf{B}^{T}\mathbf{B}\mathbf{A}\right)=\text{Tr} \left(\mathbf{B}\mathbf{A}\mathbf{B}^{T}\right)
+\end{equation}
+Now, let $\text{Tr} \left(\mathbf{B}\mathbf{A}\mathbf{B}^{T}\right)$ be calculated:
+\begin{equation}
+    \mathbf{B}\mathbf{A}\mathbf{B}^{T}=\begin{bmatrix}
+        \mathbf{b}\_{1}^{T} \newline
+        \mathbf{b}\_{2}^{T} \newline
+        \vdots \newline
+        \mathbf{b}\_{N}^{T}
+    \end{bmatrix}\mathbf{A}\begin{bmatrix}
+        \mathbf{b}\_{1} & \mathbf{b}\_{2} & \dotso & \mathbf{b}\_{N}
+    \end{bmatrix}=\begin{bmatrix}
+        \mathbf{b}\_{1}^{T} \newline
+        \mathbf{b}\_{2}^{T} \newline
+        \vdots \newline
+        \mathbf{b}\_{N}^{T}
+    \end{bmatrix}\begin{bmatrix}
+        \mathbf{A}\mathbf{b}\_{1} & \mathbf{A}\mathbf{b}\_{2} & \dotso & \mathbf{A}\mathbf{b}\_{N}
+    \end{bmatrix}\Rightarrow
+\end{equation}
+\begin{equation}
+    \mathbf{B}\mathbf{A}\mathbf{B}^{T}=\begin{bmatrix}
+        \mathbf{b}\_{1}^{T}\mathbf{A}\mathbf{b}\_{1} & \mathbf{b}\_{1}^{T}\mathbf{A}\mathbf{b}\_{2} & \dotso &\mathbf{b}\_{1}^{T}\mathbf{A}\mathbf{b}\_{N} \newline
+        \mathbf{b}\_{2}^{T}\mathbf{A}\mathbf{b}\_{1} & \mathbf{b}\_{2}^{T}\mathbf{A}\mathbf{b}\_{2} & \dotso &\mathbf{b}\_{2}^{T}\mathbf{A}\mathbf{b}\_{N} \newline
+        \vdots & \vdots & \vdots & \vdots \newline
+        \mathbf{b}\_{2}^{T}\mathbf{A}\mathbf{b}\_{1} & \mathbf{b}\_{2}^{T}\mathbf{A}\mathbf{b}\_{2} & \dotso &\mathbf{b}\_{2}^{T}\mathbf{A}\mathbf{b}\_{N} \newline
+    \end{bmatrix}\Rightarrow
+\end{equation}
+\begin{equation}
+    \text{Tr} \left(\mathbf{B}\mathbf{A}\mathbf{B}^{T}\right)=\sum\_{i=1}^{N}\mathbf{b}\_{i}^{T}\mathbf{A}\mathbf{b}\_{i}=\text{Tr} \left(\mathbf{B}^{T}\mathbf{B}\mathbf{A}\right)
+\end{equation}
+So, the relation has been proven.
+
 Using this relation, let the exponent be rearranged as follows:
 \begin{equation}
     \sum\_{i=1}^{N}-\frac{1}{2}\left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1} \left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)=-\frac{1}{2}\text{Tr}\left(\mathbf{S}\_{\mu}\boldsymbol{\Sigma}^{-1}\right)
@@ -113,7 +155,7 @@ The condition for positive definiteness can be written as in the following form:
 \end{equation}
 If the equality in equation (\ref{positive\_definiteness}) is to hold for any nonzero $\mathbf{p} \in R^{D}$, then $\mathbf{G}^{T}\mathbf{p}$ must never vanish, which means that the columns of $\mathbf{G}^{T}$ must be linearly independent. $\mathbf{G}$ is of dimension $D \times N$. $\mathbf{G}^{T}$ is of dimension $N \times D$. If $N < D$, it is impossible for the columns of $\mathbf{G}^{T}$ to be linearly independent. So, if the number of data samples is less than the number of features, the MLE cannot be positive definite. If $N\geq D$, the columns of the MLE may be linearly independent, but they are not guaranteed to be linearly independent. Hence, if the number of samples is greater than or equal to the number of features, the MLE is not guaranteed to be positive definite.
 
-An alternative to the MLE for the covariance is the maximum a posteriori (MAP) estimate. It is the mode of the posterior distribution for the covariance of the multivariate normal distribution. Provided the prior is an inverse Wishart distribution with scale matrix $\mathbf{S}\_{0}$ and degrees of freedom $\nu\_{0}$, the posterior dis\-tri\-bu\-tion has been de\-ter\-mined to be an inverse Wishart distribution with scale matrix $\mathbf{S}\_{0}+\mathbf{S}\_{\mu}$ and degrees of freedom $\nu\_{0}+N$. The mode of this distribution is
+An alternative to the MLE for the covariance is the maximum a posteriori (MAP) estimate. It is the mode of the posterior distribution for the covariance of the multivariate normal distribution. Provided the prior is an inverse Wishart distribution with scale matrix $\mathbf{S}\_{0}$ and degrees of freedom $\nu\_{0}$, the posterior distribution has been determined to be an inverse Wishart distribution with scale matrix $\mathbf{S}\_{0}+\mathbf{S}\_{\mu}$ and degrees of freedom $\nu\_{0}+N$. The mode of this distribution is
 \begin{equation}
     \frac{\mathbf{S}\_{0}+\mathbf{S}\_{\mu}}{\nu\_{0}+N+D+1},
 \end{equation}
@@ -138,7 +180,7 @@ Hence, $\boldsymbol{\Sigma}\_{\_{\text{MAP}}}$ is a compromise between $\frac{\m
     \mathbf{S}\_{0}=\text{diag} \left(\boldsymbol{\Sigma}\_{\_{\text{MLE}}}\right)
 \end{equation}
 ## Conclusion
-The prior for the covariance of a multivariate normal distribution can be chosen in different ways. It has been shown that the inverse Wishart distribution is conjugate prior to the likelihood for the covariance of a multivariate normal distribution. It has been proven that the maximum likelihood estimator for the covariance is not positive definite when the number of samples is less than the dimension of the data. In addition, it has been shown that the maximum likelihood estimator for the covariance is not guaranteed to be positive definite even when the number of samples is greater than the data dimension. On the other hand, the maximum a posteriori estimate is always positive definite provided that the prior for the covariance is inverse Wishart. The link for the  Jupyter notebook containing the computations and the comparisons of the maximum likelihood estimate and the maximum a posteriori estimate for the covariance matrix. is given on [this link](https://github.com/SaffetGokcenSen/Gaussian-Models/blob/master/inferring_the_covariance_of_an_mvn.ipynb).
+The prior for the covariance of a multivariate normal distribution can be chosen in different ways. It has been shown that the inverse Wishart distribution is conjugate prior to the likelihood for the covariance of a multivariate normal distribution. It has been proven that the maximum likelihood estimator for the covariance is not positive definite when the number of samples is less than the dimension of the data. In addition, it has been shown that the maximum likelihood estimator for the covariance is not guaranteed to be positive definite even when the number of samples is greater than the data dimension. On the other hand, the maximum a posteriori estimate is always positive definite provided that the prior for the covariance is inverse Wishart.
 ## References
 Inverse Wishart Distribution, Wikipedia.
 
