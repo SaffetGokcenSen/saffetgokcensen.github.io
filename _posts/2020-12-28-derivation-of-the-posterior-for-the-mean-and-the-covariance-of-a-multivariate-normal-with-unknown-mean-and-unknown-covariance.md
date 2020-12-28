@@ -119,9 +119,9 @@ The posterior distribution can be written as a normal-inverse Wishart distributi
 \begin{equation}
     -\frac{N}{2}\left(\boldsymbol{\mu}-\overline{\mathbf{x}}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\boldsymbol{\mu}-\overline{\mathbf{x}}\right)-\frac{\gamma\_{0}}{2}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\_{0}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\_{0}\right)=-\frac{\gamma}{2}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\right) \Rightarrow
 \end{equation}
-\begin{equation*}
+\begin{equation}
     -\frac{N}{2}\left(\boldsymbol{\mu}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}-2\boldsymbol{\mu}^{T}\boldsymbol{\Sigma}^{-1}\overline{\mathbf{x}}+\overline{\mathbf{x}}^{T}\boldsymbol{\Sigma}^{-1}\overline{\mathbf{x}}\right)-\frac{\gamma\_{0}}{2}\left(\boldsymbol{\mu}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}-2\boldsymbol{\mu}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\delta}\_{0}+\boldsymbol{\delta}\_{0}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\delta}\_{0}\right)=
-\end{equation*}
+\end{equation}
 \begin{equation}
     -\frac{\gamma}{2}\left(\boldsymbol{\mu}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}-2\boldsymbol{\mu}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\delta}+\boldsymbol{\delta}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\delta}\right) \Rightarrow
 \end{equation}
@@ -136,37 +136,37 @@ The posterior distribution can be written as a normal-inverse Wishart distributi
     \boldsymbol{\delta}=\frac{N\overline{\mathbf{x}}+\gamma\_{0}\boldsymbol{\delta}\_{0}}{\gamma}
 \end{equation}
 After determining $\gamma$ and $\delta$, it is now $\boldsymbol{\Psi}$'s turn. $\boldsymbol{\Psi}$ is the inverse scale matrix of the posterior distribution.
-\begin{equation*}
+\begin{equation}
     \exp \left[-\frac{1}{2}\text{Tr}\left(\mathbf{S}\_{\overline{\mathbf{x}}}\boldsymbol{\Sigma}^{-1}\right)\right] \exp \left[-\frac{N}{2}\left(\boldsymbol{\mu}-\overline{\mathbf{x}}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\boldsymbol{\mu}-\overline{\mathbf{x}}\right)\right] \times
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}
     \exp \left[-\frac{1}{2}\text{Tr}\left(\boldsymbol{\Psi}\_{0}\boldsymbol{\Sigma}^{-1}\right)\right]\exp \left[-\frac{\gamma\_{0}}{2}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\_{0}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\_{0}\right)\right]=
-\end{equation*}
+\end{equation}
 \begin{equation}
     \exp \left[-\frac{1}{2}\text{Tr}\left(\boldsymbol{\Psi}\boldsymbol{\Sigma}^{-1}\right)\right]\exp \left[-\frac{\gamma}{2}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\right)\right] \Rightarrow
 \end{equation}
-\begin{equation*}
+\begin{equation}
     \exp \left[-\frac{1}{2}\text{Tr}\left(\boldsymbol{\Psi}\boldsymbol{\Sigma}^{-1}\right)\right]=
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}
     \exp \left[-\frac{1}{2}\text{Tr}\left(\mathbf{S}\_{\overline{\mathbf{x}}}\boldsymbol{\Sigma}^{-1}\right)\right] \exp \left[-\frac{N}{2}\left(\boldsymbol{\mu}-\overline{\mathbf{x}}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\boldsymbol{\mu}-\overline{\mathbf{x}}\right)\right] \times
-\end{equation*}
+\end{equation}
 \begin{equation}
     \exp \left[-\frac{1}{2}\text{Tr}\left(\boldsymbol{\Psi}\_{0}\boldsymbol{\Sigma}^{-1}\right)\right]\exp \left[-\frac{\gamma\_{0}}{2}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\_{0}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\_{0}\right)\right]\exp \left[\frac{\gamma}{2}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\right)\right] \Rightarrow
 \end{equation}
-\begin{equation*}
+\begin{equation}
     -\frac{1}{2}\text{Tr}\left(\boldsymbol{\Psi}\boldsymbol{\Sigma}^{-1}\right)=
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}
     -\frac{1}{2}\text{Tr}\left(\mathbf{S}\_{\overline{\mathbf{x}}}\boldsymbol{\Sigma}^{-1}\right)-\frac{N}{2}\left(\boldsymbol{\mu}-\overline{\mathbf{x}}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\boldsymbol{\mu}-\overline{\mathbf{x}}\right)-\frac{1}{2}\text{Tr}\left(\boldsymbol{\Psi}\_{0}\boldsymbol{\Sigma}^{-1}\right)-
-\end{equation*}
+\end{equation}
 \begin{equation}
     \frac{\gamma\_{0}}{2}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\_{0}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\_{0}\right)+\frac{\gamma}{2}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\boldsymbol{\mu}-\boldsymbol{\delta}\right)
 \end{equation}
 Using the relations in the equation (\ref{simplifying\_relations}), the following equality is obtained:
-\begin{equation*}
+\begin{equation}
     -\frac{1}{2}\text{Tr}\left(\boldsymbol{\Psi}\boldsymbol{\Sigma}^{-1}\right)=
-\end{equation*}
+\end{equation}
 \begin{equation}
     -\frac{1}{2}\text{Tr}\left(\mathbf{S}\_{\overline{\mathbf{x}}}\boldsymbol{\Sigma}^{-1}\right)-\frac{1}{2}\text{Tr}\left(\boldsymbol{\Psi}\_{0}\boldsymbol{\Sigma}^{-1}\right)-\frac{N}{2}\overline{\mathbf{x}}^{T}\boldsymbol{\Sigma}^{-1}\overline{\mathbf{x}}-\frac{\gamma\_{0}}{2}\boldsymbol{\delta}\_{0}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\delta}\_{0}+\frac{\gamma}{2}\boldsymbol{\delta}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\delta}
     \label{trace\_eqn\_1}
