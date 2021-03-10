@@ -281,4 +281,4 @@ are either $-1$ or $1$. This system does not have an analytical solution for $\m
 ## Conclusion
 Maximum likelihood estimators for the target variable of the linear regression model have been derived for different probability distributions of the target variable. It has been shown that as the assumed probability distribution for the target variable changes from Gaussian to Laplace, the error to be minimized for finding the maximum likelihood estimator of the linear regression model changes from the mean squared error to the mean absolute error.
 ## References
-[1] Kevin P. Murphy, \emph{Machine Learning: A Probabilistic Perspective}, The MIT Press, 2012.
+[1] Kevin P. Murphy, Machine Learning: A Probabilistic Perspective, The MIT Press, 2012.
