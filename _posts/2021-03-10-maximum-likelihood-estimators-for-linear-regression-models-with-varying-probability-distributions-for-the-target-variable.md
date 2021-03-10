@@ -4,7 +4,7 @@ author: SAFFET GÖKÇEN ŞEN
 title: Maximum Likelihood Estimators For Linear Regression Models With Varying Probability Distributions For The Target Variable
 ---
 ## Introduction
-In this article, the linear regression model is defined in a probabilistic perspective as in \cite{Murphy}. Maximum likelihood estimators for the target variable are derived for different probability distributions of the target variable. It is shown that as the assumed probability distribution for the target variable changes from Gaussian to Laplace, the error to be minimized for finding the maximum likelihood estimator of the linear regression model changes from the mean squared error to the mean absolute error.
+In this article, the linear regression model is defined in a probabilistic perspective as in [1]. Maximum likelihood estimators for the target variable are derived for different probability distributions of the target variable. It is shown that as the assumed probability distribution for the target variable changes from Gaussian to Laplace, the error to be minimized for finding the maximum likelihood estimator of the linear regression model changes from the mean squared error to the mean absolute error.
 ## Model Definition
 It is assumed that there are $N$ samples of data. Each sample is denoted by the vector $\mathbf{x}\_{i}$ where $i$ is from $1$ to $N$. Each element of $\mathbf{x}\_{i}$ is a feature. It is assumed that there are $M$ features. The available data is stored in a matrix $\mathbf{X}$ a row of which is the transpose of $\mathbf{x}\_{i}$. Hence, the dimension of the matrix $\mathbf{X}$ is $M\times N$. There is a target $y\_{i}$ corresponding to each $\mathbf{x}\_{i}$. The linear regression model generally assumes that the targets are Gaussian distributed with a mean of the linear combination of the features and a variance of $\sigma^{2}$:
 \begin{equation}
@@ -46,7 +46,7 @@ Then, the equation (\ref{mle}) can be expanded as follows:
     \hat{\mathbf{w}} = \argmax\_{\mathbf{w}} \sum\_{i=1}^{N} \left (-1 \right )\left(y\_{i}-\mathbf{w}^{T}.\mathbf{x}\_{i}\right)^{2}
     \label{mle2}
 \end{equation}
-In other words, the mean squared error between the targets and the model es\-ti\-mates is minimized. Let the expression for the maximum likelihood estimator in the equation (\ref{mle2}) be written in terms of matrices:
+In other words, the mean squared error between the targets and the model estimates is minimized. Let the expression for the maximum likelihood estimator in the equation (\ref{mle2}) be written in terms of matrices:
 \begin{equation}
     \hat{\mathbf{w}} = \argmax\_{\mathbf{w}}  \left (-1 \right ) \begin{bmatrix}
         y\_{1}-\mathbf{w}^{T}.\mathbf{x}\_{1} & y\_{2}-\mathbf{w}^{T}.\mathbf{x}\_{2} & \dotso & y\_{N}-\mathbf{w}^{T}.\mathbf{x}\_{N}
@@ -214,7 +214,7 @@ The expressions for the partial derivatives are put into the equation (\ref{mle3
     \label{mle4}
 \end{equation}
 The maximum likelihood estimator for the parameters $\mathbf{w}$ of the linear regression model when the target variables are assumed to be Gaussian distributed with the mean $\mathbf{w}^{T}.\mathbf{x}$ and the variance $\sigma^{2}$ has been found to be given as in the equation (\ref{mle4}).
-## What If The Targets Have A Laplace Dis\-tri\-bu\-tion?
+## What If The Targets Have A Laplace Distribution?
 The maximum likelihood estimator for the parameters of the linear regression model has been derived when the targets are supposed to be Gaussian distributed with the mean $\mathbf{w}^{T}.\mathbf{x}$ and the variance $\sigma^{2}$. What will be the solution for the linear regression model if the targets do not have this Gaussian distribution?
 
 For example, let the distribution of the targets be Laplace with the location equal to $\mathbf{w}^{T}.\mathbf{x}$ and the scale equal to $1$. Then:
@@ -235,7 +235,7 @@ In order to avoid numerical underflow due to the multiplication of many small pr
 \begin{equation}
     \hat{\mathbf{w}} = \argmax\_{\mathbf{w}} \sum\_{i=1}^{N} \left (-1 \right )\left | y\_{i} - \mathbf{w}^{T}.\mathbf{x}\_{i} \right |
 \end{equation}
-In other words, the mean absolute error between the targets and the model es\-ti\-mates is minimized.
+In other words, the mean absolute error between the targets and the model estimates is minimized.
 
 The maximum likelihood estimator is at the critical point which is the solution of 
 \begin{equation}
@@ -279,7 +279,6 @@ In this system of equations, the coefficients
 \end{equation}
 are either $-1$ or $1$. This system does not have an analytical solution for $\mathbf{w}$ and it may even not have a solution. The best approximate $\hat{\mathbf{w}}$ can be found by means of optimization.
 ## Conclusion
-Maximum likelihood estimators for the target variable of the linear regression model have been derived for different probability distributions of the target var\-i\-able. It has been shown that as the assumed probability distribution for the target variable changes from Gaussian to Laplace, the error to be minimized for finding the maximum likelihood estimator of the linear regression model changes from the mean squared error to the mean absolute error.
-\begin{thebibliography}{9}
-    \bibitem{Murphy} Kevin P. Murphy, \emph{Machine Learning: A Probabilistic Perspective}, The MIT Press, 2012.
-\end{thebibliography}
+Maximum likelihood estimators for the target variable of the linear regression model have been derived for different probability distributions of the target variable. It has been shown that as the assumed probability distribution for the target variable changes from Gaussian to Laplace, the error to be minimized for finding the maximum likelihood estimator of the linear regression model changes from the mean squared error to the mean absolute error.
+## References
+[1] Kevin P. Murphy, \emph{Machine Learning: A Probabilistic Perspective}, The MIT Press, 2012.
