@@ -18,15 +18,15 @@ The maximum likelihood estimator for the parameters of the linear regression mod
 \end{equation}
 The maximum likelihood estimator is denoted by $\hat{\mathbf{w}}$. It satisfies the following equality:
 \begin{equation}
-    \hat{\mathbf{w}} = \argmax\_{\mathbf{w}} p\left(\mathbf{y}|\mathbf{X}, \mathbf{w}\right)
+    \hat{\mathbf{w}} = \underset{\mathbf{w}}{\mathrm{argmax}} \  p\left(\mathbf{y}|\mathbf{X}, \mathbf{w}\right)
 \end{equation}
 If it is assumed that the samples are independent and identically distributed (i.i.d), then:
 \begin{equation}
-    \hat{\mathbf{w}} = \argmax\_{\mathbf{w}} \prod\_{i=1}^{N} p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)
+    \hat{\mathbf{w}} = \underset{\mathbf{w}}{\mathrm{argmax}} \ \prod\_{i=1}^{N} p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)
 \end{equation}
 In order to avoid numerical underflow which is due to the multiplication of many small probabilities, the log-likelihood is used to obtain the maximum likelihood estimator. Numerically more stable form of the maximum likelihood estimator is as follows:
 \begin{equation}
-    \hat{\mathbf{w}} = \argmax\_{\mathbf{w}} \sum\_{i=1}^{N} \log \left [p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right) \right ]
+    \hat{\mathbf{w}} = \underset{\mathbf{w}}{\mathrm{argmax}} \  \sum\_{i=1}^{N} \log \left [p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right) \right ]
     \label{mle}
 \end{equation}
 $\log$ represents the natural logarithm function.
@@ -37,18 +37,18 @@ What is $p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)$? It is generally assu
 \end{equation}
 Then, the equation (\ref{mle}) can be expanded as follows:
 \begin{equation}
-    \hat{\mathbf{w}} = \argmax\_{\mathbf{w}} \sum\_{i=1}^{N} \log \left(\frac{1}{\sqrt{2\pi \sigma^{2}}}\exp \left[-\frac{\left(y\_{i}-\mathbf{w}^{T}.\mathbf{x}\_{i}\right)^{2}}{2\sigma^{2}}\right]\right) \Rightarrow
+    \hat{\mathbf{w}} = \underset{\mathbf{w}}{\mathrm{argmax}} \  \sum\_{i=1}^{N} \log \left(\frac{1}{\sqrt{2\pi \sigma^{2}}}\exp \left[-\frac{\left(y\_{i}-\mathbf{w}^{T}.\mathbf{x}\_{i}\right)^{2}}{2\sigma^{2}}\right]\right) \Rightarrow
 \end{equation}
 \begin{equation}
-    \hat{\mathbf{w}} = \argmax\_{\mathbf{w}} \sum\_{i=1}^{N} \left (-\frac{1}{2}\log \left(2\pi \sigma^{2}\right)-\frac{\left(y\_{i}-\mathbf{w}^{T}.\mathbf{x}\_{i}\right)^{2}}{2\sigma^{2}}\right ) \Rightarrow
+    \hat{\mathbf{w}} = \underset{\mathbf{w}}{\mathrm{argmax}} \  \sum\_{i=1}^{N} \left (-\frac{1}{2}\log \left(2\pi \sigma^{2}\right)-\frac{\left(y\_{i}-\mathbf{w}^{T}.\mathbf{x}\_{i}\right)^{2}}{2\sigma^{2}}\right ) \Rightarrow
 \end{equation}
 \begin{equation}
-    \hat{\mathbf{w}} = \argmax\_{\mathbf{w}} \sum\_{i=1}^{N} \left (-1 \right )\left(y\_{i}-\mathbf{w}^{T}.\mathbf{x}\_{i}\right)^{2}
+    \hat{\mathbf{w}} = \underset{\mathbf{w}}{\mathrm{argmax}} \  \sum\_{i=1}^{N} \left (-1 \right )\left(y\_{i}-\mathbf{w}^{T}.\mathbf{x}\_{i}\right)^{2}
     \label{mle2}
 \end{equation}
 In other words, the mean squared error between the targets and the model estimates is minimized. Let the expression for the maximum likelihood estimator in the equation (\ref{mle2}) be written in terms of matrices:
 \begin{equation}
-    \hat{\mathbf{w}} = \argmax\_{\mathbf{w}}  \left (-1 \right ) \begin{bmatrix}
+    \hat{\mathbf{w}} = \underset{\mathbf{w}}{\mathrm{argmax}} \   \left (-1 \right ) \begin{bmatrix}
         y\_{1}-\mathbf{w}^{T}.\mathbf{x}\_{1} & y\_{2}-\mathbf{w}^{T}.\mathbf{x}\_{2} & \dotso & y\_{N}-\mathbf{w}^{T}.\mathbf{x}\_{N}
     \end{bmatrix}\begin{bmatrix}
         y\_{1}-\mathbf{x}\_{1}^{T}.\mathbf{w} \newline
@@ -105,7 +105,7 @@ be written in a more compact form:
 \end{equation}
 The more compact form of the maximum likelihood estimator can be expressed as follows:
 \begin{equation}
-    \hat{\mathbf{w}} = \argmax\_{\mathbf{w}} \left(-1\right)\left(\mathbf{y}-\mathbf{X}.\mathbf{w}\right)^{T}\left(\mathbf{y}-\mathbf{X}.\mathbf{w}\right)
+    \hat{\mathbf{w}} = \underset{\mathbf{w}}{\mathrm{argmax}} \  \left(-1\right)\left(\mathbf{y}-\mathbf{X}.\mathbf{w}\right)^{T}\left(\mathbf{y}-\mathbf{X}.\mathbf{w}\right)
 \end{equation}
 The maximum likelihood estimator is at the critical point of 
 \begin{equation}
@@ -223,17 +223,17 @@ For example, let the distribution of the targets be Laplace with the location eq
 \end{equation}
 The maximum likelihood estimator for the parameters $\mathbf{w}$ will be derived for this linear regression model. Assuming the samples are i.i.d., the likelihood of the samples is given as follows:
 \begin{equation}
-    \hat{\mathbf{w}} = \argmax\_{\mathbf{w}} \prod\_{i=1}^{N} p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)=\argmax\_{\mathbf{w}} \prod\_{i=1}^{N} \frac{1}{2} \exp \left(-\left | y\_{i} - \mathbf{w}^{T}.\mathbf{x}\_{i} \right |\right)
+    \hat{\mathbf{w}} = \underset{\mathbf{w}}{\mathrm{argmax}} \  \prod\_{i=1}^{N} p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)=\underset{\mathbf{w}}{\mathrm{argmax}} \  \prod\_{i=1}^{N} \frac{1}{2} \exp \left(-\left | y\_{i} - \mathbf{w}^{T}.\mathbf{x}\_{i} \right |\right)
 \end{equation}
 In order to avoid numerical underflow due to the multiplication of many small probabilities, the following form is used for the maximum likelihood estimator:
 \begin{equation}
-    \hat{\mathbf{w}} = \argmax\_{\mathbf{w}} \prod\_{i=1}^{N} p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)=\argmax\_{\mathbf{w}} \sum\_{i=1}^{N} \log \left [p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)\right ] \Rightarrow
+    \hat{\mathbf{w}} = \underset{\mathbf{w}}{\mathrm{argmax}} \  \prod\_{i=1}^{N} p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)=\underset{\mathbf{w}}{\mathrm{argmax}} \  \sum\_{i=1}^{N} \log \left [p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)\right ] \Rightarrow
 \end{equation}
 \begin{equation}
-    \hat{\mathbf{w}} = \argmax\_{\mathbf{w}} \sum\_{i=1}^{N} \left (-\log 2-\left | y\_{i} - \mathbf{w}^{T}.\mathbf{x}\_{i} \right | \right ) \Rightarrow
+    \hat{\mathbf{w}} = \underset{\mathbf{w}}{\mathrm{argmax}} \  \sum\_{i=1}^{N} \left (-\log 2-\left | y\_{i} - \mathbf{w}^{T}.\mathbf{x}\_{i} \right | \right ) \Rightarrow
 \end{equation}
 \begin{equation}
-    \hat{\mathbf{w}} = \argmax\_{\mathbf{w}} \sum\_{i=1}^{N} \left (-1 \right )\left | y\_{i} - \mathbf{w}^{T}.\mathbf{x}\_{i} \right |
+    \hat{\mathbf{w}} = \underset{\mathbf{w}}{\mathrm{argmax}} \  \sum\_{i=1}^{N} \left (-1 \right )\left | y\_{i} - \mathbf{w}^{T}.\mathbf{x}\_{i} \right |
 \end{equation}
 In other words, the mean absolute error between the targets and the model estimates is minimized.
 
