@@ -21,7 +21,7 @@ So, the entries of $\mathbf{w}$ are believed to be independently around $0$ with
 
 Let the likelihood of the available data be calculated. It is assumed that there are $N$ samples given as follows:
 \begin{equation}
-    \mathcal{D}=\left {\left(\mathbf{x}\_{1}, y\_{1}\right), \left(\mathbf{x}\_{2}, y\_{2}\right), \dotso , \left(\mathbf{x}\_{N}, y\_{N}\right) \right }
+    \mathcal{D}=\left [\left(\mathbf{x}\_{1}, y\_{1}\right), \left(\mathbf{x}\_{2}, y\_{2}\right), \dotso , \left(\mathbf{x}\_{N}, y\_{N}\right) \right ]
 \end{equation}
 The likelihood is the joint probability of the $N$ samples. The $N$ samples are assumed to be independent. Then, the likelihood $p\left(\mathcal{D}|\mathbf{w}\right)$ is formulated as follows:
 \begin{equation}
