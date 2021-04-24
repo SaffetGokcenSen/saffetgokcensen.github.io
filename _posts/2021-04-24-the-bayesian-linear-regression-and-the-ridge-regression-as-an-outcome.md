@@ -21,7 +21,7 @@ So, the entries of $\mathbf{w}$ are believed to be independently around $0$ with
 
 Let the likelihood of the available data be calculated. It is assumed that there are $N$ samples given as follows:
 \begin{equation}
-    \mathcal{D}=\left \{\left(\mathbf{x}\_{1}, y\_{1}\right), \left(\mathbf{x}\_{2}, y\_{2}\right), \dotso , \left(\mathbf{x}\_{N}, y\_{N}\right) \right \}
+    \mathcal{D}=\left {\left(\mathbf{x}\_{1}, y\_{1}\right), \left(\mathbf{x}\_{2}, y\_{2}\right), \dotso , \left(\mathbf{x}\_{N}, y\_{N}\right) \right }
 \end{equation}
 The likelihood is the joint probability of the $N$ samples. The $N$ samples are assumed to be independent. Then, the likelihood $p\left(\mathcal{D}|\mathbf{w}\right)$ is formulated as follows:
 \begin{equation}
@@ -83,9 +83,9 @@ The square of the Mahalanobis distance for a multivariate Gaussian distribution 
     \label{compSquare}
 \end{equation}
 The right side of the equation (\ref{compSquare}) is to be equated to the expression in the equation (\ref{posterior2}). The aim is to determine the covariance and the mean of the multivariate Gaussian distribution for the posterior of $\mathbf{w}$:
-\begin{equation*}
+\begin{equation}
     \mathbf{w}^{T}\boldsymbol{\Sigma}^{-1}\mathbf{w}-2\mathbf{w}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}+\boldsymbol{\mu}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}=
-\end{equation*}
+\end{equation}
 \begin{equation}
     \mathbf{w}^{T}.\left(-\frac{1}{2\sigma\_{w}^{2}}\mathbf{I}-\frac{1}{2\sigma^{2}}\sum\_{i=1}^{N}\mathbf{x}\_{i}\mathbf{x}\_{i}^{T}\right).\mathbf{w}-2\mathbf{w}^{T}.\left(\sum\_{i=1}^{N}\left(-\frac{1}{2\sigma^{2}}\right)y\_{i}\mathbf{x}\_{i}\right)+\sum\_{i=1}^{N} \left(-\frac{1}{2\sigma^{2}}\right)y\_{i}^{2}
 \end{equation}
