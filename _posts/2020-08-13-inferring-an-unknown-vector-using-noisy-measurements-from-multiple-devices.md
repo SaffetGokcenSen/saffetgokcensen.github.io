@@ -41,27 +41,27 @@ be determined. The measurement sources are independent of each other. Hence:
     p\left(\left[\bar{\mathbf{y}}\_{1}^{T} \ \bar{\mathbf{y}}\_{2}^{T} \ \bar{\mathbf{y}}\_{3}^{T} \dotso  \ \bar{\mathbf{y}}\_{m}^{T}\right]^{T}\big | \mathbf{x}\right)=p\left(\bar{\mathbf{y}}\_{1}| \mathbf{x}\right)p\left(\bar{\mathbf{y}}\_{2}| \mathbf{x}\right)p\left(\bar{\mathbf{y}}\_{3}| \mathbf{x}\right)\dotso p\left(\bar{\mathbf{y}}\_{m}| \mathbf{x}\right)=
 \end{equation}
 \begin{equation}
-    \frac{1}{\left(2\pi\right)^{N\_{1}/2}\left |\boldsymbol{\Sigma}\_{1} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{1}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{1}\left(\bar{\mathbf{y}}\_{1}-\mathbf{x}\right)\right] \times
+    \frac{1}{\left(2\pi\right)^{N\_{1}/2}\left |\boldsymbol{\Sigma}\_{1} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{1}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{1}^{-1}\left(\bar{\mathbf{y}}\_{1}-\mathbf{x}\right)\right] \times
 \end{equation}
 \begin{equation}
-    \frac{1}{\left(2\pi\right)^{N\_{2}/2}\left |\boldsymbol{\Sigma}\_{2} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{2}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{2}\left(\bar{\mathbf{y}}\_{2}-\mathbf{x}\right)\right] \times
+    \frac{1}{\left(2\pi\right)^{N\_{2}/2}\left |\boldsymbol{\Sigma}\_{2} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{2}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}^{-1}\_{2}\left(\bar{\mathbf{y}}\_{2}-\mathbf{x}\right)\right] \times
 \end{equation}
 \begin{equation}
-    \frac{1}{\left(2\pi\right)^{N\_{3}/2}\left |\boldsymbol{\Sigma}\_{3} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{3}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{3}\left(\bar{\mathbf{y}}\_{3}-\mathbf{x}\right)\right] \times \dotso \times
+    \frac{1}{\left(2\pi\right)^{N\_{3}/2}\left |\boldsymbol{\Sigma}\_{3} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{3}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}^{-1}\_{3}\left(\bar{\mathbf{y}}\_{3}-\mathbf{x}\right)\right] \times \dotso \times
 \end{equation}
 \begin{equation}
-    \frac{1}{\left(2\pi\right)^{N\_{m}/2}\left |\boldsymbol{\Sigma}\_{m} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{m}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{m}\left(\bar{\mathbf{y}}\_{m}-\mathbf{x}\right)\right]=
+    \frac{1}{\left(2\pi\right)^{N\_{m}/2}\left |\boldsymbol{\Sigma}\_{m} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{m}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}^{-1}\_{m}\left(\bar{\mathbf{y}}\_{m}-\mathbf{x}\right)\right]=
 \end{equation}
 \begin{equation}
     p\left(\left[\bar{\mathbf{y}}\_{1}^{T} \ \bar{\mathbf{y}}\_{2}^{T} \ \bar{\mathbf{y}}\_{3}^{T} \dotso  \ \bar{\mathbf{y}}\_{m}^{T}\right]^{T}\big | \mathbf{x}\right)=
 \end{equation}
 \begin{equation}
-    p\left(\left[\bar{\mathbf{y}}\_{1}^{T} \ \bar{\mathbf{y}}\_{2}^{T} \ \bar{\mathbf{y}}\_{3}^{T} \dotso  \ \bar{\mathbf{y}}\_{m}^{T}\right]^{T}\big | \mathbf{x}\right)=\frac{1}{\prod\_{k=1}^{m}\left(2\pi\right)^{N\_{k}/2}\left |\boldsymbol{\Sigma}\_{k} \right |^{1/2}}\exp \left[\sum\_{k=1}^{m} -\frac{1}{2}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{k}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)\right]
+    p\left(\left[\bar{\mathbf{y}}\_{1}^{T} \ \bar{\mathbf{y}}\_{2}^{T} \ \bar{\mathbf{y}}\_{3}^{T} \dotso  \ \bar{\mathbf{y}}\_{m}^{T}\right]^{T}\big | \mathbf{x}\right)=\frac{1}{\prod\_{k=1}^{m}\left(2\pi\right)^{N\_{k}/2}\left |\boldsymbol{\Sigma}\_{k} \right |^{1/2}}\exp \left[\sum\_{k=1}^{m} -\frac{1}{2}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{k}^{-1}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)\right]
     \label{likelihood}
 \end{equation}
 Then, the exponential in the equation (\ref{likelihood}) can be written as follows:
 \begin{equation}
-    \exp \left[\sum\_{k=1}^{m} -\frac{1}{2}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{k}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)\right]=-\frac{1}{2}\left (\begin{bmatrix}
+    \sum\_{k=1}^{m} -\frac{1}{2}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{k}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)=-\frac{1}{2}\left (\begin{bmatrix}
         \bar{\mathbf{y}}\_{1} \newline
         \bar{\mathbf{y}}\_{2} \newline
         \bar{\mathbf{y}}\_{3} \newline
