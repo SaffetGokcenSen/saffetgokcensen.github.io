@@ -38,7 +38,7 @@ where $D$ is the number of features or the dimension of $\mathbf{w}$.
 
 It is assumed that there are $N$ samples given as follows:
 \begin{equation}
-    \mathcal{D}=\left \{\left(\mathbf{x}\_{1}, y\_{1}\right), \left(\mathbf{x}\_{2}, y\_{2}\right), \dotso , \left(\mathbf{x}\_{N}, y\_{N}\right) \right \}
+    \mathcal{D}=\left (\left(\mathbf{x}\_{1}, y\_{1}\right), \left(\mathbf{x}\_{2}, y\_{2}\right), \dotso , \left(\mathbf{x}\_{N}, y\_{N}\right) \right )
 \end{equation}
 The $N$ samples are assumed to be independent. Let the target samples be collected in a vector $\mathbf{y}$ which is defined as follows:
 \begin{equation}
@@ -193,8 +193,8 @@ The posterior predictive distribution can symbolically be written as follows:
     p\left(y|\mathbf{w}, \mathbf{x}\right)=\mathcal{N}\left(y|\mathbf{x}^{T}\boldsymbol{\mu}\_{\mathbf{w}|\mathbf{y}}, \sigma^{2}+\mathbf{x}^{T}\boldsymbol{\Sigma}\_{\mathbf{w}|\mathbf{y}}\mathbf{x}\right)
 \end{equation}
 ## Conclusion
-The Bayesian linear regression has been studied. The linear Gaussian system framework has been shown to enable easy derivation of the posterior predictive distribution. The sample Jupyter notebook is at the [link](https://github.com/SaffetGokcenSen/Bayesian-Linear-Regression/blob/main/bayesian\_linear\_regression\_model.ipynb).
+The Bayesian linear regression has been studied. The linear Gaussian system framework has been shown to enable easy derivation of the posterior predictive distribution. The sample Jupyter notebook is at this [link](https://github.com/SaffetGokcenSen/Bayesian-Linear-Regression/blob/main/bayesian_linear_regression_model.ipynb).
 ## References
-[1] Kevin P. Murphy, \emph{Machine Learning: A Probabilistic Perspective}, The MIT Press, 2012
-[2] \emph{Bayes Rule For A Linear Gaussian System}, <https://saffetgokcensen.github.io/blog/2020/07/08/bayes-rule-for-a-linear-gaussian-system>
-[3] \emph{Marginals and Conditionals from the Joint Gaussian Distribution of Two Random Vectors}, <https://saffetgokcensen.github.io/blog/2020/06/04/marginals-and-conditionals-from-the-joint-gaussian-distribution-of-two-random-vectors>
+[1] Kevin P. Murphy, Machine Learning: A Probabilistic Perspective, The MIT Press, 2012
+[2] Bayes Rule For A Linear Gaussian System, <https://saffetgokcensen.github.io/blog/2020/07/08/bayes-rule-for-a-linear-gaussian-system>
+[3] Marginals and Conditionals from the Joint Gaussian Distribution of Two Random Vectors, <https://saffetgokcensen.github.io/blog/2020/06/04/marginals-and-conditionals-from-the-joint-gaussian-distribution-of-two-random-vectors>
