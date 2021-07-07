@@ -196,5 +196,7 @@ The posterior predictive distribution can symbolically be written as follows:
 The Bayesian linear regression has been studied. The linear Gaussian system framework has been shown to enable easy derivation of the posterior predictive distribution. The sample Jupyter notebook is at this [link](https://github.com/SaffetGokcenSen/Bayesian-Linear-Regression/blob/main/bayesian_linear_regression_model.ipynb).
 ## References
 [1] Kevin P. Murphy, Machine Learning: A Probabilistic Perspective, The MIT Press, 2012
+
 [2] Bayes Rule For A Linear Gaussian System, <https://saffetgokcensen.github.io/blog/2020/07/08/bayes-rule-for-a-linear-gaussian-system>
+
 [3] Marginals and Conditionals from the Joint Gaussian Distribution of Two Random Vectors, <https://saffetgokcensen.github.io/blog/2020/06/04/marginals-and-conditionals-from-the-joint-gaussian-distribution-of-two-random-vectors>
