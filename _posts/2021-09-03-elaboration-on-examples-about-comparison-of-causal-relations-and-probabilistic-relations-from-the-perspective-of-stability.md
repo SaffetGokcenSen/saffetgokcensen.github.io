@@ -40,4 +40,4 @@ Now, let me give some more details about the probabilistic relation using the DA
 ## Conclusion
 The difference between a causal relation and a probabilistic relation has been shown using the DAG for a causal model and the d-separation criterion. A causal relation holds independently of the knowledge about or belief in the environment whereas a probabilistic relation's truth value changes with the changes in the knowledge about or belief in the environment.
 ## References
-[1] Judea Pearl, \emph{Causality: Models, Reasoning and Inference}, Cambridge University Press, 2009.
+[1] Judea Pearl, Causality: Models, Reasoning and Inference, Cambridge University Press, 2009.
