@@ -16,12 +16,14 @@ In order to give examples about causal relations and probabilistic relations, I 
 </figure>
 
 A causal relation is the following: "The state of the sprinkler does not affect the state of the rain". A probabilistic relation can be stated as follows: "The state of the sprinkler is unassociated with the state of the rain". Applying d-separation criteron on the DAG in the Figure 1, I am going to give some more details on the causality of the first statement. Then, I am going to elaborate on the change of the logic state (true or false) of the probabilistic statement depending on the information I have. Since I am going to use the d-separation criterion, let it be defined first. It is defined in Definition 1.2.3 in the section 1.2.3 of [1]. I am going to rewrite that definition from [1] as follows:
-\\ A path $p$ is said to be d-separated (or blocked) by a set of nodes $Z$ if and only if
+
+A path $p$ is said to be d-separated (or blocked) by a set of nodes $Z$ if and only if
 
 1. $p$ contains a chain $i \rightarrow m \rightarrow j$ or a fork $i \leftarrow m \rightarrow j$ such that the middle node $m$ is in $Z$, or
 
 2. $p$ contains an inverted fork (or collider) $i \rightarrow m \leftarrow j$ such that the middle node $m$ is not in $Z$ and such that no descendant of $m$ is in $Z$.
-\\ A set $Z$ is said to d-separate $X$ from $Y$ if and only if $Z$ blocks every path from a node in $X$ to a node in $Y$.
+
+A set $Z$ is said to d-separate $X$ from $Y$ if and only if $Z$ blocks every path from a node in $X$ to a node in $Y$.
 
 A path is a sequence of consecutive edges (of any directionaliy) in the graph.
 
