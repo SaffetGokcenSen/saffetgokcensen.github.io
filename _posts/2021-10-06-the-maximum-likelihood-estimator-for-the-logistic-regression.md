@@ -156,7 +156,7 @@ Using the result given in the equation (\ref{grad\_NLL}):
     H\_{jk}=\sum\_{i=1}^{N} x\_{i\_{j}}x\_{i\_{k}}\frac{e^{-\theta\_{i}}}{\left(1+e^{-\theta\_{i}}\right)^{2}}
     \label{Hessian}
 \end{equation}
-Now that the Hessian has been derived, let it be checked if it is positive definite. From the equation (\ref{Hessian}), it can be seen that the Hessian is a symmetric matrix. There is a mathematical fact related with the positive definiteness of symmetric matrices. A symmetric matrix is positive definite if all of its diagonal entries are positive and each diagonal entry is greater than the sum of the absolute values of all other entries in the corresponding row/column [2]. Are the diagonal entries of the Hessian positive?
+Now that the Hessian has been derived, let it be checked if it is positive definite. From the equation (\ref{Hessian}), it can be seen that the Hessian is a symmetric matrix. There is a mathematical fact related with the positive definiteness of symmetric matrices. A symmetric matrix is positive definite if all of its diagonal entries are positive and each diagonal entry is greater than the sum of the absolute values of all other entries in the corresponding row/column. Are the diagonal entries of the Hessian positive?
 \begin{equation}
     H\_{jj}=\sum\_{i=1}^{N} x\_{i\_{j}}x\_{i\_{j}}\frac{e^{-\theta\_{i}}}{\left(1+e^{-\theta\_{i}}\right)^{2}}=\sum\_{i=1}^{N} x\_{i\_{j}}^{2}\frac{e^{-\theta\_{i}}}{\left(1+e^{-\theta\_{i}}\right)^{2}}
     \label{diagonal}
@@ -254,5 +254,3 @@ If the Hessian in the equation (\ref{hessian\_-1\_1\_final}) and the Hessian in 
 The logistic regression model has been defined for the binary classification task. The NLL function has been derived for arbitrary output labels. The MLE for the unknown coefficient vector $\mathbf{w}$ has been derived. It has been shown that the NLL is not guaranteed to be a convex function of $\mathbf{w}$.
 ## References
 [1] Kevin P. Murphy, Machine Learning: A Probabilistic Perspective, The MIT Press, 2012.
-    
-[2] <https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/04LinearAlgebra/posdef/>
