@@ -253,6 +253,6 @@ If the Hessian in the equation (\ref{hessian\_-1\_1\_final}) and the Hessian in 
 ## Conclusion
 The logistic regression model has been defined for the binary classification task. The NLL function has been derived for arbitrary output labels. The MLE for the unknown coefficient vector $\mathbf{w}$ has been derived. It has been shown that the NLL is not guaranteed to be a convex function of $\mathbf{w}$.
 ## References
-    [1] Kevin P. Murphy, Machine Learning: A Probabilistic Perspective, The MIT Press, 2012.
+[1] Kevin P. Murphy, Machine Learning: A Probabilistic Perspective, The MIT Press, 2012.
     
-    [2] <https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/04LinearAlgebra/posdef/>
+[2] <https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/04LinearAlgebra/posdef/>
