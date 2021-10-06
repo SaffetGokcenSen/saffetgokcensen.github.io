@@ -15,7 +15,7 @@ where $\mathbf{x}$ is the input vector, $\mathbf{w}$ is the coefficient vector a
 ### Analytical Calculation Of The Critical Point Of The Negative Log-likelihood
 It is assumed that there is a set of $N$ samples of data:
 \begin{equation}
-    \mathcal{D}=\left \{ \left(y\_{1}, \mathbf{x}\_{1}\right), \dotso , \left(y\_{N}, \mathbf{x}\_{N}\right) \right \}
+    \mathcal{D}=\left ( \left(y\_{1}, \mathbf{x}\_{1}\right), \dotso , \left(y\_{N}, \mathbf{x}\_{N}\right) \right )
 \end{equation}
 The data samples are assumed to be independent and identically distributed (i.i.d.). The i.i.d. assumption enables the likelihood of the data to be written as follows:
 \begin{equation}
@@ -253,6 +253,6 @@ If the Hessian in the equation (\ref{hessian\_-1\_1\_final}) and the Hessian in 
 ## Conclusion
 The logistic regression model has been defined for the binary classification task. The NLL function has been derived for arbitrary output labels. The MLE for the unknown coefficient vector $\mathbf{w}$ has been derived. It has been shown that the NLL is not guaranteed to be a convex function of $\mathbf{w}$.
 ## References
-    [1] Kevin P. Murphy, \emph{Machine Learning: A Probabilistic Perspective}, The MIT Press, 2012.
+    [1] Kevin P. Murphy, Machine Learning: A Probabilistic Perspective, The MIT Press, 2012.
     
     [2] <https://ece.uwaterloo.ca/~dwharder/NumericalAnalysis/04LinearAlgebra/posdef/>
