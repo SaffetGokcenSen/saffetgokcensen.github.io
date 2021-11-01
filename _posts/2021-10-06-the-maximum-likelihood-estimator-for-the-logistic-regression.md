@@ -108,9 +108,9 @@ Vanishing of the gradient of the NLL with respect to $\mathbf{w}$ yields the fol
 \begin{equation}
     x\_{1\_{2}}v\_{1}+x\_{2\_{2}}v\_{2}+ \dotso + x\_{N\_{2}}v\_{N}=x\_{1\_{2}}\mathbb{I}\left(y\_{1}=t\right)+x\_{2\_{2}}\mathbb{I}\left(y\_{2}=t\right)+ \dotso +x\_{N\_{2}}\mathbb{I}\left(y\_{N}=t\right)
 \end{equation}
-\begin{equation*}
+\begin{equation}
     \vdots
-\end{equation*}
+\end{equation}
 \begin{equation}
     x\_{1\_{K}}v\_{1}+x\_{2\_{K}}v\_{2}+ \dotso + x\_{N\_{K}}v\_{N}=x\_{1\_{K}}\mathbb{I}\left(y\_{1}=t\right)+x\_{2\_{K}}\mathbb{I}\left(y\_{2}=t\right)+ \dotso +x\_{N\_{K}}\mathbb{I}\left(y\_{N}=t\right)
 \end{equation}
