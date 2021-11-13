@@ -84,4 +84,4 @@ The last formula is called the adjustment for direct causes of $X\_{i}$.
 ## Conclusion
 In a Markovian structural causal model, the adjustment formula for the direct causes or parents of a variable has been derived.
 ## References
-[1] Judea Pearl, \emph{Causality: Models, Reasoning and Inference}, Cambridge University Press, 2009.
+[1] Judea Pearl, *Causality: Models, Reasoning and Inference*, Cambridge University Press, 2009.
