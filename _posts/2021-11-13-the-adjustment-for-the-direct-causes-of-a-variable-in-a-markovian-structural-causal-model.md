@@ -61,7 +61,7 @@ Another form of the last equation can be obtained by expanding $p\left(x\_{i}^{\
         0 & \text{if } x\_{i}\neq x\_{i}^{\prime}
     \end{cases}
 \end{equation}
-Using this form, the intervention's effect on a set of variables $Y$ is to be obtained. $Y$ is a set of variables which is disjoint from $\left \{ X\_{i} \right \} \cup PA\_{i}$. As indicated in [1], the calculation is made by summing $p\left(x\_{1}, \dotso , x\_{n} | do\left(X\_{i}=x\_{i}^{\prime}\right)\right)$ over all model variables except $\left \{ X\_{i} \right \} \cup Y$. Now, let this calculation be carried out:
+Using this form, the intervention's effect on a set of variables $Y$ is to be obtained. $Y$ is a set of variables which is disjoint from $X\_{i} \cup PA\_{i}$. As indicated in [1], the calculation is made by summing $p\left(x\_{1}, \dotso , x\_{n} | do\left(X\_{i}=x\_{i}^{\prime}\right)\right)$ over all model variables except $X\_{i} \cup Y$. Now, let this calculation be carried out:
 \begin{equation}
     \sum \dotso \sum p\left(x\_{1}, \dotso , x\_{n} | do\left(X\_{i}=x\_{i}^{\prime}\right)\right)=\begin{cases}
         \sum \dotso \sum p\left(x\_{1} , \dotso , x\_{n}|x\_{i}^{\prime}, pa\_{i}\right)p\left(pa\_{i}\right) & \text{if } x\_{i}=x\_{i}^{\prime} \newline
