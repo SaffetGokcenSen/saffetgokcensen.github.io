@@ -19,7 +19,7 @@ Let $p\left(x|y,do\left(z\right)\right)$ be attempted for computation. Can the i
 \begin{equation}
     p\left(x|y,do\left(z\right)\right) \stackrel{?}{=} p\left(x|y,z\right)
 \end{equation}
-It must be examined if $\left(X \perp ! \perp Z | Y\right)$ in $G\_{\underline{Z}}$. $G\_{\underline{Z}}$ is a modified version of the original DAG $G$. The arrows going out of $Z$ are removed from $G$ to obtain $G\_{\underline{Z}}$. $G\_{\underline{Z}}$ is shown in the Figure 2.
+It must be examined if $\left(X \perp \perp Z | Y\right)$ in $G\_{\underline{Z}}$. $G\_{\underline{Z}}$ is a modified version of the original DAG $G$. The arrows going out of $Z$ are removed from $G$ to obtain $G\_{\underline{Z}}$. $G\_{\underline{Z}}$ is shown in the Figure 2.
 <figure>
    <img src="/assets/dag_Z_underline.png" style="max-width: 400px;">
    <figcaption>Figure 2. The graph $G_{\underline{Z}}$.</figcaption>
@@ -33,7 +33,7 @@ Can the intervention on $Z$ be removed?
 \begin{equation}
     p\left(x|y,do\left(z\right)\right) \stackrel{?}{=} p\left(x|y\right)
 \end{equation}
-It must be scrutinized if $\left(X \perp\!\!\!\!\perp Z | Y\right)$ in $G\_{\overline{Z\left(Y\right)}}$. $G\_{\overline{Z\left(Y\right)}}$ is a modified version of $G$. The arrows going into $Z$ variable(s) which are not ancestor(s) of $Y$ are removed to get $G\_{\overline{Z\left(Y\right)}}$. $Z$ is an ancestor of $Y$. Hence, $G\_{\overline{Z\left(Y\right)}}$ is the same as $G$. $X$ and $Z$ are conditionally d-connected given $Y$ in $G$ through either the path $X \rightarrow Z$ or the path $X \leftarrow U \rightarrow Y \leftarrow Z$. So, the intervention on $Z$ cannot be removed:
+It must be scrutinized if $\left(X \perp \perp Z | Y\right)$ in $G\_{\overline{Z\left(Y\right)}}$. $G\_{\overline{Z\left(Y\right)}}$ is a modified version of $G$. The arrows going into $Z$ variable(s) which are not ancestor(s) of $Y$ are removed to get $G\_{\overline{Z\left(Y\right)}}$. $Z$ is an ancestor of $Y$. Hence, $G\_{\overline{Z\left(Y\right)}}$ is the same as $G$. $X$ and $Z$ are conditionally d-connected given $Y$ in $G$ through either the path $X \rightarrow Z$ or the path $X \leftarrow U \rightarrow Y \leftarrow Z$. So, the intervention on $Z$ cannot be removed:
 \begin{equation}
     p\left(x|y,do\left(z\right)\right) \neq p\left(x|y\right)
 \end{equation}
@@ -42,7 +42,7 @@ A way into a solution may be obtained by replacing the observation of $Y$ with t
 \begin{equation}
     p\left(x|y,do\left(z\right)\right) \stackrel{?}{=} p\left(x|do\left(y\right),do\left(z\right)\right)
 \end{equation}
-It must be studied if $X \perp\!\!\!\!\perp Y$ in $G\_{\overline{Z}\underline{Y}}$. $G\_{\overline{Z}\underline{Y}}$ can be obtained from $G$ by removing the arrows entering $Z$ and the arrows going out of $Y$. $G\_{\overline{Z}\underline{Y}}$ is displayed in the Figure 3.
+It must be studied if $X \perp \perp Y$ in $G\_{\overline{Z}\underline{Y}}$. $G\_{\overline{Z}\underline{Y}}$ can be obtained from $G$ by removing the arrows entering $Z$ and the arrows going out of $Y$. $G\_{\overline{Z}\underline{Y}}$ is displayed in the Figure 3.
 <figure>
    <img src="/assets/dag_Z_overline_Y_underline.png" style="max-width: 400px;">
    <figcaption>Figure 3. The graph $G_{\overline{Z}\underline{Y}}$ or the graph $G_{\overline{Z}}$.</figcaption>
