@@ -61,7 +61,7 @@ Let $p\left(y|x,do\left(z\right)\right)$ be attempted for computation. Can the i
 \begin{equation}
     p\left(y|x,do\left(z\right)\right) \stackrel{?}{=} p\left(y|x,z\right)
 \end{equation}
-Is $\left(Y \perp\!\!\!\!\perp Z | X \right)$ in $G\_{\underline{Z}}$? Yes. From $G\_{\underline{Z}}$ shown in the Figure 2, it can be detected that $Y$ is conditionally d-separated from Z given $X$ since the path $Z \leftarrow X \leftarrow U \rightarrow Y$ is blocked by $X$. Then, the intervention on $Z$ can be replaced by the observation of $Z$:
+Is $\left(Y \perp \perp Z | X \right)$ in $G\_{\underline{Z}}$? Yes. From $G\_{\underline{Z}}$ shown in the Figure 2, it can be detected that $Y$ is conditionally d-separated from Z given $X$ since the path $Z \leftarrow X \leftarrow U \rightarrow Y$ is blocked by $X$. Then, the intervention on $Z$ can be replaced by the observation of $Z$:
 \begin{equation}
     p\left(y|x,do\left(z\right)\right) = p\left(y|x,z\right)
     \label{first\_part}
@@ -70,13 +70,13 @@ $p\left(y|x,do\left(z\right)\right)$ has been computed. Now, it is the turn of $
 \begin{equation}
     p\left(x|do\left(z\right)\right) \stackrel{?}{=} p\left(x|z\right)
 \end{equation}
-Is $X \perp\!\!\!\!\perp Z$ in $G\_{\underline{Z}}$? No. From the Figure 2, it can be seen that $X$ and $Z$ are d-connected through the path $X \rightarrow Z$.
+Is $X \perp \perp Z$ in $G\_{\underline{Z}}$? No. From the Figure 2, it can be seen that $X$ and $Z$ are d-connected through the path $X \rightarrow Z$.
 
 Can the intervention on $Z$ be removed?
 \begin{equation}
     p\left(x|do\left(z\right)\right) \stackrel{?}{=} p\left(x\right)
 \end{equation}
-Is $X \perp\!\!\!\!\perp Z$ in $G\_{\overline{Z}}$? Yes. From the Figure 3, it can be seen that $X$ and $Z$ are d-separated since the path $X \leftarrow U \rightarrow Y \leftarrow Z$ is blocked by the collision node $Y$. Hence, the intervention can be removed to yield the following equality:
+Is $X \perp \perp Z$ in $G\_{\overline{Z}}$? Yes. From the Figure 3, it can be seen that $X$ and $Z$ are d-separated since the path $X \leftarrow U \rightarrow Y \leftarrow Z$ is blocked by the collision node $Y$. Hence, the intervention can be removed to yield the following equality:
 \begin{equation}
     p\left(x|do\left(z\right)\right) = p\left(x\right)
     \label{second\_part}
