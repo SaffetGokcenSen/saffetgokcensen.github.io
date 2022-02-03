@@ -19,10 +19,10 @@ Let $p\left(x|y,do\left(z\right)\right)$ be attempted for computation. Can the i
 \begin{equation}
     p\left(x|y,do\left(z\right)\right) \stackrel{?}{=} p\left(x|y,z\right)
 \end{equation}
-It must be examined if $\left(X \perp \perp Z | Y\right)$ in $G\_{\underline{Z}}$. $G\_{\underline{Z}}$ is a modified version of the original DAG $G$. The arrows going out of $Z$ are removed from $G$ to obtain $G\_{\underline{Z}}$. $G\_{\underline{Z}}$ is shown in the Figure 2.
+It must be examined if $\left(X \perp ! \perp Z | Y\right)$ in $G\_{\underline{Z}}$. $G\_{\underline{Z}}$ is a modified version of the original DAG $G$. The arrows going out of $Z$ are removed from $G$ to obtain $G\_{\underline{Z}}$. $G\_{\underline{Z}}$ is shown in the Figure 2.
 <figure>
    <img src="/assets/dag_Z_underline.png" style="max-width: 400px;">
-   <figcaption>Figure 2. The graph $G\_{\underline{Z}}$.</figcaption>
+   <figcaption>Figure 2. The graph $G_{\underline{Z}}$.</figcaption>
 </figure>
 As can easily be detected from $G\_{\underline{Z}}$, $X$ and $Z$ are conditionally d-connected given $Y$ through the path $X \rightarrow Z$. Therefore, the intervention on $Z$ cannot be replaced with the observation of $Z$:
 \begin{equation}
@@ -45,7 +45,7 @@ A way into a solution may be obtained by replacing the observation of $Y$ with t
 It must be studied if $X \perp\!\!\!\!\perp Y$ in $G\_{\overline{Z}\underline{Y}}$. $G\_{\overline{Z}\underline{Y}}$ can be obtained from $G$ by removing the arrows entering $Z$ and the arrows going out of $Y$. $G\_{\overline{Z}\underline{Y}}$ is displayed in the Figure 3.
 <figure>
    <img src="/assets/dag_Z_overline_Y_underline.png" style="max-width: 400px;">
-   <figcaption>Figure 3. The graph $G\_{\overline{Z}\underline{Y}}$ or the graph $G\_{\overline{Z}}$..</figcaption>
+   <figcaption>Figure 3. The graph $G_{\overline{Z}\underline{Y}}$ or the graph $G_{\overline{Z}}$.</figcaption>
 </figure>
 The graph $G\_{\overline{Z}\underline{Y}}$ implies that $X$ and $Y$ are d-connected through the path $X \leftarrow U \rightarrow Y$. This means that the observation of $Y$ cannot be replaced by the intervention on $Y$:
 \begin{equation}
@@ -87,6 +87,6 @@ Now, the computation result of the causal effect $p\left(x,y|do\left(z\right)\ri
     p\left(x,y|do\left(z\right)\right)=p\left(y|x,z\right)p\left(x\right)
 \end{equation}
 ## Conclusion
-The computation of the causal effect $p\left(x,y|do\left(z\right)\right)$ for a causal model whose DAG is shown in the Figure 1 has been elaborated on. This problem is the fifth task on page 88 of \cite{Pearl}.
+The computation of the causal effect $p\left(x,y|do\left(z\right)\right)$ for a causal model whose DAG is shown in the Figure 1 has been elaborated on. This problem is the fifth task on page 88 of [1].
 ## References
 Judea Pearl, Causality: Models, Reasoning and Inference, Cambridge University Press, 2009.
