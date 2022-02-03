@@ -89,4 +89,4 @@ Now, the computation result of the causal effect $p\left(x,y|do\left(z\right)\ri
 ## Conclusion
 The computation of the causal effect $p\left(x,y|do\left(z\right)\right)$ for a causal model whose DAG is shown in the Figure 1 has been elaborated on. This problem is the fifth task on page 88 of [1].
 ## References
-Judea Pearl, Causality: Models, Reasoning and Inference, Cambridge University Press, 2009.
+[1] Judea Pearl, Causality: Models, Reasoning and Inference, Cambridge University Press, 2009.
