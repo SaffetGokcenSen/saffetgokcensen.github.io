@@ -15,7 +15,7 @@ There is an unknown vector $\mathbf{x}$. It has a multivariate Gaussian distribu
 \end{equation}
 There are $N$ measurements from a single measurement device. The likelihood is as follows:
 \begin{equation}
-    p\left(\mathbf{y}\_{i}|\mathbf{x}\right)=N\left(\mathbf{x}, \boldsymbol{\Sigma}\_{y}\right)
+    p\left(\mathbf{y}\_{i}|\mathbf{x}\right)\propto N\left(\mathbf{x}, \boldsymbol{\Sigma}\_{y}\right)
 \end{equation}
 where $\mathbf{y}\_{i}$ is a single measurement. Since there is a single measurement device, there is only one covariance for the measurements. There are $N$ independent measurements. The mean of these $N$ measurements is taken as the final measurement:
 \begin{equation}
@@ -93,7 +93,7 @@ Then:
 \end{equation}
 Hence, $\bar{\mathbf{y}}$ has the following likelihood:
 \begin{equation}
-    p\left(\bar{\mathbf{y}}|\mathbf{x}\right)=N\left(\mathbf{x},\frac{1}{N}\boldsymbol{\Sigma}\_{y}\right)
+    p\left(\bar{\mathbf{y}}|\mathbf{x}\right)\propto N\left(\mathbf{x},\frac{1}{N}\boldsymbol{\Sigma}\_{y}\right)
 \end{equation}
 The prior $p\left(\mathbf{x}\right)$ and the likelihood $p\left(\bar{\mathbf{y}}|\mathbf{x}\right)$ are known. The posterior $p\left(\mathbf{x}|\bar{\mathbf{y}}\right)$ is to be obtained. Given the prior $N\left(\mathbf{x}|\boldsymbol{\mu}\_{x}, \boldsymbol{\Sigma}\_{x}\right)$ and the likelihood $N\left(\mathbf{y}|\mathbf{A}\mathbf{x}+\mathbf{b}, \boldsymbol{\Sigma}\_{y}\right)$, it is known that the posterior $p\left(\mathbf{x}|\mathbf{y}\right)$ is given by either of the following two forms:
 \begin{equation}
