@@ -106,7 +106,7 @@ Hence, the likelihood is proportional to a multivariate normal distribution with
         \mathbf{0} & \mathbf{0} & \mathbf{0} & \dotso & \boldsymbol{\Sigma}\_{m}
     \end{bmatrix}
 \end{equation}
-The mean for the likelihood has the following relation with the prior mean $\mathbf{x}$:
+The mean for the likelihood probability density function has the following relation with the prior mean $\mathbf{x}$:
 \begin{equation}
     \boldsymbol{\mu}\_{\mathbf{y}}=\begin{bmatrix}
         \mathbf{x} \newline
