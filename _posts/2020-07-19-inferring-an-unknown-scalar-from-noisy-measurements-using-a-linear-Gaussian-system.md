@@ -14,7 +14,7 @@ There are $N$ noisy measurements. They are denoted by $y\_{i}$. It is assumed th
 \end{equation}
 where $\epsilon$ is the noise and $x$ is the actual signal under the measurement. The measurements are assumed to have the following likelihood:
 \begin{equation}
-    p\left(y\_{i}|x\right)=N\left(y\_{i}|x, \lambda\_{y}^{-1}\right)
+    p\left(y\_{i}|x\right)\propto N\left(y\_{i}|x, \lambda\_{y}^{-1}\right)
 \end{equation}
 where $\lambda\_{y}=1/\sigma^{2}$. The underlying signal $x$ is supposed to have the following prior:
 \begin{equation}
