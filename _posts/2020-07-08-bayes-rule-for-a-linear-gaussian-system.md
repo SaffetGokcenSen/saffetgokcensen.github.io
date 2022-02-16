@@ -18,13 +18,13 @@ As can be seen from the above definition, the mean of $p\left(\mathbf{y}|\mathbf
 ## Derivation
 Let the Bayes rule for a linear Gaussian system be derived. First, the joint distribution of $\mathbf{x}$ and $\mathbf{y}$ is to be written:
 \begin{equation}
-    p\left(\mathbf{x}, \mathbf{y}\right)=p\left(\mathbf{x}\right)p\left(\mathbf{y}|\mathbf{x}\right)=\frac{1}{\left(2\pi\right)^{D\_{x}/2}\left |\boldsymbol{\Sigma}\_{x}\right |^{1/2}}\exp \left[-\frac{1}{2}\left(\mathbf{x}-\boldsymbol{\mu}\_{x}\right)^{T}\boldsymbol{\Sigma}\_{x}^{-1}\left(\mathbf{x}-\boldsymbol{\mu}\_{x}\right)\right] \times
+    p\left(\mathbf{x}, \mathbf{y}\right) \propto p\left(\mathbf{x}\right)p\left(\mathbf{y}|\mathbf{x}\right)=\frac{1}{\left(2\pi\right)^{D\_{x}/2}\left |\boldsymbol{\Sigma}\_{x}\right |^{1/2}}\exp \left[-\frac{1}{2}\left(\mathbf{x}-\boldsymbol{\mu}\_{x}\right)^{T}\boldsymbol{\Sigma}\_{x}^{-1}\left(\mathbf{x}-\boldsymbol{\mu}\_{x}\right)\right] \times
 \end{equation}
 \begin{equation}
     \frac{1}{\left(2\pi\right)^{D\_{y}/2}\left |\boldsymbol{\Sigma}\_{y}\right |^{1/2}}\exp \left[-\frac{1}{2}\left(\mathbf{y}-\boldsymbol{\mu}\_{y}\right)^{T}\boldsymbol{\Sigma}\_{y}^{-1}\left(\mathbf{y}-\boldsymbol{\mu}\_{y}\right)\right] \Rightarrow
 \end{equation}
 \begin{equation}
-    p\left(\mathbf{x}, \mathbf{y}\right)=
+    p\left(\mathbf{x}, \mathbf{y}\right) \propto
 \end{equation}
 \begin{equation}
     \frac{1}{\left(2\pi\right)^{\left(D\_{x}+D\_{y}\right)/2}\left |\boldsymbol{\Sigma}\_{x}\boldsymbol{\Sigma}\_{y}\right |^{1/2}} \exp \left[-\frac{1}{2}\left(\mathbf{x}-\boldsymbol{\mu}\_{x}\right)^{T}\boldsymbol{\Sigma}\_{x}^{-1}\left(\mathbf{x}-\boldsymbol{\mu}\_{x}\right)-\frac{1}{2}\left(\mathbf{y}-\boldsymbol{\mu}\_{y}\right)^{T}\boldsymbol{\Sigma}\_{y}^{-1}\left(\mathbf{y}-\boldsymbol{\mu}\_{y}\right)\right]
