@@ -5,7 +5,7 @@ title: Decision Boundaries For Quadratic Discriminant Analysis
 ---
 Assume that a classification is to be made. Given the parameters $\boldsymbol{\theta}$ and the input vector $\textbf{x}$, the class of the output variable $y$ is to be determined. The probability density function of $y$ being from the class $c$ is modeled using a discrete generative model as follows:
 \begin{equation}
-p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )=\frac{p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )p\left ( y=c|\boldsymbol{\theta}\right )}{p\left (\textbf{x}|\boldsymbol{\theta} \right )}
+p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )\propto \frac{p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )p\left ( y=c|\boldsymbol{\theta}\right )}{p\left (\textbf{x}|\boldsymbol{\theta} \right )}
 \end{equation}
 If a multivariate Gaussian distribution is used to model the class conditional density of the input vector, i.e. $p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )$, then this is called the quadratic discriminant analysis:
 \begin{equation}
@@ -17,13 +17,13 @@ Let the decision boundary between two classes be drawn to illustrate the quadrat
 p\left (y=c\_{1}|\textbf{x}, \boldsymbol{\theta}\right )=p\left (y=c\_{2}|\textbf{x}, \boldsymbol{\theta}\right ) \Rightarrow 
 \end{equation}
 \begin{equation}
-\frac{p\left (\textbf{x}|y=c\_{1}, \boldsymbol{\theta}\right )p\left ( y=c\_{1}|\boldsymbol{\theta}\right )}{p\left (\textbf{x}|\boldsymbol{\theta} \right )}=\frac{p\left (\textbf{x}|y=c\_{2}, \boldsymbol{\theta}\right )p\left ( y=c\_{2}|\boldsymbol{\theta}\right )}{p\left (\textbf{x}|\boldsymbol{\theta} \right )} \Rightarrow
+\frac{p\left (\textbf{x}|y=c\_{1}, \boldsymbol{\theta}\right )p\left ( y=c\_{1}|\boldsymbol{\theta}\right )}{p\left (\textbf{x}|\boldsymbol{\theta} \right )}\propto \frac{p\left (\textbf{x}|y=c\_{2}, \boldsymbol{\theta}\right )p\left ( y=c\_{2}|\boldsymbol{\theta}\right )}{p\left (\textbf{x}|\boldsymbol{\theta} \right )} \Rightarrow
 \end{equation}
 \begin{equation}
-p\left (\textbf{x}|y=c\_{1}, \boldsymbol{\theta}\right )p\left ( y=c\_{1}|\boldsymbol{\theta}\right )=p\left (\textbf{x}|y=c\_{2}, \boldsymbol{\theta}\right )p\left ( y=c\_{2}|\boldsymbol{\theta}\right ) \Rightarrow
+p\left (\textbf{x}|y=c\_{1}, \boldsymbol{\theta}\right )p\left ( y=c\_{1}|\boldsymbol{\theta}\right )\propto p\left (\textbf{x}|y=c\_{2}, \boldsymbol{\theta}\right )p\left ( y=c\_{2}|\boldsymbol{\theta}\right ) \Rightarrow
 \end{equation}
 \begin{equation}
-\pi\_{1}\frac{1}{\left (2\pi \right )^{D/2} \left | \boldsymbol{\Sigma}\_{c\_{1}} \right |^{1/2}}\exp \left [-\frac{1}{2}\left (\textbf{x}-\boldsymbol{\mu}\_{c\_{1}} \right )^{T}\boldsymbol{\Sigma}\_{c\_{1}}^{-1} \left (\textbf{x}-\boldsymbol{\mu}\_{c\_{1}} \right )\right ] =
+\pi\_{1}\frac{1}{\left (2\pi \right )^{D/2} \left | \boldsymbol{\Sigma}\_{c\_{1}} \right |^{1/2}}\exp \left [-\frac{1}{2}\left (\textbf{x}-\boldsymbol{\mu}\_{c\_{1}} \right )^{T}\boldsymbol{\Sigma}\_{c\_{1}}^{-1} \left (\textbf{x}-\boldsymbol{\mu}\_{c\_{1}} \right )\right ] \propto
 \end{equation}
 \begin{equation}
 \pi\_{2}\frac{1}{\left (2\pi \right )^{D/2} \left | \boldsymbol{\Sigma}\_{c\_{2}} \right |^{1/2}}\exp \left [-\frac{1}{2}\left (\textbf{x}-\boldsymbol{\mu}\_{c\_{2}} \right )^{T}\boldsymbol{\Sigma}\_{c\_{2}}^{-1} \left (\textbf{x}-\boldsymbol{\mu}\_{c\_{2}} \right )\right ]
