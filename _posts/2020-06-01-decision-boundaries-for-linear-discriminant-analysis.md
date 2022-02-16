@@ -17,7 +17,7 @@ A special case of the quadratic discriminant analysis is when the covariance mat
 \end{equation}
 for all of the classes $c$. Then, $p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )$ can be calculated as follows:
 \begin{equation}
-p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )\propto \frac{p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )p\left ( y=c|\boldsymbol{\theta}\right )}{p\left (\textbf{x}|\boldsymbol{\theta} \right )}=
+p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )\propto \frac{p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )p\left ( y=c|\boldsymbol{\theta}\right )}{p\left (\textbf{x}|\boldsymbol{\theta} \right )}\propto
 \end{equation}
 \begin{equation}
 \frac{p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )p\left ( y=c|\boldsymbol{\theta}\right )}{\sum\_{s=1}^{C}p\left (x, y=s|\boldsymbol{\theta} \right )}=\frac{p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )p\left ( y=c|\boldsymbol{\theta}\right )}{\sum\_{s=1}^{C}p\left (\textbf{x}|y=s, \boldsymbol{\theta}\right )p\left ( y=s|\boldsymbol{\theta}\right )} \Rightarrow
