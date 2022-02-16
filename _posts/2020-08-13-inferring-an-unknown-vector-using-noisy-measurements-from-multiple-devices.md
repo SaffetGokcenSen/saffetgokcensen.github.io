@@ -13,7 +13,7 @@ There is an unknown vector $\mathbf{x}$. It has a multivariate Gaussian distribu
 \end{equation}
 The number of measurement devices is $m$ where $m > 1$. The measurement devices are independent of each other. There are $N\_{k}$ measurements from the $k^{th}$ measurement device. The likelihood of the $i^{th}$ measurement from the $k^{th}$ device is as follows:
 \begin{equation}
-    p\left(\mathbf{y}\_{k}^{i}|\mathbf{x}\right)=N\left(\mathbf{x}, \boldsymbol{\Sigma}\_{y\_{\_{k}}}\right)
+    p\left(\mathbf{y}\_{k}^{i}|\mathbf{x}\right)\propto N\left(\mathbf{x}, \boldsymbol{\Sigma}\_{y\_{\_{k}}}\right)
 \end{equation}
 There are $N\_{k}$ independent measurements from the $k^{th}$ device. The mean of these $N\_{k}$ measurements is taken as the final measurement:
 \begin{equation}
@@ -26,7 +26,7 @@ The aim is to find the posterior distribution
 ## Solution
 It can be proven that $\bar{\mathbf{y}}\_{k}$ has the following likelihood:
 \begin{equation}
-    p\left(\bar{\mathbf{y}}\_{k}|\mathbf{x}\right)=N\left(\mathbf{x},\frac{1}{N\_{k}}\boldsymbol{\Sigma}\_{y\_{\_{k}}}\right)
+    p\left(\bar{\mathbf{y}}\_{k}|\mathbf{x}\right) \propto N\left(\mathbf{x},\frac{1}{N\_{k}}\boldsymbol{\Sigma}\_{y\_{\_{k}}}\right)
 \end{equation}
 where
 \begin{equation}
@@ -38,7 +38,7 @@ Let the likelihood
 \end{equation}
 be determined. The measurement sources are independent of each other. Hence:
 \begin{equation}
-    p\left(\left[\bar{\mathbf{y}}\_{1}^{T} \ \bar{\mathbf{y}}\_{2}^{T} \ \bar{\mathbf{y}}\_{3}^{T} \dotso  \ \bar{\mathbf{y}}\_{m}^{T}\right]^{T}\big | \mathbf{x}\right)=p\left(\bar{\mathbf{y}}\_{1}| \mathbf{x}\right)p\left(\bar{\mathbf{y}}\_{2}| \mathbf{x}\right)p\left(\bar{\mathbf{y}}\_{3}| \mathbf{x}\right)\dotso p\left(\bar{\mathbf{y}}\_{m}| \mathbf{x}\right)=
+    p\left(\left[\bar{\mathbf{y}}\_{1}^{T} \ \bar{\mathbf{y}}\_{2}^{T} \ \bar{\mathbf{y}}\_{3}^{T} \dotso  \ \bar{\mathbf{y}}\_{m}^{T}\right]^{T}\big | \mathbf{x}\right)=p\left(\bar{\mathbf{y}}\_{1}| \mathbf{x}\right)p\left(\bar{\mathbf{y}}\_{2}| \mathbf{x}\right)p\left(\bar{\mathbf{y}}\_{3}| \mathbf{x}\right)\dotso p\left(\bar{\mathbf{y}}\_{m}| \mathbf{x}\right)\propto 
 \end{equation}
 \begin{equation}
     \frac{1}{\left(2\pi\right)^{N\_{1}/2}\left |\boldsymbol{\Sigma}\_{1} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{1}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{1}^{-1}\left(\bar{\mathbf{y}}\_{1}-\mathbf{x}\right)\right] \times
@@ -50,13 +50,10 @@ be determined. The measurement sources are independent of each other. Hence:
     \frac{1}{\left(2\pi\right)^{N\_{3}/2}\left |\boldsymbol{\Sigma}\_{3} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{3}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}^{-1}\_{3}\left(\bar{\mathbf{y}}\_{3}-\mathbf{x}\right)\right] \times \dotso \times
 \end{equation}
 \begin{equation}
-    \frac{1}{\left(2\pi\right)^{N\_{m}/2}\left |\boldsymbol{\Sigma}\_{m} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{m}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}^{-1}\_{m}\left(\bar{\mathbf{y}}\_{m}-\mathbf{x}\right)\right]=
+    \frac{1}{\left(2\pi\right)^{N\_{m}/2}\left |\boldsymbol{\Sigma}\_{m} \right |^{1/2}}\exp\left[-\frac{1}{2}\left(\bar{\mathbf{y}}\_{m}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}^{-1}\_{m}\left(\bar{\mathbf{y}}\_{m}-\mathbf{x}\right)\right] \Rightarrow
 \end{equation}
 \begin{equation}
-    p\left(\left[\bar{\mathbf{y}}\_{1}^{T} \ \bar{\mathbf{y}}\_{2}^{T} \ \bar{\mathbf{y}}\_{3}^{T} \dotso  \ \bar{\mathbf{y}}\_{m}^{T}\right]^{T}\big | \mathbf{x}\right)=
-\end{equation}
-\begin{equation}
-    p\left(\left[\bar{\mathbf{y}}\_{1}^{T} \ \bar{\mathbf{y}}\_{2}^{T} \ \bar{\mathbf{y}}\_{3}^{T} \dotso  \ \bar{\mathbf{y}}\_{m}^{T}\right]^{T}\big | \mathbf{x}\right)=\frac{1}{\prod\_{k=1}^{m}\left(2\pi\right)^{N\_{k}/2}\left |\boldsymbol{\Sigma}\_{k} \right |^{1/2}}\exp \left[\sum\_{k=1}^{m} -\frac{1}{2}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{k}^{-1}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)\right]
+    p\left(\left[\bar{\mathbf{y}}\_{1}^{T} \ \bar{\mathbf{y}}\_{2}^{T} \ \bar{\mathbf{y}}\_{3}^{T} \dotso  \ \bar{\mathbf{y}}\_{m}^{T}\right]^{T}\big | \mathbf{x}\right)\propto \frac{1}{\prod\_{k=1}^{m}\left(2\pi\right)^{N\_{k}/2}\left |\boldsymbol{\Sigma}\_{k} \right |^{1/2}}\exp \left[\sum\_{k=1}^{m} -\frac{1}{2}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)^{T}\boldsymbol{\Sigma}\_{k}^{-1}\left(\bar{\mathbf{y}}\_{k}-\mathbf{x}\right)\right]
     \label{likelihood}
 \end{equation}
 Then, the exponential in the equation (\ref{likelihood}) can be written as follows:
@@ -93,7 +90,7 @@ Then, the exponential in the equation (\ref{likelihood}) can be written as follo
         \mathbf{x}
     \end{bmatrix}\right )
 \end{equation}
-Hence, the likelihood is also a multivariate normal distribution with mean and covariance given as follows:
+Hence, the likelihood is proportional to a multivariate normal distribution with mean and covariance given as follows:
 \begin{equation}
     \boldsymbol{\mu}\_{\mathbf{y}}=\begin{bmatrix}
         \mathbf{x} \newline
@@ -139,7 +136,7 @@ where
         \mathbf{I}
     \end{bmatrix}, \mathbf{b}=\mathbf{0}
 \end{equation}
-Given the prior $N\left(\mathbf{x}|\boldsymbol{\mu}\_{x}, \boldsymbol{\Sigma}\_{x}\right)$ and the likelihood $N\left(\mathbf{y}|\mathbf{A}\mathbf{x}+\mathbf{b}, \boldsymbol{\Sigma}\_{y}\right)$, it is known that the posterior $p\left(\mathbf{x}|\mathbf{y}\right)$ is given by either of the following two forms:
+Given the prior $N\left(\mathbf{x}|\boldsymbol{\mu}\_{x}, \boldsymbol{\Sigma}\_{x}\right)$ and the likelihood proportional to $N\left(\mathbf{y}|\mathbf{A}\mathbf{x}+\mathbf{b}, \boldsymbol{\Sigma}\_{y}\right)$, it is known that the posterior $p\left(\mathbf{x}|\mathbf{y}\right)$ is given by either of the following two forms:
 \begin{equation}
     p\left(\mathbf{x}|\mathbf{y}\right)=N\left(\mathbf{x}|\left(\boldsymbol{\Sigma}\_{x}-\boldsymbol{\Sigma}\_{x|y}\right)\boldsymbol{\Sigma}\_{x}^{-1}\mathbf{A}^{-1}\left(\mathbf{y}-\mathbf{b}\right)+\boldsymbol{\Sigma}\_{x|y}\boldsymbol{\Sigma}\_{x}^{-1}\boldsymbol{\mu}\_{x}, \boldsymbol{\Sigma}\_{x|y}\right) \ \text{(first form)}
 \end{equation}
@@ -259,7 +256,7 @@ Let the second form for the posterior covariance be calculated:
 \end{equation}
 Obviously, the second form of the posterior covariance is easier to compute. It seems to be numerically more stable than the first form.
 ## Conclusion
-There are more than one measurement devices which are independent of each other. Measurements are made for an unknown vector by these devices. The prior for the unknown vector is multivariate Gaussian and it is known. Additionally, likelihoods for the measurement devices are also known and they are all multivariate Gaussian. The prior and likelihoods form a linear Gaussian system. The posterior for the unknown vector has been calculated. A sample implementation can be found in the Jupyter notebook given on [this link](https://github.com/SaffetGokcenSen/Gaussian-Models/blob/master/inferring_an_unknown_vector_from_noisy_measurements_sensor_fusion.ipynb).
+There are more than one measurement devices which are independent of each other. Measurements are made for an unknown vector by these devices. The prior for the unknown vector is multivariate Gaussian and it is known. Additionally, likelihoods for the measurement devices are also known and they are all proportional to multivariate Gaussians. The prior and likelihoods form a linear Gaussian system. The posterior for the unknown vector has been calculated. A sample implementation can be found in the Jupyter notebook given on [this link](https://github.com/SaffetGokcenSen/Gaussian-Models/blob/master/inferring_an_unknown_vector_from_noisy_measurements_sensor_fusion.ipynb).
 ## References
 [1] Machine Learning A Probabilistic Perspective, Kevin P. Murphy.
 
