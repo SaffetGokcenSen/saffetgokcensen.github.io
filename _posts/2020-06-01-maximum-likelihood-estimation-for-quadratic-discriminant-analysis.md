@@ -3,11 +3,11 @@ layout: post
 author: SAFFET GÖKÇEN ŞEN
 title: Maximum Likelihood Estimation For Quadratic Discriminant Analysis
 ---
-Assume that there is a discrete generative model. A classification is to be made using this model. The probability density function of the output to be in the class $c$ is given as follows:
+Assume that there is a discrete generative model. A classification is to be made using this model. The probability of the output to be in the class $c$ is given as follows:
 \begin{equation}
 p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )=\frac{p\left (\textbf{x}|y=c, \boldsymbol{\theta} \right )p\left (y=c|\boldsymbol{\theta} \right )}{p\left ( \textbf{x}|\boldsymbol{\theta}\right )}
 \end{equation}
-If $p\left (\textbf{x}|y=c, \boldsymbol{\theta} \right )$ is given by a multivariate Gaussian distribution, then this classification is called the quadratic discriminant classification. The maximum likelihood estimator for the quadratic discriminant classifier is to be derived. Hence, the likelihood of the data should be written first. The likelihood of a single data sample $\left (\textbf{x}\_{i}, y\_{i} \right )$ is as follows:
+If the class conditioned probability density function of the input is given by a multivariate Gaussian distribution, then this classification is called the quadratic discriminant classification. The maximum likelihood estimator for the quadratic discriminant classifier is to be derived. Hence, the likelihood of the data should be written first. The likelihood of a single data sample $\left (\textbf{x}\_{i}, y\_{i} \right )$ is as follows:
 \begin{equation}
 p\left (\textbf{x}\_{i}, y\_{i}|\boldsymbol{\theta}\right )=p\left (\textbf{x}\_{i}|y\_{i}, \boldsymbol{\theta} \right ) p\left (y\_{i}|\boldsymbol{\theta} \right )=\prod\_{c=1}^{C} p\left (y\_{i}|\boldsymbol{\theta}\_{c} \right )^{I\left (y\_{i}=c \right )}\prod\_{c=1}^{C}p\left (\textbf{x}\_{i}|y\_{i}, \boldsymbol{\theta}\_{c} \right )^{I\left (y\_{i}=c \right )}
 \end{equation}
@@ -42,7 +42,7 @@ is plugged in place of $p\left (y\_{i}=c|\boldsymbol{\theta}\_{c} \right )$. $N\
 \begin{equation}
 \boldsymbol{\Sigma}\_{c\_{MLE}} = \frac{1}{N\_{c}} \sum\_{i:y\_{i}=c} \left (\textbf{x}\_{i}-\boldsymbol{\mu}\_{c\_{MLE}} \right )\left (\textbf{x}\_{i}-\boldsymbol{\mu}\_{c\_{MLE}} \right )^{T}
 \end{equation}
-The maximum likelihood estimation measure for $p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )$ is calculated without computing $p\left ( \textbf{x}|\boldsymbol{\theta}\right )$ since it is the same for all of the classes. A sample for the maximum likelihood estimation is given on [this link](https://github.com/SaffetGokcenSen/Gaussian-Models/blob/master/mle_for_quadratic_discriminant%20_analysis.ipynb).
+A sample for the maximum likelihood estimation is given on [this link](https://github.com/SaffetGokcenSen/Gaussian-Models/blob/master/mle_for_quadratic_discriminant%20_analysis.ipynb).
 
 $\textbf{References}$
 
