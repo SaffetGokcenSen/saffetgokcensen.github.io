@@ -5,7 +5,7 @@ title: Decision Boundaries For Linear Discriminant Analysis
 ---
 Assume that a classification is to be made. Given the parameters $\boldsymbol{\theta}$ and the input vector $\textbf{x}$, the class of the output variable $y$ is to be determined. The probability density function of $y$ being from the class $c$ is modeled using a discrete generative model as follows:
 \begin{equation}
-p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )=\frac{p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )p\left ( y=c|\boldsymbol{\theta}\right )}{p\left (\textbf{x}|\boldsymbol{\theta} \right )}
+p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right ) \propto \frac{p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )p\left ( y=c|\boldsymbol{\theta}\right )}{p\left (\textbf{x}|\boldsymbol{\theta} \right )}
 \end{equation}
 If a multivariate Gaussian distribution is used to model the class conditional density of the input vector, i.e. $p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )$, then this is called the quadratic discriminant analysis:
 \begin{equation}
@@ -17,16 +17,16 @@ A special case of the quadratic discriminant analysis is when the covariance mat
 \end{equation}
 for all of the classes $c$. Then, $p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )$ can be calculated as follows:
 \begin{equation}
-p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )=\frac{p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )p\left ( y=c|\boldsymbol{\theta}\right )}{p\left (\textbf{x}|\boldsymbol{\theta} \right )}=
+p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )\propto \frac{p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )p\left ( y=c|\boldsymbol{\theta}\right )}{p\left (\textbf{x}|\boldsymbol{\theta} \right )}=
 \end{equation}
 \begin{equation}
 \frac{p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )p\left ( y=c|\boldsymbol{\theta}\right )}{\sum\_{s=1}^{C}p\left (x, y=s|\boldsymbol{\theta} \right )}=\frac{p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )p\left ( y=c|\boldsymbol{\theta}\right )}{\sum\_{s=1}^{C}p\left (\textbf{x}|y=s, \boldsymbol{\theta}\right )p\left ( y=s|\boldsymbol{\theta}\right )} \Rightarrow
 \end{equation}
 \begin{equation}
-p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )=\frac{\pi\_{c}p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )}{\sum\_{s=1}^{C}\pi\_{s}p\left (\textbf{x}|y=s, \boldsymbol{\theta}\right )} \Rightarrow
+p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right ) \propto \frac{\pi\_{c}p\left (\textbf{x}|y=c, \boldsymbol{\theta}\right )}{\sum\_{s=1}^{C}\pi\_{s}p\left (\textbf{x}|y=s, \boldsymbol{\theta}\right )} \Rightarrow
 \end{equation}
 \begin{equation}
-p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )=\frac{\pi\_{c}\frac{1}{\left (2\pi \right )^{D/2} \left | \boldsymbol{\Sigma} \right |^{1/2}}\exp \left [-\frac{1}{2}\left (\textbf{x}-\boldsymbol{\mu}\_{c} \right )^{T}\boldsymbol{\Sigma}^{-1} \left (\textbf{x}-\boldsymbol{\mu}\_{c} \right )\right ]}{\sum\_{s=1}^{C} \pi\_{s}\frac{1}{\left (2\pi \right )^{D/2} \left | \boldsymbol{\Sigma} \right |^{1/2}}\exp \left [-\frac{1}{2}\left (\textbf{x}-\boldsymbol{\mu}\_{s} \right )^{T}\boldsymbol{\Sigma}^{-1} \left (\textbf{x}-\boldsymbol{\mu}\_{s} \right )\right ]}
+p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right ) \propto \frac{\pi\_{c}\frac{1}{\left (2\pi \right )^{D/2} \left | \boldsymbol{\Sigma} \right |^{1/2}}\exp \left [-\frac{1}{2}\left (\textbf{x}-\boldsymbol{\mu}\_{c} \right )^{T}\boldsymbol{\Sigma}^{-1} \left (\textbf{x}-\boldsymbol{\mu}\_{c} \right )\right ]}{\sum\_{s=1}^{C} \pi\_{s}\frac{1}{\left (2\pi \right )^{D/2} \left | \boldsymbol{\Sigma} \right |^{1/2}}\exp \left [-\frac{1}{2}\left (\textbf{x}-\boldsymbol{\mu}\_{s} \right )^{T}\boldsymbol{\Sigma}^{-1} \left (\textbf{x}-\boldsymbol{\mu}\_{s} \right )\right ]}
 \end{equation}
 Let the expression
 \begin{equation}
@@ -47,7 +47,7 @@ be simplified:
 \end{equation}
 The simplified expression is put into the class probability density conditioned on the input and parameters:
 \begin{equation}
-p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )=\frac{\pi\_{c}\frac{1}{\left (2\pi \right )^{D/2} \left | \boldsymbol{\Sigma} \right |^{1/2}}\exp \left [-\frac{1}{2}\left (\textbf{x}-\boldsymbol{\mu}\_{c} \right )^{T}\boldsymbol{\Sigma}^{-1} \left (\textbf{x}-\boldsymbol{\mu}\_{c} \right )\right ]}{\sum\_{s=1}^{C} \pi\_{s}\frac{1}{\left (2\pi \right )^{D/2} \left | \boldsymbol{\Sigma} \right |^{1/2}}\exp \left [-\frac{1}{2}\left (\textbf{x}-\boldsymbol{\mu}\_{s} \right )^{T}\boldsymbol{\Sigma}^{-1} \left (\textbf{x}-\boldsymbol{\mu}\_{s} \right )\right ]}=
+p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )\propto \frac{\pi\_{c}\frac{1}{\left (2\pi \right )^{D/2} \left | \boldsymbol{\Sigma} \right |^{1/2}}\exp \left [-\frac{1}{2}\left (\textbf{x}-\boldsymbol{\mu}\_{c} \right )^{T}\boldsymbol{\Sigma}^{-1} \left (\textbf{x}-\boldsymbol{\mu}\_{c} \right )\right ]}{\sum\_{s=1}^{C} \pi\_{s}\frac{1}{\left (2\pi \right )^{D/2} \left | \boldsymbol{\Sigma} \right |^{1/2}}\exp \left [-\frac{1}{2}\left (\textbf{x}-\boldsymbol{\mu}\_{s} \right )^{T}\boldsymbol{\Sigma}^{-1} \left (\textbf{x}-\boldsymbol{\mu}\_{s} \right )\right ]}=
 \end{equation}
 \begin{equation}
 \frac{\pi\_{c}\frac{1}{\left (2\pi \right )^{D/2} \left | \boldsymbol{\Sigma} \right |^{1/2}}\exp \left [-\frac{1}{2}\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\textbf{x}+\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c}-\frac{1}{2}\boldsymbol{\mu}\_{c}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c}\right ]}{\sum\_{s=1}^{C} \pi\_{s}\frac{1}{\left (2\pi \right )^{D/2} \left | \boldsymbol{\Sigma} \right |^{1/2}}\exp \left [-\frac{1}{2}\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\textbf{x}+\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{s}-\frac{1}{2}\boldsymbol{\mu}\_{s}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{s}\right ]}=
@@ -59,26 +59,26 @@ p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )=\frac{\pi\_{c}\frac{1}{\left
 \frac{\pi\_{c}\exp \left [\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c}-\frac{1}{2}\boldsymbol{\mu}\_{c}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c}\right ]}{\sum\_{s=1}^{C} \pi\_{s}\exp \left [\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{s}-\frac{1}{2}\boldsymbol{\mu}\_{s}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{s}\right ]} \Rightarrow
 \end{equation}
 \begin{equation}
-p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )=\frac{\exp \left [\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c}+\log \pi\_{c}-\frac{1}{2}\boldsymbol{\mu}\_{c}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c}\right ]}{\sum\_{s=1}^{C} \exp \left [\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{s}+\log \pi\_{s}-\frac{1}{2}\boldsymbol{\mu}\_{s}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{s}\right ]}
+p\left (y=c|\textbf{x}, \boldsymbol{\theta}\right )\propto \frac{\exp \left [\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c}+\log \pi\_{c}-\frac{1}{2}\boldsymbol{\mu}\_{c}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c}\right ]}{\sum\_{s=1}^{C} \exp \left [\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{s}+\log \pi\_{s}-\frac{1}{2}\boldsymbol{\mu}\_{s}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{s}\right ]}
 \end{equation}
 The boundary separating two classes $c\_{1}$ and $c\_{2}$ is a linear function of $\textbf{x}$. Hence, this analysis is called the linear discriminant analysis. The equation for this linear boundary can be derived as follows:
 \begin{equation}
 p\left (y=c\_{1}|\textbf{x}, \boldsymbol{\theta}\right )=p\left (y=c\_{2}|\textbf{x}, \boldsymbol{\theta}\right ) \Rightarrow
 \end{equation}
 \begin{equation}
-\frac{\exp \left [\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}+\log \pi\_{c\_{1}}-\frac{1}{2}\boldsymbol{\mu}\_{c\_{1}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}\right ]}{\sum\_{s=1}^{C} \exp \left [\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{s}+\log \pi\_{s}-\frac{1}{2}\boldsymbol{\mu}\_{s}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{s}\right ]}=
+\frac{\exp \left [\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}+\log \pi\_{c\_{1}}-\frac{1}{2}\boldsymbol{\mu}\_{c\_{1}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}\right ]}{\sum\_{s=1}^{C} \exp \left [\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{s}+\log \pi\_{s}-\frac{1}{2}\boldsymbol{\mu}\_{s}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{s}\right ]}\propto
 \end{equation}
 \begin{equation}
 \frac{\exp \left [\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{2}}+\log \pi\_{c\_{2}}-\frac{1}{2}\boldsymbol{\mu}\_{c\_{2}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{2}}\right ]}{\sum\_{s=1}^{C} \exp \left [\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{s}+\log \pi\_{s}-\frac{1}{2}\boldsymbol{\mu}\_{s}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{s}\right ]} \Rightarrow
 \end{equation}
 \begin{equation}
-\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}+\log \pi\_{c\_{1}}-\frac{1}{2}\boldsymbol{\mu}\_{c\_{1}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}=\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{2}}+\log \pi\_{c\_{2}}-\frac{1}{2}\boldsymbol{\mu}\_{c\_{2}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{2}} \Rightarrow
+\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}+\log \pi\_{c\_{1}}-\frac{1}{2}\boldsymbol{\mu}\_{c\_{1}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}} \propto \textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{2}}+\log \pi\_{c\_{2}}-\frac{1}{2}\boldsymbol{\mu}\_{c\_{2}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{2}} \Rightarrow
 \end{equation}
 \begin{equation}
-\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}-\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{2}}=\frac{1}{2}\boldsymbol{\mu}\_{c\_{1}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}-\frac{1}{2}\boldsymbol{\mu}\_{c\_{2}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{2}}+\log \pi\_{c\_{2}}-\log \pi\_{c\_{1}} \Rightarrow
+\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}-\textbf{x}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{2}}\propto \frac{1}{2}\boldsymbol{\mu}\_{c\_{1}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}-\frac{1}{2}\boldsymbol{\mu}\_{c\_{2}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{2}}+\log \pi\_{c\_{2}}-\log \pi\_{c\_{1}} \Rightarrow
 \end{equation}
 \begin{equation}
-\textbf{x}^{T} \left (\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}-\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{2}} \right )=\frac{1}{2}\boldsymbol{\mu}\_{c\_{1}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}-\frac{1}{2}\boldsymbol{\mu}\_{c\_{2}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{2}}+\log \pi\_{c\_{2}}-\log \pi\_{c\_{1}}
+\textbf{x}^{T} \left (\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}-\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{2}} \right )\propto \frac{1}{2}\boldsymbol{\mu}\_{c\_{1}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{1}}-\frac{1}{2}\boldsymbol{\mu}\_{c\_{2}}^{T}\boldsymbol{\Sigma}^{-1}\boldsymbol{\mu}\_{c\_{2}}+\log \pi\_{c\_{2}}-\log \pi\_{c\_{1}}
 \end{equation}
 Assume that there are only two features which means that $\textbf{x}$ vector is two dimensional. Then, the equation of the boundary is as follows:
 \begin{equation}
