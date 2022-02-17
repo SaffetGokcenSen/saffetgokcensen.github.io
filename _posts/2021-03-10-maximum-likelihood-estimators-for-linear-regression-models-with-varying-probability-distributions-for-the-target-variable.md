@@ -31,7 +31,7 @@ In order to avoid numerical underflow which is due to the multiplication of many
 \end{equation}
 $\log$ represents the natural logarithm function.
 
-What is $p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)$? It is generally assumed to be a Gaussian distribution. The mean of the distribution is $\mathbf{w}^{T}.\mathbf{x}\_{i}$ and the variance is $\sigma^{2}$:
+What is $p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)$? It is generally assumed to be proportional to a Gaussian distribution. The mean of the distribution is $\mathbf{w}^{T}.\mathbf{x}\_{i}$ and the variance is $\sigma^{2}$:
 \begin{equation}
     p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right) = \frac{1}{\sqrt{2\pi \sigma^{2}}}\exp \left[-\frac{\left(y\_{i}-\mathbf{w}^{T}.\mathbf{x}\_{i}\right)^{2}}{2\sigma^{2}}\right]
 \end{equation}
@@ -219,7 +219,7 @@ The maximum likelihood estimator for the parameters of the linear regression mod
 
 For example, let the distribution of the targets be Laplace with the location equal to $\mathbf{w}^{T}.\mathbf{x}$ and the scale equal to $1$. Then:
 \begin{equation}
-    p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)=\frac{1}{2} \exp \left(-\left | y\_{i} - \mathbf{w}^{T}.\mathbf{x}\_{i} \right |\right)
+    p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)\propto \frac{1}{2} \exp \left(-\left | y\_{i} - \mathbf{w}^{T}.\mathbf{x}\_{i} \right |\right)
 \end{equation}
 The maximum likelihood estimator for the parameters $\mathbf{w}$ will be derived for this linear regression model. Assuming the samples are i.i.d., the likelihood of the samples is given as follows:
 \begin{equation}
