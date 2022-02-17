@@ -12,13 +12,13 @@ The number of samples in the data set is $N$ and the samples are supposed to be 
 \end{equation}
 Let the data set be denoted by $\mathbf{X}$. It is not important whether the data vectors are columns or rows of the matrix $\mathbf{X}$. It can be chosen according to the software package used. The likelihood is the probability of obtaining the data in hand. Due to the independence of the samples, the likelihood is the product of the probabilities of each sample:
 \begin{equation}
-    p\left(\mathbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)=p\left(\mathbf{x}\_{1},\mathbf{x}\_{2}, \dotso , \mathbf{x}\_{N}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)=\prod\_{i=1}^{N}p\left(\mathbf{x}\_{i}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)=
+    p\left(\mathbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)=p\left(\mathbf{x}\_{1},\mathbf{x}\_{2}, \dotso , \mathbf{x}\_{N}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)=\prod\_{i=1}^{N}p\left(\mathbf{x}\_{i}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)\propto
 \end{equation}
 \begin{equation}
     \prod\_{i=1}^{N}\frac{1}{\left(2\pi\right)^{D/2}\left |\boldsymbol{\Sigma} \right |^{1/2}}\exp \left[-\frac{1}{2}\left(\mathbf{x}\_{i}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\mathbf{x}\_{i}-\boldsymbol{\mu}\right)\right] \Rightarrow
 \end{equation}
 \begin{equation}
-    p\left(\mathbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)=\frac{1}{\left(2\pi\right)^{ND/2}\left | \boldsymbol{\Sigma} \right |^{N/2}}\exp \left[\sum\_{i=1}^{N} -\frac{1}{2}\left(\mathbf{x}\_{i}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\mathbf{x}\_{i}-\boldsymbol{\mu}\right)\right]
+    p\left(\mathbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right) \propto \frac{1}{\left(2\pi\right)^{ND/2}\left | \boldsymbol{\Sigma} \right |^{N/2}}\exp \left[\sum\_{i=1}^{N} -\frac{1}{2}\left(\mathbf{x}\_{i}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\mathbf{x}\_{i}-\boldsymbol{\mu}\right)\right]
 \end{equation}
 The likelihood is to be put into a form which is shape compliant with an existing probability distribution called the normal-inverse Wishart distribution. This form can be achieved by using the following equality:
 \begin{equation}
@@ -88,10 +88,10 @@ Let the validity of the equation (\ref{key\_relation}) be proven:
 \end{equation}
 Now that the relation in the equation (\ref{key\_relation}) has been proven, the likelihood can be written as in the following form:
 \begin{equation}
-    p\left(\mathbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)=\frac{1}{\left(2\pi\right)^{ND/2}\left | \boldsymbol{\Sigma} \right |^{N/2}}\exp \left[\sum\_{i=1}^{N} -\frac{1}{2}\left(\mathbf{x}\_{i}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\mathbf{x}\_{i}-\boldsymbol{\mu}\right)\right] \Rightarrow
+    p\left(\mathbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right) \propto \frac{1}{\left(2\pi\right)^{ND/2}\left | \boldsymbol{\Sigma} \right |^{N/2}}\exp \left[\sum\_{i=1}^{N} -\frac{1}{2}\left(\mathbf{x}\_{i}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\mathbf{x}\_{i}-\boldsymbol{\mu}\right)\right] \Rightarrow
 \end{equation}
 \begin{equation}
-    p\left(\mathbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)=\frac{1}{\left(2\pi\right)^{ND/2}\left | \boldsymbol{\Sigma} \right |^{N/2}}\exp \left[-\frac{1}{2}\text{Tr}\left(\mathbf{S}\_{\overline{\mathbf{x}}}\boldsymbol{\Sigma}^{-1}\right)\right] \exp \left[-\frac{N}{2}\left(\boldsymbol{\mu}-\overline{\mathbf{x}}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\boldsymbol{\mu}-\overline{\mathbf{x}}\right)\right]
+    p\left(\mathbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right) \propto \frac{1}{\left(2\pi\right)^{ND/2}\left | \boldsymbol{\Sigma} \right |^{N/2}}\exp \left[-\frac{1}{2}\text{Tr}\left(\mathbf{S}\_{\overline{\mathbf{x}}}\boldsymbol{\Sigma}^{-1}\right)\right] \exp \left[-\frac{N}{2}\left(\boldsymbol{\mu}-\overline{\mathbf{x}}\right)^{T}\boldsymbol{\Sigma}^{-1}\left(\boldsymbol{\mu}-\overline{\mathbf{x}}\right)\right]
     \label{likelihood}
 \end{equation}
 The probability density function (pdf) for the normal-inverse-Wishart distribution is defined as follows:
@@ -103,9 +103,6 @@ where $\boldsymbol{\mu}\_{0} \in \text{R}^{D}$, $\lambda > 0$, positive definite
 The likelihood in the equation (\ref{likelihood}) and the pdf for the normal-inverse-Wishart in the equation (\ref{NIW}) are seen to be similar to each other if their exponential parts are compared.
 ## The Posterior
 The posterior of the distribution of $\boldsymbol{\mu}$ and $\boldsymbol{\Sigma}$ given the available data $\mathbf{X}$ is to be calculated using the Bayes rule:
-\begin{equation}
-    p\left(\boldsymbol{\mu}, \boldsymbol{\Sigma}|\mathbf{X}\right)=\frac{p\left(\mathbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)p\left(\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)}{p\left(\mathbf{X}\right)} \Rightarrow
-\end{equation}
 \begin{equation}
     p\left(\boldsymbol{\mu}, \boldsymbol{\Sigma}|\mathbf{X}\right) \propto p\left(\mathbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)p\left(\boldsymbol{\mu}, \boldsymbol{\Sigma}\right) \Rightarrow
 \end{equation}
