@@ -12,13 +12,13 @@ It is assumed that $\boldsymbol{\mu}$ is known while $\boldsymbol{\Sigma}$ is un
 ## The Likelihood
 The likelihood is the probability of the occurrence of the data at hand. In the calculation of the likelihood, data samples are supposed to be independent. The likelihood is denoted by $p\left(\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)$ and has the following mathematical expression:
 \begin{equation}
-    p\left (\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma} \right)=p\left(\textbf{x}\_{1}, \textbf{x}\_{2}, \textbf{x}\_{3}, \dotso , \textbf{x}\_{N}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right )=\prod\_{i=1}^{N} p\left(\textbf{x}\_{i}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)=
+    p\left (\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma} \right)=p\left(\textbf{x}\_{1}, \textbf{x}\_{2}, \textbf{x}\_{3}, \dotso , \textbf{x}\_{N}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right )=\prod\_{i=1}^{N} p\left(\textbf{x}\_{i}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)\propto
 \end{equation}
 \begin{equation}
     \prod\_{i=1}^{N}\frac{1}{\left(2\pi\right)^{D/2}\left | \boldsymbol{\Sigma}\right |^{1/2}}\exp \left[-\frac{1}{2}\left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1} \left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)\right] \Rightarrow
 \end{equation}
 \begin{equation}
-    p\left (\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma} \right)=\frac{1}{\left(2\pi\right)^{ND/2}\left | \boldsymbol{\Sigma}\right |^{N/2}}\exp \left[\sum\_{i=1}^{N}-\frac{1}{2}\left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1} \left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)\right]
+    p\left (\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma} \right)\propto \frac{1}{\left(2\pi\right)^{ND/2}\left | \boldsymbol{\Sigma}\right |^{N/2}}\exp \left[\sum\_{i=1}^{N}-\frac{1}{2}\left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1} \left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)\right]
     \label{likelihood\_1}
 \end{equation}
 The inverse Wishart distribution is a choice for the prior of the covariance of a multivariate normal distribution. There can be other choices as the prior. In this article, the inverse Wishart distribution is to be used as the prior. Hence, the likelihood is to be made similar to the inverse Wishart distribution by rearranging the exponent. In this rearrangement, a relation from the matrix algebra will be used. The relation is as follows:
@@ -83,10 +83,10 @@ where
 \end{equation}
 Hence, the likelihood is written as follows:
 \begin{equation}
-    p\left (\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma} \right)=\frac{1}{\left(2\pi\right)^{ND/2}\left | \boldsymbol{\Sigma}\right |^{N/2}}\exp \left[\sum\_{i=1}^{N}-\frac{1}{2}\left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1} \left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)\right] \Rightarrow
+    p\left (\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma} \right)\propto \frac{1}{\left(2\pi\right)^{ND/2}\left | \boldsymbol{\Sigma}\right |^{N/2}}\exp \left[\sum\_{i=1}^{N}-\frac{1}{2}\left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1} \left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)\right] \Rightarrow
 \end{equation}
 \begin{equation}
-    p\left (\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma} \right)=\frac{1}{\left(2\pi\right)^{ND/2}\left | \boldsymbol{\Sigma}\right |^{N/2}}\exp \left[-\frac{1}{2}\text{Tr}\left(\mathbf{S}\_{\mu}\boldsymbol{\Sigma}^{-1}\right)\right].
+    p\left (\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma} \right) \propto \frac{1}{\left(2\pi\right)^{ND/2}\left | \boldsymbol{\Sigma}\right |^{N/2}}\exp \left[-\frac{1}{2}\text{Tr}\left(\mathbf{S}\_{\mu}\boldsymbol{\Sigma}^{-1}\right)\right].
     \label{likelihood2}
 \end{equation}
 ## The Posterior
@@ -105,10 +105,6 @@ Let the prior for the covariance of the multivariate normal distribution be set 
     \label{prior}
 \end{equation}
 The posterior for the covariance, $p \left(\boldsymbol{\Sigma}|\mathbf{X}, \boldsymbol{\mu}\right)$, is the normalized product of the prior and the likelihood:
-\begin{equation}
-    p \left(\boldsymbol{\Sigma}|\mathbf{X}, \boldsymbol{\mu}\right)=\frac{p\left(\boldsymbol{\Sigma}\right)p\left (\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma} \right)}{p\left(\mathbf{X}|\boldsymbol
-    \mu\right)} \Rightarrow
-\end{equation}
 \begin{equation}
     p \left(\boldsymbol{\Sigma}|\mathbf{X}, \boldsymbol{\mu}\right) \propto p\left(\boldsymbol{\Sigma}\right)p\left (\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma} \right) =
 \end{equation}
