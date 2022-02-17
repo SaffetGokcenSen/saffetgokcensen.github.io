@@ -8,7 +8,7 @@ In this article, the linear regression is studied using the Bayesian framework. 
 ## The Bayesian Linear Regression
 The linear regression model is used to estimate the target variable $y$ which is usually assumed to have the following distribution for a sample input $\mathbf{x}$:
 \begin{equation}
-    p\left(y|\mathbf{x}, \mathbf{w}\right)=\mathcal{N}\left(y|\mathbf{w}^{T}\mathbf{x}, \sigma^{2}\right)
+    p\left(y|\mathbf{x}, \mathbf{w}\right)\propto \mathcal{N}\left(y|\mathbf{w}^{T}\mathbf{x}, \sigma^{2}\right)
     \label{linearRegModel}
 \end{equation}
 $\mathbf{w}$ is the parameter vector to be determined. The maximum likelihood estimator for $\mathbf{w}$ is a solution. In order to get the Bayesian solution for $\mathbf{w}$, a prior for it must be decided on. Combining the likelihood and the prior yields the posterior for $\mathbf{w}$.
@@ -48,16 +48,16 @@ The $N$ samples are assumed to be independent. Let the target samples be collect
 \end{equation}
 $p\left(\mathbf{y}|\mathbf{w}\right)$ is called the likelihood using the linear Gaussian system terminology. It is formulated as follows:
 \begin{equation}
-    p\left(\mathbf{y}|\mathbf{w}\right) = \prod\_{i=1}^{N}p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right) = \prod\_{i=1}^{N} \mathcal{N} \left(y\_{i}|\mathbf{w}^{T}\mathbf{x}\_{i}, \sigma^{2}\right) \Rightarrow
+    p\left(\mathbf{y}|\mathbf{w}\right) = \prod\_{i=1}^{N}p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right) \propto \prod\_{i=1}^{N} \mathcal{N} \left(y\_{i}|\mathbf{w}^{T}\mathbf{x}\_{i}, \sigma^{2}\right) \Rightarrow
 \end{equation}
 \begin{equation}
-    p\left(\mathbf{y}|\mathbf{w}\right) = \prod\_{i=1}^{N} \frac{1}{\left(2\pi \sigma^{2}\right)^{1/2}}\exp \left[-\frac{\left(y\_{i}-\mathbf{w}^{T}\mathbf{x}\_{i}\right)^{2}}{2\sigma^{2}}\right] \Rightarrow
+    p\left(\mathbf{y}|\mathbf{w}\right) \propto \prod\_{i=1}^{N} \frac{1}{\left(2\pi \sigma^{2}\right)^{1/2}}\exp \left[-\frac{\left(y\_{i}-\mathbf{w}^{T}\mathbf{x}\_{i}\right)^{2}}{2\sigma^{2}}\right] \Rightarrow
 \end{equation}
 \begin{equation}
-    p\left(\mathbf{y}|\mathbf{w}\right) = \frac{1}{\left(2\pi \sigma^{2}\right)^{N/2}}\exp \left[\sum\_{i=1}^{N}-\frac{\left(y\_{i}-\mathbf{x}\_{i}^{T}\mathbf{w}\right)^{2}}{2\sigma^{2}}\right]\Rightarrow
+    p\left(\mathbf{y}|\mathbf{w}\right) \propto \frac{1}{\left(2\pi \sigma^{2}\right)^{N/2}}\exp \left[\sum\_{i=1}^{N}-\frac{\left(y\_{i}-\mathbf{x}\_{i}^{T}\mathbf{w}\right)^{2}}{2\sigma^{2}}\right]\Rightarrow
 \end{equation}
 \begin{equation}
-    p\left(\mathbf{y}|\mathbf{w}\right) = \frac{1}{\left(2\pi\right)^{N/2}\left| \boldsymbol{\Sigma}\_{y} \right|^{1/2}}\exp \left[-\frac{1}{2}\left(\mathbf{y}-\boldsymbol{\mu}\_{\mathbf{y}}\right)^{T}\boldsymbol{\Sigma}\_{\mathbf{y}}^{-1}\left(\mathbf{y}-\boldsymbol{\mu}\_{\mathbf{y}}\right)\right]
+    p\left(\mathbf{y}|\mathbf{w}\right) \propto \frac{1}{\left(2\pi\right)^{N/2}\left| \boldsymbol{\Sigma}\_{y} \right|^{1/2}}\exp \left[-\frac{1}{2}\left(\mathbf{y}-\boldsymbol{\mu}\_{\mathbf{y}}\right)^{T}\boldsymbol{\Sigma}\_{\mathbf{y}}^{-1}\left(\mathbf{y}-\boldsymbol{\mu}\_{\mathbf{y}}\right)\right]
 \end{equation}
 where
 \begin{equation}
@@ -89,7 +89,7 @@ and
 \end{equation}
 As a result, the likelihood satisfies the following equality:
 \begin{equation}
-    p\left(\mathbf{y}|\mathbf{w}\right) = \mathcal{N} \left(\mathbf{y}|\mathbf{A}.\mathbf{w}+\mathbf{b}, \boldsymbol{\Sigma}\_{\mathbf{y}}\right)
+    p\left(\mathbf{y}|\mathbf{w}\right) \propto \mathcal{N} \left(\mathbf{y}|\mathbf{A}.\mathbf{w}+\mathbf{b}, \boldsymbol{\Sigma}\_{\mathbf{y}}\right)
 \end{equation}
 Given the linear Gaussian system defined by
 \begin{equation}
@@ -97,7 +97,7 @@ Given the linear Gaussian system defined by
 \end{equation}
 and
 \begin{equation}
-    p\left(\mathbf{y}|\mathbf{w}\right) = \mathcal{N} \left(\mathbf{y}|\mathbf{A}.\mathbf{w}+\mathbf{b}, \boldsymbol{\Sigma}\_{\mathbf{y}}\right),
+    p\left(\mathbf{y}|\mathbf{w}\right) \propto \mathcal{N} \left(\mathbf{y}|\mathbf{A}.\mathbf{w}+\mathbf{b}, \boldsymbol{\Sigma}\_{\mathbf{y}}\right),
 \end{equation}
 the posterior $p\left(\mathbf{w}|\mathbf{y}\right)$ satisfies the following relations [2]:
 \begin{equation}
