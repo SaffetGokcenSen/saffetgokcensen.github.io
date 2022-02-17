@@ -12,13 +12,13 @@ It is assumed that $\boldsymbol{\mu}$ is unknown while $\boldsymbol{\Sigma}$ is 
 ## The Likelihood
 The likelihood is the probability of the occurrence of the data at hand. In the calculation of the likelihood, data samples are supposed to be independent. The likelihood is denoted by $p\left(\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)$ and has the following mathematical expression:
 \begin{equation}
-    p\left (\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma} \right)=p\left(\textbf{x}\_{1}, \textbf{x}\_{2}, \textbf{x}\_{3}, \dotso , \textbf{x}\_{N}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right )=\prod\_{i=1}^{N} p\left(\textbf{x}\_{i}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)=
+    p\left (\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma} \right)=p\left(\textbf{x}\_{1}, \textbf{x}\_{2}, \textbf{x}\_{3}, \dotso , \textbf{x}\_{N}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right )=\prod\_{i=1}^{N} p\left(\textbf{x}\_{i}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)\propto
 \end{equation}
 \begin{equation}
     \prod\_{i=1}^{N}\frac{1}{\left(2\pi\right)^{D/2}\left | \boldsymbol{\Sigma}\right |^{1/2}}\exp \left[-\frac{1}{2}\left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1} \left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)\right] \Rightarrow
 \end{equation}
 \begin{equation}
-    p\left (\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma} \right)=\frac{1}{\left(2\pi\right)^{ND/2}\left | \boldsymbol{\Sigma}\right |^{N/2}}\exp \left[\sum\_{i=1}^{N}-\frac{1}{2}\left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1} \left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)\right]
+    p\left (\textbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma} \right)\propto \frac{1}{\left(2\pi\right)^{ND/2}\left | \boldsymbol{\Sigma}\right |^{N/2}}\exp \left[\sum\_{i=1}^{N}-\frac{1}{2}\left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)^{T}\boldsymbol{\Sigma}^{-1} \left(\textbf{x}\_{i}-\boldsymbol{\mu}\right)\right]
     \label{likelihood\_1}
 \end{equation}
 The exponent in the equation (\ref{likelihood\_1}) can be written as follows:
@@ -84,9 +84,6 @@ The prior for the mean of the data at hand is chosen as a Gaussian which is give
     \label{prior}
 \end{equation}
 The posterior for the mean of the data at hand is proportional to the product of the prior and the likelihood:
-\begin{equation}
-    p\left(\boldsymbol{\mu}|\mathbf{X}, \boldsymbol{\Sigma}\right)=\frac{p\left(\boldsymbol{\mu}\right)p\left(\mathbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)}{p\left(\mathbf{X}|\mathbf{\Sigma}\right)} \Rightarrow
-\end{equation}
 \begin{equation}
     p\left(\boldsymbol{\mu}|\mathbf{X}, \boldsymbol{\Sigma}\right) \propto p\left(\boldsymbol{\mu}\right)p\left(\mathbf{X}|\boldsymbol{\mu}, \boldsymbol{\Sigma}\right)=
 \end{equation}
