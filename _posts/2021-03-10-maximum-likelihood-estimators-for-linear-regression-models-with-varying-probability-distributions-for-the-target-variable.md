@@ -8,7 +8,7 @@ In this article, the linear regression model is defined in a probabilistic persp
 ## Model Definition
 It is assumed that there are $N$ samples of data. Each sample is denoted by the vector $\mathbf{x}\_{i}$ where $i$ is from $1$ to $N$. Each element of $\mathbf{x}\_{i}$ is a feature. It is assumed that there are $M$ features. The available data is stored in a matrix $\mathbf{X}$ a row of which is the transpose of $\mathbf{x}\_{i}$. Hence, the dimension of the matrix $\mathbf{X}$ is $M\times N$. There is a target $y\_{i}$ corresponding to each $\mathbf{x}\_{i}$. The linear regression model generally assumes that the targets are Gaussian distributed with a mean of the linear combination of the features and a variance of $\sigma^{2}$:
 \begin{equation}
-    p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)=N\left(y\_{i}|\mathbf{w}^{T}.\mathbf{x}\_{i}, \sigma^{2}\right)
+    p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)\propto N\left(y\_{i}|\mathbf{w}^{T}.\mathbf{x}\_{i}, \sigma^{2}\right)
 \end{equation}
 The distribution of the targets can be assumed to be different from Gaussian. The supposition for the distribution of the targets depends on the problem and the available data. The vector $\mathbf{w}$ contains the parameters of the linear regression model. Let the target values be stored in a vector $\mathbf{y}$.
 ## The Maximum Likelihood Estimator
@@ -33,7 +33,7 @@ $\log$ represents the natural logarithm function.
 
 What is $p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right)$? It is generally assumed to be proportional to a Gaussian distribution. The mean of the distribution is $\mathbf{w}^{T}.\mathbf{x}\_{i}$ and the variance is $\sigma^{2}$:
 \begin{equation}
-    p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right) = \frac{1}{\sqrt{2\pi \sigma^{2}}}\exp \left[-\frac{\left(y\_{i}-\mathbf{w}^{T}.\mathbf{x}\_{i}\right)^{2}}{2\sigma^{2}}\right]
+    p\left(y\_{i}|\mathbf{x}\_{i}, \mathbf{w}\right) \propto \frac{1}{\sqrt{2\pi \sigma^{2}}}\exp \left[-\frac{\left(y\_{i}-\mathbf{w}^{T}.\mathbf{x}\_{i}\right)^{2}}{2\sigma^{2}}\right]
 \end{equation}
 Then, the equation (\ref{mle}) can be expanded as follows:
 \begin{equation}
