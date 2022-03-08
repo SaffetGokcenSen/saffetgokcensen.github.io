@@ -8,24 +8,30 @@ In this article, the calculation of causal effects of conditional interventions 
 ## The Conditional Intervention
 The directed acyclic graph (DAG) of the causal model is given in the Figure 1.
 <figure>
-   <img src="/assets/conditional_intervention_original_dag.png" style="max-width: 800px;">
+   <img src="/assets/conditional_intervention_original_dag.png" style="max-width: 400px;">
    <figcaption>Figure 1. The DAG of the causal model.</figcaption>
 </figure>
 The $z$-specific causal effect of $X$ on $Y$ is to be calculated in a detailed manner. The adjective "$z$-specific" means that the causal effect of $X$ on $Y$ is to be found for a specific $z$ value of $Z$.
 
 The backdoor criterion is to be used to find the minimal adjustment sets. All of the adjustment sets must contain $Z$ since an intervention conditioned on $Z$ is being done. The backdoors from $X$ to $Y$ are as follows:
-\begin{enumerate}
-    \item $X \leftarrow Z \rightarrow Y$
-    \item $X \leftarrow Z \leftarrow C \rightarrow D \rightarrow Y$
-    \item $X \leftarrow A \leftarrow B \rightarrow Z \rightarrow Y$
-    \item $X \leftarrow A \leftarrow B \rightarrow Z \leftarrow C \rightarrow D \rightarrow Y$
-\end{enumerate}
+\begin{equation}
+    1) X \leftarrow Z \rightarrow Y
+\end{equation}
+\begin{equation}
+    2) X \leftarrow Z \leftarrow C \rightarrow D \rightarrow Y
+\end{equation}
+\begin{equation}
+    3) X \leftarrow A \leftarrow B \rightarrow Z \rightarrow Y
+\end{equation}
+\begin{equation}
+    4) X \leftarrow A \leftarrow B \rightarrow Z \leftarrow C \rightarrow D \rightarrow Y
+\end{equation}
 The first, the second and the third ones are blocked by conditioning on $Z$. Con\-di\-tion\-ing on $Z$ unblocks the collider in the fourth one. Hence, one of $A, B, C$ and $D$ must also be conditioned on to block the fourth backdoor. As a result, the minimal adjustment sets are as follows:
-\begin{center}
-    1) $A, Z$ 2) $B, Z$ 3) $C, Z$ 4) $D, Z$
-\end{center}
+\begin{equation}
+    1) A, Z \ 2) B, Z \ 3) C, Z \ 4) D, Z
+\end{equation}
 <figure>
-   <img src="/assets/conditional_intervention_manipulated_dag.png" style="max-width: 800px;">
+   <img src="/assets/conditional_intervention_manipulated_dag.png" style="max-width: 400px;">
    <figcaption>Figure 2. The manipulated graph.</figcaption>
 </figure>
 Let the $z$-specific causal effect of $X$ on $Y$ be calculated using the first adjustment set. This causal quantity can be calculated as follows:
@@ -124,4 +130,4 @@ The relation in the equation (\ref{adjustment4}) can now be written in terms of 
 ## Conclusion
 A conditional intervention problem has been solved in a detailed manner.
 ## References
-[1]Judea Pearl, Madelyn Glymour, Nicholas P. Jewell, \emph{Causal Inference In Statistics A Primer}, John Wiley \& Sons Ltd., 2016.
+[1] Judea Pearl, Madelyn Glymour, Nicholas P. Jewell, Causal Inference In Statistics A Primer, John Wiley and Sons Ltd., 2016.
