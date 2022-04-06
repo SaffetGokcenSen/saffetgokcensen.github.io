@@ -68,4 +68,4 @@ This expression is in compliance with the backdoor criterion. There is no backdo
 ## Conclusion
 A calculation for a direct controlled effect has been made. The relations between the post-intervention and pre-inervention probabilities have been explained in a detailed way.
 ## References
-[1] Judea Pearl, Madelyn Glymour, Nicholas P. Jewell, \emph{Causal Inference In Statistics A Primer}, John Wiley \& Sons Ltd., 2016.
+[1] Judea Pearl, Madelyn Glymour, Nicholas P. Jewell, Causal Inference In Statistics A Primer, John Wiley and Sons Ltd., 2016.
