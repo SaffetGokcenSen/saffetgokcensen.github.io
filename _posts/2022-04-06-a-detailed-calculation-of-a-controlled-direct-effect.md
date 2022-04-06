@@ -1,7 +1,7 @@
 ---
 layout: post
 author: SAFFET GÖKÇEN ŞEN
-title: An Detailed Calculation Of A Controlled Direct Effect
+title: A Detailed Calculation Of A Controlled Direct Effect
 ---
 ## Introduction
 In this article, a calculation of a direct controlled effect is made. The relations between the post-intervention and pre-inervention probabilities are explained in a detailed manner. The DAG of the causal model is the same as that of the causal model given in section 3.7 of [1].
@@ -18,7 +18,7 @@ The aim is to calculate the controlled direct effect of $X$ on $Y$. There are tw
 Let the intervention on $X$ in $p\left(y|do\left(x\right), do\left(z\right)\right)$ be dealt with first. The rules of do-calculus will be used in this task. Can the intervention be converted to an observation? That is the mean, is $p\left(y|do\left(x\right), do\left(z\right)\right)$ equal to $p\left(y|x, do\left(z\right)\right)$? For this equality to hold, $X$ and $Y$ must be conditionally independent given $Z$ in the graph $G\_{\underline{X}\overline{Z}}$. $G\_{\underline{X}\overline{Z}}$ is shown in the Figure 2.
 <figure>
    <img src="/assets/controlled_direct_effect_dag2.png" style="max-width: 400px;">
-   <figcaption>Figure 2. The graph $G\_{\underline{X}\overline{Z}}$.</figcaption>
+   <figcaption>Figure 2. The graph $G_{\underline{X}\overline{Z}}$.</figcaption>
 </figure>
 As can be seen from the Figure 2, $X$ and $Y$ are conditionally independent given $Z$. Therefore, the following equality can safely be written:
 \begin{equation}
@@ -27,7 +27,7 @@ As can be seen from the Figure 2, $X$ and $Y$ are conditionally independent give
 Now, it is time to consider the intervention on $Z$. In calculating $p\left(y|x, do\left(z\right)\right)$, the manipulated graph is first drawn. It is $G\_{\overline{Z}}$. The graph $G\_{\overline{Z}}$ is shown in the Figure 3.
 <figure>
    <img src="/assets/controlled_direct_effect_dag3.png" style="max-width: 400px;">
-   <figcaption>Figure 3. The graph $G\_{\overline{Z}}$.</figcaption>
+   <figcaption>Figure 3. The graph $G_{\overline{Z}}$.</figcaption>
 </figure>
 Let the probability distribution represented by this graph be denoted by $p\_{m}$. $p\left(y|x, do\left(z\right)\right)$ can be written as follows, which is nothing but the law of total probability:
 \begin{equation}
