@@ -1,10 +1,10 @@
 ---
 layout: post
 author: SAFFET GÖKÇEN ŞEN
-title: Directed Acyclic Graphs From An Equivalence Class For A Colorless Image
+title: Directed Acyclic Graphs From An Equivalence Class For An Image
 ---
 ## Introduction
-In this article, directed acyclic graphs (DAGs) from an equivalence class for a colorless image are proposed. The reasoning behind these DAGs is explained.
+In this article, directed acyclic graphs (DAGs) from an equivalence class for an image are proposed. The reasoning behind these DAGs is explained.
 ## Reasoning and the DAGs
 An image is a particular collection of pixels. All the pixels forming the image can be separated into disjoint subsets of pixels. Let each of such disjoint subsets be a feature of the image. The dependencies among these features will vary with the number of pixels in each feature because the visual meaning of a feature changes with the number of pixels in it. If the image is divided into features containing a big number of pixels compared to the total number of pixels in the image, then these features are expected to be dependent on each other. In the <a href="#indep_features" >Figure 1</a>, the rectangle $A$ contains some pixels and the rectangle $B$ contains some other pixels. The feature formed by the pixels bounded by the triangle $A$ is considered to be independent of the feature formed by the pixels bounded by the triangle $B$.
 <figure id="indep_features">
@@ -48,7 +48,7 @@ Since the number of pixels in each of the feature is big relative to the number 
 </figure>
 These DAGs share the same skeleton. There are no v-structures in the DAGs. So, they share the same set of v-structures, specifically no v-structures. The dependencies in these DAGs have been examined using the R package DAGitty <a href="#DAGitty" >[2]</a> and it has been determined that there are no marginal or conditional independencies among the features. Hence, all the DAGs imply the same set of d-separation implications, specifically no marginal or conditional d-separations. The absence of marginal or conditional d-separation implications is in compliance with the above reasoning and expectation that the features should be dependent on each other since the number of pixels in each feature is relatively big.
 ## Conclusion
-DAGs from the same equivalence class for a colorless image has been constructed. The reasoning behind these DAGs has been explained.
+DAGs from the same equivalence class for an image has been constructed. The reasoning behind these DAGs has been explained.
 ## References
 <span id="Pearl">[1] Judea Pearl, Madelyn Glymour, Nicholas P. Jewell \emph{Causal Inference In Statistics A Primer}, Wiley, 2016.</span>
 
