@@ -50,6 +50,6 @@ These DAGs share the same skeleton. There are no v-structures in the DAGs. So, t
 ## Conclusion
 DAGs from the same equivalence class for an image has been constructed. The reasoning behind these DAGs has been explained.
 ## References
-<span id="Pearl">[1] Judea Pearl, Madelyn Glymour, Nicholas P. Jewell Causal Inference In Statistics A Primer, Wiley, 2016.</span>
+<span id="Pearl">[1] Judea Pearl, Madelyn Glymour, Nicholas P. Jewell. Causal Inference In Statistics A Primer, Wiley, 2016.</span>
 
 <span id="DAGitty">[2] Johannes Textor, Benito van der Zander, Mark K. Gilthorpe, Maciej Liskiewicz, George T.H. Ellison. Robust causal inference using directed acyclic graphs: the R package 'dagitty'. International Journal of Epidemiology 45(6):1887-1894, 2016.</span>
