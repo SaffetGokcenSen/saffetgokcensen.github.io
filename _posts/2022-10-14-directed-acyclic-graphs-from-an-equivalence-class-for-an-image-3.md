@@ -27,16 +27,16 @@ The equivalence class of the DAG in the <a href="#manyFeatures" >Figure 1</a> ha
 The DAGs from the equivalence class of the DAG in the <a href="#manyFeatures" >Figure 1</a> are represented as follows:
 \begin{equation}
     \begin{array}{l}
-        \text{pdag} \{ \newline
+        \text{pdag} ( \newline
         A, B, C, D, E, F, G, H, I, I\_{1}, I\_{2}, I\_{3}, J \newline
-        A -- B, A -- C, A -- I\_{1}, B -- C, B -- I\_{1}, C -- I\_{1}, D -- E, D -- F \newline
-        D -- I\_{2}, E -- F, E -- I\_{2}, F -- I\_{2}, G -- H, G -- I\_{3}, G -- J, H -- I\_{3} \newline
-        H -- J, I -- I\_{1}, I -- I\_{2}, I -- I\_{3}, I\_{1} -- I\_{2}, I\_{1} -- I{3}, I\_{2} -- I\_{3}, I\_{3} -- J \newline
-        \}
+        A \-\- B, A \-\- C, A \-\- I\_{1}, B \-\- C, B \-\- I\_{1}, C \-\- I\_{1}, D \-\- E, D \-\- F \newline
+        D \-\- I\_{2}, E \-\- F, E \-\- I\_{2}, F \-\- I\_{2}, G \-\- H, G \-\- I\_{3}, G \-\- J, H \-\- I\_{3} \newline
+        H \-\- J, I \-\- I\_{1}, I \-\- I\_{2}, I \-\- I\_{3}, I\_{1} \-\- I\_{2}, I\_{1} \-\- I{3}, I\_{2} \-\- I\_{3}, I\_{3} \-\- J \newline
+        )
     \end{array}
     \label{equivalenceClassRep}
 \end{equation}
-In the representation given in the equation (\ref{equivalenceClassRep}), the nodes in the equivalent DAGs are listed first. Then, the arrows which can be in any two possible directions are indicated. For example, $A -- B$ means either $A \rightarrow B$ or $A \leftarrow B$. From the equation (\ref{equivalenceClassRep}), it is observed that all of the edges can have either of the possible two directions. Hence, there are a total of $2^{24}$ DAGs in the equivalence class. However, in our image model, edges can only leave the intent nodes which are $I$, $I\_{1}$, $I\_{2}$ and $I\_{3}$. Hence, there are $2^{24}/2^{12}=2^{12}$ DAGs from the same equivalence set for our image model.
+In the representation given in the equation (\ref{equivalenceClassRep}), the nodes in the equivalent DAGs are listed first. Then, the arrows which can be in any two possible directions are indicated. For example, $A \-\- B$ means either $A \rightarrow B$ or $A \leftarrow B$. From the equation (\ref{equivalenceClassRep}), it is observed that all of the edges can have either of the possible two directions. Hence, there are a total of $2^{24}$ DAGs in the equivalence class. However, in our image model, edges can only leave the intent nodes which are $I$, $I\_{1}$, $I\_{2}$ and $I\_{3}$. Hence, there are $2^{24}/2^{12}=2^{12}$ DAGs from the same equivalence set for our image model.
 
 ## d-separation Implications
 
