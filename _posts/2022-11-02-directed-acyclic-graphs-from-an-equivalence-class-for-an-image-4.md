@@ -199,14 +199,13 @@ Can the intervention on $F$ be removed or is $p\left(g|do\left(f\right)\right)$ 
 The DAG in the <a href="#dag1" >Figure 1</a> has been shown to be identifying all of the basic twelve causal effects in the form of $p\left(y|do\left(x\right)\right)$. This is an expected result due to the theorem 3.6.1 on the page 105 of <a href="#JudeaPearl">[4]</a>. The theorem states a sufficient condition for a graph to be identifying a causal effect in the form of $p\left(y|do\left(x\right)\right)$. It is quoted as follows:
 
 *A sufficient condition for identifying the causal effect 
-$p\left(y|do\left(x\right)\right)$ is that there exists no bi-directed path (i.e., a path composed entirely of bi-directed arcs) between $X$ and any of its children.\cite{TianAndJudea} <a href="#TianAndJudea">[5]</a>*
+$p\left(y|do\left(x\right)\right)$ is that there exists no bi-directed path (i.e., a path composed entirely of bi-directed arcs) between $X$ and any of its children. <a href="#TianAndJudea">[5]</a>*
 
 Since there are no bidirected arcs in the DAG in the <a href="#dag1" >Figure 1</a>, the causal effects in the form of $p\left(y|do\left(x\right)\right)$ must be identified by the DAG according to the theorem.
 
 ## Conclusion
 
-The basic causal effects in the form of 
-$p\left(y|do\left(x\right)\right)$ have been calculated for the DAG in the <a href="#dag1" >Figure 1</a>.
+The basic causal effects in the form of $p\left(y|do\left(x\right)\right)$ have been calculated for the DAG in the <a href="#dag1" >Figure 1</a>.
 
 ## References
 
