@@ -201,11 +201,13 @@ The DAG in the <a href="#dag1" >Figure 1</a> has been shown to be identifying al
 *A sufficient condition for identifying the causal effect 
 $p\left(y|do\left(x\right)\right)$ is that there exists no bi-directed path (i.e., a path composed entirely of bi-directed arcs) between $X$ and any of its children. <a href="#TianAndJudea">[5]</a>*
 
-Since there are no bidirected arcs in the DAG in the <a href="#dag1" >Figure 1</a>, the causal effects in the form of $p\left(y|do\left(x\right)\right)$ must be identified by the DAG according to the theorem.
+Since there are no bidirected arcs in the DAG in the <a href="#dag1" >Figure 1</a>, the causal effects in the form of 
+$p\left(y|do\left(x\right)\right)$ must be identified by the DAG according to the theorem.
 
 ## Conclusion
 
-The basic causal effects in the form of $p\left(y|do\left(x\right)\right)$ have been calculated for the DAG in the <a href="#dag1" >Figure 1</a>.
+The basic causal effects in the form of 
+$p\left(y|do\left(x\right)\right)$ have been calculated for the DAG in the <a href="#dag1" >Figure 1</a>.
 
 ## References
 
