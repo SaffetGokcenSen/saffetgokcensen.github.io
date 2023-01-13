@@ -192,7 +192,7 @@ means that there are no backdoors from $Y$ to $X_{k}$ and the causal effect of $
 
 ## Conclusion
 
-The sequential backdoor conditions have been shown to be sufficient for the iden\-ti\-fi\-ca\-tion of a plan, i.e. determining the causal effect of a plan on an output variable. Some thoughts on the sequential backdoor conditions have been stated.
+The sequential backdoor conditions have been shown to be sufficient for the identification of a plan, i.e. determining the causal effect of a plan on an output variable. Some thoughts on the sequential backdoor conditions have been stated.
 
 ## References
 
