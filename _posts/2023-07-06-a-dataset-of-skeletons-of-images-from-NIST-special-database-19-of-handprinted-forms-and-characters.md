@@ -27,7 +27,10 @@ skeletons.
 
 ## The Source Code
 The source code for the Image class is given at the link <a href="#source1">[8]</a>. 
-The code for creating the skeletons of the character "J" is at <a href="#source2">[9]</a>.
+The code for creating the skeletons of the character "J" is at <a href="#source2">[9]</a>. 
+The images of the character "J" from the NIST database are also given at the link 
+<a href="#Jimages">[10]</a>. The $28 \times 28$ skeletons of most of these images 
+are at <a href="#Jskeletons">[11]</a>.
 
 ## Conclusion
 Some information has been given about a data set of image skeletons. The images 
@@ -52,3 +55,7 @@ are from the NIST special database 19 of handprinted forms and characters.
 <span id="source1"> [8] [https://github.com/SaffetGokcenSen/skeleton_NIST_special_database_19/blob/main/Image.py](https://github.com/SaffetGokcenSen/skeleton_NIST_special_database_19/blob/main/Image.py)</span>
 
 <span id="source2"> [9] [https://github.com/SaffetGokcenSen/skeleton_NIST_special_database_19/blob/main/4a_skeletons.py](https://github.com/SaffetGokcenSen/skeleton_NIST_special_database_19/blob/main/4a_skeletons.py)</span>
+
+<span id="Jimages"> [10] [https://github.com/SaffetGokcenSen/skeleton_NIST_special_database_19/blob/main/train_4a.zip](https://github.com/SaffetGokcenSen/skeleton_NIST_special_database_19/blob/main/train_4a.zip)
+
+<span id="Jskeletons"> [11] [https://github.com/SaffetGokcenSen/skeleton_NIST_special_database_19/blob/main/rescaled_skeleton_4a.zip](https://github.com/SaffetGokcenSen/skeleton_NIST_special_database_19/blob/main/rescaled_skeleton_4a.zip) 
