@@ -48,10 +48,14 @@ When these conditions are satisfied, the effect of the plan is given by
 Some definitions related with the theorem are to be made. The problem has a 
 directed acyclic graph (DAG) denoted by $G$. $G$ has a vertex set $V$. $V$ is 
 composed of four disjoint sets as follows:
-1. $X$ is the set of control variables.
-2. $Z$ is the set of observed variables or the covariates.
-3. $U$ is the set of unobserved variables or the latent variables.
-4. $Y$ is the outcome variable.
+
+1- $X$ is the set of control variables.
+
+2- $Z$ is the set of observed variables or the covariates.
+
+3- $U$ is the set of unobserved variables or the latent variables.
+
+4- $Y$ is the outcome variable.
 
 The control variables are ordered, which means that every $X\_{k}$ is a nondescendant 
 of $X\_{j}$ for $j>k$. The outcome is a descendant of $X\_{n}$. $N\_{k}$ represents 
@@ -132,58 +136,47 @@ $Z\_{k}$ is a nondescendant of $X\_{k}$. There cannot be a directed path from
 $X\_{k}$ to $Z\_{k}$. If $X\_{k}$ and $Z\_{k}$ were to be d-connected, then the 
 following conditions related with the paths between $Z\_{k}$ and $X\_{k}$ would 
 hold:
-\begin{equation}
-	\text{ The paths between } Z\_{k} \text{ and } X\_{k} \text{ must include at 
-	least either a fork or a collider since there cannot be a directed path from } 
-	X\_{k} \text{ to } Z\_{k} \text{. A chain may or may not exist in addition 
-	to a fork or a collider. All these paths must be unblocked.}
-\end{equation}
-\begin{equation}
-	\text{The middle nodes of the forks cannot be from the set } \left \lbrace 
-	Z\_{1}, ... , Z\_{k-1}, X\_{1}, ... , X\_{k-1} \right \rbrace \text{ since 
-	these are conditioned on in the equation (\ref{dSep1Simplified}).}
-	\label{midFork}
-\end{equation}
-\begin{equation}
-	\text{The edge nodes of the forks cannot be from the set } \left \lbrace 
-	X\_{k}, ... , X\_{n} \right \rbrace \text{ since the condition in the equation 
-	(\ref{dSep1Simplified}) must hold in } G\_{\overline{X}\_{k}, \overline{X}\_{k+1}, 
-	... \overline{X}\_{n}} \text{ in which no edges can enter } \left \lbrace X\_{k}, 
-	... , X\_{n} \right \rbrace.
-	\label{edgeFork}
-\end{equation}
-\begin{equation}
-	\text{The collider nodes must be from the set } \left \lbrace Z\_{1}, ... , 
-	Z\_{k-1}, X\_{1}, ... , X\_{k-1} \right \rbrace \text{ since these nodes are 
-	conditioned on in the equation (\ref{dSep1Simplified}) and unblock the colliders.}
-	\label{collider}
-\end{equation}
-\begin{equation}
-	\text{The inner nodes in a chain cannot be from the set } \left \lbrace Z\_{1}, 
-	... , Z\_{k-1}, X\_{1}, ... , X\_{k-1} \right \rbrace \text{ since they are 
-	conditioned on and block the chains.}
-	\label{chain1}
-\end{equation}
-\begin{equation}
-	\text{The inner nodes of the chains cannot be from the set } \left \lbrace 
-	X\_{k}, ... , X\_{n} \right \rbrace \text{ since no edges can enter them in 
-	the graph } G\_{\overline{X}\_{k}, \overline{X}\_{k+1}, ... \overline{X}\_{n}}\text{.}
-	\label{chain2}
-\end{equation}
 
-From the condition (\ref{midFork}) and the condition (\ref{edgeFork}), it can be 
+1) The paths between $Z\_{k}$ and $X\_{k}$ must include at least either a 
+fork or a collider since there cannot be a directed path from $X\_{k}$ to $Z\_{k}$. 
+A chain may or may not exist in addition to a fork or a collider. All these paths 
+must be unblocked.
+
+<span id="midFork"> 2) The middle nodes of the forks cannot be from the set $\left \lbrace 
+Z\_{1}, ... , Z\_{k-1}, X\_{1}, ... , X\_{k-1} \right \rbrace $ since 
+these are conditioned on in the equation (\ref{dSep1Simplified}). 
+
+<span id="edgeFork"> 3) The edge nodes of the forks cannot be from the set $\left 
+\lbrace X\_{k}, ... , X\_{n} \right \rbrace$ since the condition in the equation 
+(\ref{dSep1Simplified}) must hold in $G\_{\overline{X}\_{k}, \overline{X}\_{k+1}, 
+... \overline{X}\_{n}}$ in which no edges can enter $\left \lbrace X\_{k}, ... , 
+X\_{n} \right \rbrace$.
+
+<span id="collider"> 4) The collider nodes must be from the set $\left \lbrace 
+Z\_{1}, ... , Z\_{k-1}, X\_{1}, ... , X\_{k-1} \right \rbrace$ since these nodes 
+are conditioned on in the equation (\ref{dSep1Simplified}) and unblock the colliders.
+
+<span id="chain1"> 5) The inner nodes in a chain cannot be from the set $\left 
+\lbrace Z\_{1}, ... , Z\_{k-1}, X\_{1}, ... , X\_{k-1} \right \rbrace$ since they 
+are conditioned on and block the chains.
+
+<span id="chain2"> 6) The inner nodes of the chains cannot be from the set $\left 
+\lbrace X\_{k}, ... , X\_{n} \right \rbrace$ since no edges can enter them in the 
+graph $G\_{\overline{X}\_{k}, \overline{X}\_{k+1}, ... \overline{X}\_{n}}$.
+
+From the condition <a href="#midFork">2</a> and the condition <a href="#edgeFork">3</a>, it can be 
 deduced that the middle nodes of the forks must be from the set $\left \lbrace 
 X\_{k}, ... , X\_{n} \right \rbrace$ and the edge nodes of the forks must be 
 from the set $\left \lbrace Z\_{1}, ... , Z\_{k-1}, X\_{1}, ... , X\_{k-1} \right 
 \rbrace$. But this is in conflict with the requirement given in 
 (\ref{directedPathReq}). As a result, there cannot be an unblocked fork between 
-$X\_{k}$ and $Z\_{k}$. From the condition (\ref{collider}) and the requirement in 
+$X\_{k}$ and $Z\_{k}$. From the condition <a href="#collider">4</a> and the requirement in 
 (\ref{directedPathReq}), it is determined that the parent nodes of colliders 
 cannot be from the set $\left \lbrace X\_{k}, ... , X\_{n} \right \rbrace$. The 
 collider node and the parent nodes of the collider can be only from the set 
 $\left \lbrace Z\_{1}, ... , Z\_{k-1}, X\_{1}, ... , X\_{k-1} \right \rbrace$ provided 
 $Z\_{k} \subseteq N\_{k}$ and the order in the control variables are respected. From 
-the conditions (\ref{chain1}) and (\ref{chain2}), it is concluded that the inner nodes 
+the conditions <a href="#chain1">5</a> and <a href="#chain2">6</a>, it is concluded that the inner nodes 
 of chains can only be $Z\_{k}$ as an observable variable. An unobserved variable 
 can also be an inner node. The initial node of a chain may be a variable from 
 $\left \lbrace X\_{k}, ... , X\_{n} \right \rbrace$ or a variable from $\left 
@@ -191,8 +184,8 @@ $\left \lbrace X\_{k}, ... , X\_{n} \right \rbrace$ or a variable from $\left
 an unobserved variable. The last node of a chain may be a variable from $\left 
 \lbrace Z\_{1}, ... , Z\_{k-1}, X\_{1}, ... , X\_{k-1} \right \rbrace$ or $Z\_{k}$ or 
 an unobserved variable. In any case, there must be at least an unobserved variable 
-in a chain due to the equation (\ref{directedPathReq}), the conditions (\ref{chain1}) 
-and (\ref{chain2}). As a result, there can be only colliders between $X\_{k}$ and 
+in a chain due to the equation (\ref{directedPathReq}), the conditions <a href="#chain1">5</a> 
+and <a href="#chain2">6</a>. As a result, there can be only colliders between $X\_{k}$ and 
 $Z\_{k}$ if unobserved variables are excluded for the time being. The allowed 
 collider is shown in the Figure <a href="#colliderOfCovariates">1</a>.
 <figure id="colliderOfCovariates">
@@ -239,22 +232,22 @@ covariates.
 
 Now, let the cases when there are unobserved (latent) variables on the paths 
 between $X\_{k}$ and $Z\_{k}$ be examined. Due to the requirement in the 
-equation (\ref{directedPathReq}) and the conditions (\ref{midFork}) and 
-(\ref{edgeFork}), the allowed forks with covariates and latent variables are shown 
+equation (\ref{directedPathReq}) and the conditions <a href="#midFork">2</a> and 
+<a href="#edgeFork">3</a>, the allowed forks with covariates and latent variables are shown 
 in the Figure <a href="#forkCovAndLat">6</a>. 
 <figure id="forkCovAndLat">
 <img src="/assets/elaborationOnSequentialBackdoorCriterion/forkCovAndLat.png" style="max-width: 1000px;">
 <figcaption>Figure 6. The allowed forks with covariates and latent variables. </figcaption>
 </figure>
 Due to the requirement in the equation (\ref{directedPathReq}) and the condition 
-(\ref{collider}), the allowed colliders are given in the Figure 
+<a href="#collider">4</a>, the allowed colliders are given in the Figure 
 <a href="#colliderCovAndLat">7</a>. 
 <figure id="colliderCovAndLat">
 <img src="/assets/elaborationOnSequentialBackdoorCriterion/colliderCovAndLat.png" style="max-width: 800px;">
 <figcaption>Figure 7. The allowed colliders with covariates and latent variables. </figcaption>
 </figure>
 Due to the requirement in the equation (\ref{directedPathReq}) and the conditions 
-(\ref{chain1}) and (\ref{chain2}), the allowed chains are shown in the Figure 
+<a href="#chain1">5</a> and <a href="#chain2">6</a>, the allowed chains are shown in the Figure 
 <a href="#chainCovAndLat">8</a>.
 <figure id="chainCovAndLat">
 <img src="/assets/elaborationOnSequentialBackdoorCriterion/chainCovAndLat.png" style="max-width: 800px;">
