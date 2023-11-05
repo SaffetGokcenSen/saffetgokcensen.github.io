@@ -196,30 +196,30 @@ and (\ref{chain2}). As a result, there can be only colliders between $X\_{k}$ an
 $Z\_{k}$ if unobserved variables are excluded for the time being. The allowed 
 collider is shown in the Figure <a href="#colliderOfCovariates">1</a>.
 <figure id="colliderOfCovariates">
-<img src="/assets/colliderOfObserved.png" style="max-width: 600px;">
+<img src="/assets/elaborationOnSequentialBackdoorCriterion/colliderOfObserved.png" style="max-width: 600px;">
 <figcaption>Figure 1. The collider which is allowed to build the path between 
 $X_{k}$ and $Z_{k}$. </figcaption>
 </figure> 
 This collider can be connected to $X\_{k}$ in either of the ways shown in the 
 <figure id="XkConnection1">
-<img src="/assets/XkConnection1.png" style="max-width: 600px;">
+<img src="/assets/elaborationOnSequentialBackdoorCriterion/XkConnection1.png" style="max-width: 600px;">
 <figcaption>Figure 2. The first possible connection of the collider in the Figure 
 <a href="#colliderOfCovariates">1</a> to $X_{k}$. </figcaption>
 </figure>
 Figures <a href="#XkConnection1">2</a>, <a href="#XkConnection2">3</a>, 
 <a href="#XkConnection3">4</a> and <a href="#XkConnection4">5</a>.
 <figure id="XkConnection2">
-<img src="/assets/XkConnection2.png" style="max-width: 600px;">
+<img src="/assets/elaborationOnSequentialBackdoorCriterion/XkConnection2.png" style="max-width: 600px;">
 <figcaption>Figure 3. The second possible connection of the collider in the Figure 
 <a href="#colliderOfCovariates">1</a> to $X_{k}$. </figcaption>
 </figure>
 <figure id="XkConnection3">
-<img src="/assets/XkConnection3.png" style="max-width: 600px;">
+<img src="/assets/elaborationOnSequentialBackdoorCriterion/XkConnection3.png" style="max-width: 600px;">
 <figcaption>Figure 4. The third possible connection of the collider in the Figure 
 <a href="#colliderOfCovariates">1</a> to $X_{k}$. </figcaption>
 </figure>
 <figure id="XkConnection4">
-<img src="/assets/XkConnection4.png" style="max-width: 600px;">
+<img src="/assets/elaborationOnSequentialBackdoorCriterion/XkConnection4.png" style="max-width: 600px;">
 <figcaption>Figure 5. The fourth possible connection of the collider in the Figure 
 	<a href="#colliderOfCovariates">1</a> to $X_{k}$. </figcaption>
 </figure>
@@ -243,21 +243,21 @@ equation (\ref{directedPathReq}) and the conditions (\ref{midFork}) and
 (\ref{edgeFork}), the allowed forks with covariates and latent variables are shown 
 in the Figure <a href="#forkCovAndLat">6</a>. 
 <figure id="forkCovAndLat">
-<img src="/assets/forkCovAndLat.png" style="max-width: 1000px;">
+<img src="/assets/elaborationOnSequentialBackdoorCriterion/forkCovAndLat.png" style="max-width: 1000px;">
 <figcaption>Figure 6. The allowed forks with covariates and latent variables. </figcaption>
 </figure>
 Due to the requirement in the equation (\ref{directedPathReq}) and the condition 
 (\ref{collider}), the allowed colliders are given in the Figure 
 <a href="#colliderCovAndLat">7</a>. 
 <figure id="colliderCovAndLat">
-<img src="/assets/colliderCovAndLat.png" style="max-width: 800px;">
+<img src="/assets/elaborationOnSequentialBackdoorCriterion/colliderCovAndLat.png" style="max-width: 800px;">
 <figcaption>Figure 7. The allowed colliders with covariates and latent variables. </figcaption>
 </figure>
 Due to the requirement in the equation (\ref{directedPathReq}) and the conditions 
 (\ref{chain1}) and (\ref{chain2}), the allowed chains are shown in the Figure 
 <a href="#chainCovAndLat">8</a>.
 <figure id="chainCovAndLat">
-<img src="/assets/chainCovAndLat.png" style="max-width: 800px;">
+<img src="/assets/elaborationOnSequentialBackdoorCriterion/chainCovAndLat.png" style="max-width: 800px;">
 <figcaption>Figure 8. The allowed chains with covariates and latent variables. </figcaption>
 </figure>
 Since the d-separation of $Z\_{k}$ and $\left \lbrace X\_{k}, ... , X\_{n} \right 
