@@ -6,7 +6,7 @@ title: An Example Of The Graph Topology Guided Causal Effect Calculation 3
 
 ## Introduction
 
-In this article, a causal effect calculation will be carried out using the graph topology guidance. The causal effect is the causal effect of $X$ on $Y$ in the directed acyclic graph (DAG) given in the Figure 3.8 (g) on the page 92 of <a href="#Pearl">[1]</a>. Its calculation has been explained in detail using the topology guidance of the DAG in the Figure 3.8 (e) in <a href="#myBlog">[2]</a>. In <a href="#myBlog2">[3]</a>, it has been shown that the DAG in the Figure 3.8 (c) can also guide the calculation of the causal effect. In this article, the details and the result of this topology guided calculation is going to be given.
+First of all, this article is best viewed in Chromium and Google Chrome browsers. Some characters are not rendered correctly in Firefox. In this article, a causal effect calculation will be carried out using the graph topology guidance. The causal effect is the causal effect of $X$ on $Y$ in the directed acyclic graph (DAG) given in the Figure 3.8 (g) on the page 92 of <a href="#Pearl">[1]</a>. Its calculation has been explained in detail using the topology guidance of the DAG in the Figure 3.8 (e) in <a href="#myBlog">[2]</a>. In <a href="#myBlog2">[3]</a>, it has been shown that the DAG in the Figure 3.8 (c) can also guide the calculation of the causal effect. In this article, the details and the result of this topology guided calculation is going to be given.
 
 ## Topology Guided Causal Effect Calculation
 
