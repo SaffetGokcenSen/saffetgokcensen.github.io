@@ -4,7 +4,7 @@ author: SAFFET GÖKÇEN ŞEN
 title: An Example For The Application Of The Do-calculus
 ---
 ## Introduction
-The computation of a causal effect by means of the do-calculus is elaborated on. The causal effect computation to be elaborated on is the fifth task on page 88 of [1].
+First of all, this article is best viewed in Chromium and Google Chrome browsers. Some characters are not rendered correctly in Firefox. The computation of a causal effect by means of the do-calculus is elaborated on. The causal effect computation to be elaborated on is the fifth task on page 88 of [1].
 ## The Causal Effect Computation
 There is a simple causal model whose directed acyclic graph (DAG) is given in the Figure 1.
 <figure>
