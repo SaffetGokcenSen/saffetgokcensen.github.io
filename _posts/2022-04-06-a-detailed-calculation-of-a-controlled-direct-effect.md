@@ -4,7 +4,7 @@ author: SAFFET GÖKÇEN ŞEN
 title: A Detailed Calculation Of A Controlled Direct Effect
 ---
 ## Introduction
-In this article, a calculation of a direct controlled effect is made. The relations between the post-intervention and pre-inervention probabilities are explained in a detailed manner. The DAG of the causal model is the same as that of the causal model given in section 3.7 of [1].
+First of all, this article is best viewed in Chromium and Google Chrome browsers. Some characters are not rendered correctly in Firefox. In this article, a calculation of a direct controlled effect is made. The relations between the post-intervention and pre-inervention probabilities are explained in a detailed manner. The DAG of the causal model is the same as that of the causal model given in section 3.7 of [1].
 ## The Controlled Direct Effect
 It is assumed that there is a causal model with the features $X$, $Y$, $Z$ and $I$. The DAG of the causal model is given in the Figure 1.
 <figure>
