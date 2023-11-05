@@ -4,9 +4,10 @@ author: SAFFET GÖKÇEN ŞEN
 title: Some Elaboration On The Sequential Backdoor Criterion
 ---
 ## Introduction
-In this article, the proof of theorem about the sequential backdoor criterion is 
-elaborated on. The theorem is given on the page 121 of <a href="#Pearl">[1]</a>. 
-Its proof is also given in the same reference.
+First of all, this article is best viewed in Chromium and Google Chrome browsers. 
+Some characters are not rendered correctly in Firefox. In this article, the proof of 
+theorem about the sequential backdoor criterion is elaborated on. The theorem is 
+given on the page 121 of <a href="#Pearl">[1]</a>. Its proof is also given in the same reference.
 
 ## The Sequential Backdoor Criterion
 The sequential backdoor criterion gives the conditions for 
