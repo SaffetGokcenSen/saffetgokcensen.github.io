@@ -4,7 +4,7 @@ author: SAFFET GÖKÇEN ŞEN
 title: An Example Of The Graph Topology Guided Causal Effect Calculation
 ---
 ## Introduction
-In this article, an example is to be given for the graph topology guided causal effect calculation. The graph topology guided causal effect calculation is demonstrated on the page 93 of [1]. A similar technique is to be applied to calculate the causal effect of $X$ on $Y$ for the directed acyclic graph (DAG) shown in the subfigure (g) of the Figure 3.8 on the page 92 of [1].
+First of all, this article is best viewed in Chromium and Google Chrome browsers. Some characters are not rendered correctly in Firefox. In this article, an example is to be given for the graph topology guided causal effect calculation. The graph topology guided causal effect calculation is demonstrated on the page 93 of [1]. A similar technique is to be applied to calculate the causal effect of $X$ on $Y$ for the directed acyclic graph (DAG) shown in the subfigure (g) of the Figure 3.8 on the page 92 of [1].
 ## The DAG
 The DAG to be studied for the calculation of the causal effect of $X$ on $Y$ is shown in the <a href="#topologyGuidedCausalEffectDag1" >Figure 1</a>.
 <figure id="topologyGuidedCausalEffectDag1">
