@@ -6,7 +6,7 @@ title: Directed Acyclic Graphs From An Equivalence Class For An Image 4
 
 ## Introduction
 
-In this article, some causal effects in the form of $p\left(y|do\left(x\right)\right)$ 
+First of all, this article is best viewed in Chromium and Google Chrome browsers. Some characters are not rendered correctly in Firefox. In this article, some causal effects in the form of $p\left(y|do\left(x\right)\right)$ 
 are calculated for a directed acyclic graph (DAG) from the equivalence class of an image. The rules of do-calculus are going to be used to calculate causal effects. DAGs from the equivalence class of an image have been studied in the articles <a href="#firstArticle">[1]</a>, <a href="#secondArticle">[2]</a> and <a href="#thirdArticle">[3]</a>.
 
 ## The Causal Effects
