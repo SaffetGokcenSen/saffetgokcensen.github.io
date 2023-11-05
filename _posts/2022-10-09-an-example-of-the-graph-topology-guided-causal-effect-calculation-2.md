@@ -6,7 +6,7 @@ title: An Example Of The Graph Topology Guided Causal Effect Calculation 2
 
 ## Introduction
 
-In this article, some graphs are examined to determine if they can be utilized in calculating a causal effect in a given directed acyclic graph (DAG). Each graph is studied to detect if only this graph is enough to calculate the causal effect. The examined graphs are the (b), (c) and (d) parts of the Figure 3.8 on page 92 of <a href="#Pearl">[1]</a>. The DAG for which the causal effect is to be calculated is the (g) part of the Figure 3.8 on page 92 of <a href="#Pearl">[1]</a>.
+First of all, this article is best viewed in Chromium and Google Chrome browsers. Some characters are not rendered correctly in Firefox. In this article, some graphs are examined to determine if they can be utilized in calculating a causal effect in a given directed acyclic graph (DAG). Each graph is studied to detect if only this graph is enough to calculate the causal effect. The examined graphs are the (b), (c) and (d) parts of the Figure 3.8 on page 92 of <a href="#Pearl">[1]</a>. The DAG for which the causal effect is to be calculated is the (g) part of the Figure 3.8 on page 92 of <a href="#Pearl">[1]</a>.
 
 ## The Topology Guided Causal Effect Calculation
 
