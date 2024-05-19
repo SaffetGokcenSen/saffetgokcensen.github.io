@@ -45,7 +45,7 @@ letter $J$ if it is capped.
 sample_cap_length = sample_right_n - sample_left_n + 1 
 seed1 = 41+theIndex 
 size1 = sample_cap_length-1 
-seed2 = 51+theIndex
+seed2 = 51+numOfSamples+theIndex
 random_deviations = randomDeviations(seed1, size1, seed2, p_zero_dev_m) 
 
 cap_mn_array = np.zeros((sample_cap_length, 2), dtype=int)
@@ -57,9 +57,9 @@ im, cap_mn_array = drawCap(
 The following Python code snippet draws the vertical part of the variable $E$.
 ```python 
 var_E_ver_part_length = variable_E_height-vertical_start_m
-seed1 = 81 + theIndex 
+seed1 = 81 + 4*numOfSamples + theIndex 
 size1 = var_E_ver_part_length 
-seed2 = 91 + theIndex 
+seed2 = 91 + 5*numOfSamples + theIndex 
 pZero = p_zero_dev_n
 random_dev = randomDeviations(seed1, size1, seed2, pZero) 
 
@@ -90,11 +90,11 @@ the noise due to causes like writing styles varying from person to person and pe
 tips. The second equation of the SCM given in the equation \eqref{SCMEqn2} is 
 implemented by the following Python code snippet:
 ```python
-seed1 = 101 + theIndex 
+seed1 = 101 + 6*numOfSamples + theIndex 
 ver_start_m_F = variable_E_height 
 var_F_ver_part_length = variable_F_m_upper_bound+1-ver_start_m_F
 size1 = var_F_ver_part_length 
-seed2 = 111 + theIndex 
+seed2 = 111 + 7*numOfSamples + theIndex 
 pZero = p_zero_dev_n_F
 random_dev = randomDeviations(seed1, size1, seed2, pZero) 
 
