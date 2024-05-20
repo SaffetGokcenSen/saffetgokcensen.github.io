@@ -198,10 +198,10 @@ the following SCM is obtained for the antecedent $X=1$:
 According to the Table <a href="#table4">4</a> and the SCM in the equation 
 \eqref{SCM1Counter1}, the data set given in the Table <a href="#table5">5</a> is 
 generated. 
-\begin{array}{cccccc}
-u_{1} & u_{2} & P\left(u_{1},u_{2}\right) & x & z & y \newline
-\frac{1}{2} & 1 & \frac{1}{2} & 1 & 3 & 9 \newline 
-1 & 0 & \frac{1}{2} & 1 & 2 & 6 \newline
+\begin{array}{ccccc}
+u_{2} & P\left(u_{2}\right) & x & z & y \newline
+1 & \frac{1}{2} & 1 & 3 & 9 \newline 
+0 & \frac{1}{2} & 1 & 2 & 6 \newline
 \notag
 \end{array} 
 <p id="table5" align="center"> Table 5: The data set which is generated for the 
@@ -220,16 +220,16 @@ Now, the following counterfactual expectation is to be calculated:
 From the SCM in the equation \eqref{SCM1}, the following SCM is got for the 
 antecedent $X=0$:
 \begin{gather}
-	X=0 \notag \\ 
-	Z=U_{2} \label{SCM1Counter2} \\ 
+	X=0 \notag \newline
+	Z=U_{2} \label{SCM1Counter2} \newline 
 	Y=3Z \notag
 \end{gather} 
 The data set generated according to Table <a href="#table4">4</a> and the SCM in 
 the equation \eqref{SCM1Counter2} is shown in the Table <a href="#table6">6</a>.
-\begin{array}{cccccc}
-u_{1} & u_{2} & P\left(u_{1},u_{2}\right) & x & z & y \newline
-\frac{1}{2} & 1 & \frac{1}{2} & 0 & 1 & 3 \newline 
-1 & 0 & \frac{1}{2} & 0 & 0 & 0 \newline
+\begin{array}{ccccc}
+u_{2} & P\left(u_{2}\right) & x & z & y \newline
+1 & \frac{1}{2} & 0 & 1 & 3 \newline 
+0 & \frac{1}{2} & 0 & 0 & 0 \newline
 \notag
 \end{array} 
 <p id="table6" align="center"> Table 6: The data set which is generated for the 
