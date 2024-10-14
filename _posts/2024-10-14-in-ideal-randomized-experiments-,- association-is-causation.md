@@ -57,7 +57,7 @@ can be compactly written as follows:
 	\label{compact1}
 \end{equation} 
 Since $A$ and $Y$ are binary variables, the relation in the equation 
-\eqref{compact1} states that $Y$ and $A$ are independent. 
+\eqref{compact1} states that $Y^{a}$ and $A$ are independent. 
 
 Let $P\left(Y^{a}=1\right)$ be calculated using the results derived by means of 
 randomization:
