@@ -161,7 +161,7 @@ following:
 	\hat{a}\_{f\_{31}}\frac{\partial d^{i} }{\partial f\_{31}} 
 	+ 
 	\hat{a}\_{f\_{32}}\frac{\partial d^{i} }{\partial f\_{32}} 
-	\implies 
+	\implies \newline
 	\nabla\_{f} d^{i} =
 		\hat{a}\_{f\_{11}} d^{i}\_{11}+
 		\hat{a}\_{f\_{12}} d^{i}\_{12}+
