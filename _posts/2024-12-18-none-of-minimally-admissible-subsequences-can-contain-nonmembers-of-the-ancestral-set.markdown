@@ -4,6 +4,7 @@ author: SAFFET GÖKÇEN ŞEN
 title: None Of Minimally Admissible Subsequences Can Contain Nonmembers Of The Ancestral Set 
 ---
 ## Introduction 
+First of all, this article is best viewed in Chromium, Google Chrome or Chrome based browsers. Some characters are not rendered correctly in Firefox.
 In this article, an important fact related with the proof of a theorem is 
 proven. The theorem is about the existence of an admissible sequence within the 
 context of the sequential backdoor criterion. The theorem states the 
