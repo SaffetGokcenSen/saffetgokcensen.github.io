@@ -446,7 +446,6 @@ one-to-one mapping between a binary image and a filter of the same size. The
 inner product of the image and the filter yields a number unique to the image. 
 Due to this uniqueness, the one-to-one mapping is established. Some results 
 from the implementations of the optimization algorithms have been presented. 
-The references to the complete Python codes are given in the references.
 
 [code1]: https://github.com/SaffetGokcenSen/oneToOneMappingBetweenABinaryImageAndAFilter/blob/main/oneToOneCorrespondence.py 
 [code2]: https://github.com/SaffetGokcenSen/oneToOneMappingBetweenABinaryImageAndAFilter/blob/main/oneToOneCorrespondence2.py 
